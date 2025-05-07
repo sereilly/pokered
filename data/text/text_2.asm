@@ -1695,8 +1695,8 @@ _LinkCanceledText::
 
 _OakSpeechText1::
 	text "Hello there!"
-	line "Welcome to the"
-	cont "world of #MON!"
+	line "Welcome to open"
+	cont "world #MON mod"
 
 	para "My name is OAK!"
 	line "People call me"

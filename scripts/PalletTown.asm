@@ -192,8 +192,9 @@ PalletTownOakText:
 	text_end
 
 PalletTownGirlText:
-	text_far _PalletTownGirlText
-	text_end
+	text_asm
+	call ChooseFlyDestination
+	jp TextScriptEnd
 
 PalletTownFisherText:
 	text_far _PalletTownFisherText
