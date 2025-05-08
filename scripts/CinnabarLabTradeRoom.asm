@@ -34,30 +34,30 @@ CinnabarLabCharmanderPokeBallText:
 	text_asm
 	ld a, STARTER2
 	ld [wRivalStarterTemp], a
-	ld a, OAKSLAB_SQUIRTLE_POKE_BALL
+	ld a, CINNABARLABTRADEROOM_SQUIRTLE_POKE_BALL
 	ld [wRivalStarterBallSpriteIndex], a
 	ld a, STARTER1
-	ld b, OAKSLAB_CHARMANDER_POKE_BALL
+	ld b, CINNABARLABTRADEROOM_CHARMANDER_POKE_BALL
 	jr CinnabarLabSelectedPokeBallScript
 
 CinnabarLabSquirtlePokeBallText:
 	text_asm
 	ld a, STARTER3
 	ld [wRivalStarterTemp], a
-	ld a, OAKSLAB_BULBASAUR_POKE_BALL
+	ld a, CINNABARLABTRADEROOM_BULBASAUR_POKE_BALL
 	ld [wRivalStarterBallSpriteIndex], a
 	ld a, STARTER2
-	ld b, OAKSLAB_SQUIRTLE_POKE_BALL
+	ld b, CINNABARLABTRADEROOM_SQUIRTLE_POKE_BALL
 	jr CinnabarLabSelectedPokeBallScript
 
 CinnabarLabBulbasaurPokeBallText:
 	text_asm
 	ld a, STARTER1
 	ld [wRivalStarterTemp], a
-	ld a, OAKSLAB_CHARMANDER_POKE_BALL
+	ld a, CINNABARLABTRADEROOM_CHARMANDER_POKE_BALL
 	ld [wRivalStarterBallSpriteIndex], a
 	ld a, STARTER3
-	ld b, OAKSLAB_BULBASAUR_POKE_BALL
+	ld b, CINNABARLABTRADEROOM_BULBASAUR_POKE_BALL
 
 CinnabarLabSelectedPokeBallScript:
 	ld [wCurPartySpecies], a
@@ -66,8 +66,9 @@ CinnabarLabSelectedPokeBallScript:
 	ld [wSpriteIndex], a
 	CheckEvent EVENT_GOT_STARTER
 	jp nz, CinnabarLabLastMonScript
-	CheckEventReuseA EVENT_OAK_ASKED_TO_CHOOSE_MON
-	jr nz, CinnabarLabShowPokeBallPokemonScript
+	;CheckEventReuseA EVENT_OAK_ASKED_TO_CHOOSE_MON
+	;jr nz, CinnabarLabShowPokeBallPokemonScript
+	jr CinnabarLabShowPokeBallPokemonScript ; skipping event check
 	ld hl, CinnabarLabThoseArePokeBallsText
 	call PrintText
 	jp TextScriptEnd
@@ -98,9 +99,9 @@ CinnabarLabShowPokeBallPokemonScript:
 	ld c, 10
 	call DelayFrames
 	ld a, [wSpriteIndex]
-	cp OAKSLAB_CHARMANDER_POKE_BALL
+	cp CINNABARLABTRADEROOM_CHARMANDER_POKE_BALL
 	jr z, CinnabarLabYouWantCharmanderText
-	cp OAKSLAB_SQUIRTLE_POKE_BALL
+	cp CINNABARLABTRADEROOM_SQUIRTLE_POKE_BALL
 	jr z, CinnabarLabYouWantSquirtleText
 	jr CinnabarLabYouWantBulbasaurText
 
@@ -138,17 +139,17 @@ CinnabarLabMonChoiceMenu:
 	ld [wNamedObjectIndex], a
 	call GetMonName
 	ld a, [wSpriteIndex]
-	cp OAKSLAB_CHARMANDER_POKE_BALL
+	cp CINNABARLABTRADEROOM_CHARMANDER_POKE_BALL
 	jr nz, .not_charmander
-	ld a, HS_STARTER_BALL_1
+	ld a, HS_STARTER_BALL_CINNABAR_1
 	jr .continue
 .not_charmander
-	cp OAKSLAB_SQUIRTLE_POKE_BALL
+	cp CINNABARLABTRADEROOM_SQUIRTLE_POKE_BALL
 	jr nz, .not_squirtle
-	ld a, HS_STARTER_BALL_2
+	ld a, HS_STARTER_BALL_CINNABAR_2
 	jr .continue
 .not_squirtle
-	ld a, HS_STARTER_BALL_3
+	ld a, HS_STARTER_BALL_CINNABAR_3
 .continue
 	ld [wMissableObjectIndex], a
 	predef HideObject
@@ -167,10 +168,25 @@ CinnabarLabMonChoiceMenu:
 	call AddPartyMon
 	ld hl, wStatusFlags4
 	set BIT_GOT_STARTER, [hl]
-	ld a, SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
-	ld [wJoyIgnore], a
-	ld a, SCRIPT_OAKSLAB_CHOSE_STARTER_SCRIPT
-	ld [wOaksLabCurScript], a
+
+	; fade to black and hide the other balls
+	call GBFadeOutToBlack
+	ld a, HS_STARTER_BALL_CINNABAR_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_CINNABAR_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_CINNABAR_3
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	call GBFadeInFromBlack
+
+    ; disabling this because we aren't entering a cutscene after
+	;ld a, SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
+	;ld [wJoyIgnore], a
+	;ld a, SCRIPT_CINNABARLABTRADEROOM_CHOSE_STARTER_SCRIPT
+	;ld [wOaksLabCurScript], a
 CinnabarLabMonChoiceEnd:
 	jp TextScriptEnd
 
