@@ -49,6 +49,57 @@ TrainerDataPointers:
 	dw LanceData
 	assert_table_length NUM_TRAINERS
 
+TrainerDataPointers0:
+	table_width 2
+	dw YoungsterData
+	dw BugCatcherData
+	dw LassData
+	dw SailorData
+	dw JrTrainerMData
+	dw JrTrainerFData
+	dw PokemaniacData
+	dw SuperNerdData
+	dw HikerData
+	dw BikerData
+	dw BurglarData0
+	dw EngineerData
+	dw UnusedJugglerData
+	dw FisherData
+	dw SwimmerData
+	dw CueBallData
+	dw GamblerData
+	dw BeautyData
+	dw PsychicData
+	dw RockerData
+	dw JugglerData
+	dw TamerData
+	dw BirdKeeperData
+	dw BlackbeltData
+	dw Rival1Data
+	dw ProfOakData
+	dw ChiefData
+	dw ScientistData
+	dw GiovanniData
+	dw RocketData
+	dw CooltrainerMData
+	dw CooltrainerFData
+	dw BrunoData
+	dw BrockData
+	dw MistyData
+	dw LtSurgeData
+	dw ErikaData
+	dw KogaData
+	dw BlaineData
+	dw SabrinaData
+	dw GentlemanData
+	dw Rival2Data
+	dw Rival3Data
+	dw LoreleiData
+	dw ChannelerData
+	dw AgathaData
+	dw LanceData
+	assert_table_length NUM_TRAINERS
+
 ; if first byte != $FF, then
 	; first byte is level (of all pokemon on this team)
 	; all the next bytes are pokemon species
@@ -298,6 +349,22 @@ BurglarData:
 	db 37, VULPIX, GROWLITHE, 0
 ; Mansion 2F
 	db 34, CHARMANDER, CHARMELEON, 0
+; Mansion 3F
+	db 38, NINETALES, 0
+; Mansion B1F
+	db 34, GROWLITHE, PONYTA, 0
+
+BurglarData0:
+; Unused
+	db 29, GROWLITHE, VULPIX, 0
+	db 33, GROWLITHE, 0
+	db 28, VULPIX, CHARMANDER, PONYTA, 0
+; Cinnabar Gym
+	db 36, GROWLITHE, VULPIX, NINETALES, 0
+	db 41, PONYTA, 0
+	db 37, VULPIX, GROWLITHE, 0
+; Mansion 2F
+	db 5, CHARMANDER, CHARMELEON, 0
 ; Mansion 3F
 	db 38, NINETALES, 0
 ; Mansion B1F

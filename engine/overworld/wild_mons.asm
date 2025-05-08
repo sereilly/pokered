@@ -1,8 +1,6 @@
 LoadWildData::
-    ld a, [wObtainedBadges] ; Load the badge bitmask
-    call CountSetBits       ; Count the number of badges obtained
+    call CountBadges       ; Count the number of badges obtained
     ld e, b                 ; Store the badge count in register E
-
     ld hl, WildDataPointersTable ; Load the base pointer table
     ld d, 0
     add hl, de              ; Offset HL by the badge count
@@ -42,7 +40,8 @@ LoadWildData::
     jp CopyData
 
 ; Subroutine to count the number of set bits in A
-CountSetBits:
+CountBadges:
+    ld a, [wObtainedBadges] ; Load the badge bitmask
     ld   b, 0          ; Clear B (bit counter)
 .count_loop:
     sla  a             ; Shift A left, MSB goes into carry

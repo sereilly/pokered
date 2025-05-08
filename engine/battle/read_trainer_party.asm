@@ -15,10 +15,21 @@ ReadTrainer:
 	ld [hl], a
 
 ; get the pointer to trainer data for this class
+
+	call CountBadges2       ; Count the number of badges obtained
+    ld e, b                ; Store the badge count in register E
+    ld hl, TrainerDataPointersTable ; Load the base pointer table
+    ld d, 0
+    add hl, de             ; Offset HL by the badge count
+	ld a, [hl]             ; Load the low byte of the pointer
+    inc hl                 ; Increment HL to point to the next byte
+    ld h, [hl]             ; Load the high byte of the pointer
+    ld l, a                ; Set HL to the full pointer
+
 	ld a, [wCurOpponent]
 	sub OPP_ID_OFFSET + 1 ; convert value from pokemon to trainer
 	add a
-	ld hl, TrainerDataPointers
+	;ld hl, TrainerDataPointers
 	ld c, a
 	ld b, 0
 	add hl, bc ; hl points to trainer class
@@ -164,3 +175,29 @@ ReadTrainer:
 	dec b
 	jr nz, .LastLoop ; repeat wCurEnemyLevel times
 	ret
+
+
+; Subroutine to count the number of set bits in A
+CountBadges2:
+    ld a, [wObtainedBadges] ; Load the badge bitmask
+    ld   b, 0          ; Clear B (bit counter)
+.count_loop:
+    sla  a             ; Shift A left, MSB goes into carry
+    jr   nc, .no_carry
+    inc  b             ; If carry was set, increment B
+.no_carry:
+    bit  0, a          ; Check if A is zero (early out)
+    jr   nz, .count_loop
+    ret
+
+; Table of pointers to TrainerDataPointers tables
+TrainerDataPointersTable:
+    dw TrainerDataPointers0
+    dw TrainerDataPointers
+    dw TrainerDataPointers
+    dw TrainerDataPointers
+    dw TrainerDataPointers
+    dw TrainerDataPointers
+    dw TrainerDataPointers
+    dw TrainerDataPointers
+    dw TrainerDataPointers
