@@ -32,31 +32,31 @@ CinnabarLabTradeRoomDoTrade:
 
 CinnabarLabCharmanderPokeBallText:
 	text_asm
-	ld a, STARTER2
+	ld a, STARTER2_CINNABAR
 	ld [wRivalStarterTemp], a
 	ld a, CINNABARLABTRADEROOM_SQUIRTLE_POKE_BALL
 	ld [wRivalStarterBallSpriteIndex], a
-	ld a, STARTER1
+	ld a, STARTER1_CINNABAR
 	ld b, CINNABARLABTRADEROOM_CHARMANDER_POKE_BALL
 	jr CinnabarLabSelectedPokeBallScript
 
 CinnabarLabSquirtlePokeBallText:
 	text_asm
-	ld a, STARTER3
+	ld a, STARTER3_CINNABAR
 	ld [wRivalStarterTemp], a
 	ld a, CINNABARLABTRADEROOM_BULBASAUR_POKE_BALL
 	ld [wRivalStarterBallSpriteIndex], a
-	ld a, STARTER2
+	ld a, STARTER2_CINNABAR
 	ld b, CINNABARLABTRADEROOM_SQUIRTLE_POKE_BALL
 	jr CinnabarLabSelectedPokeBallScript
 
 CinnabarLabBulbasaurPokeBallText:
 	text_asm
-	ld a, STARTER1
+	ld a, STARTER1_CINNABAR
 	ld [wRivalStarterTemp], a
 	ld a, CINNABARLABTRADEROOM_CHARMANDER_POKE_BALL
 	ld [wRivalStarterBallSpriteIndex], a
-	ld a, STARTER3
+	ld a, STARTER3_CINNABAR
 	ld b, CINNABARLABTRADEROOM_BULBASAUR_POKE_BALL
 
 CinnabarLabSelectedPokeBallScript:
@@ -109,21 +109,21 @@ CinnabarLabYouWantCharmanderText:
 	ld hl, .Text
 	jr CinnabarLabMonChoiceMenu
 .Text:
-	text_far _OaksLabYouWantCharmanderText
+	text_far _CinnabarLabTradeRoomYouWantSeelText
 	text_end
 
 CinnabarLabYouWantSquirtleText:
 	ld hl, .Text
 	jr CinnabarLabMonChoiceMenu
 .Text:
-	text_far _OaksLabYouWantSquirtleText
+	text_far _CinnabarLabTradeRoomYouWantCaterpieText
 	text_end
 
 CinnabarLabYouWantBulbasaurText:
 	ld hl, .Text
 	jr CinnabarLabMonChoiceMenu
 .Text:
-	text_far _OaksLabYouWantBulbasaurText
+	text_far _CinnabarLabTradeRoomYouWantPorygonText
 	text_end
 
 CinnabarLabMonChoiceMenu:
@@ -191,7 +191,7 @@ CinnabarLabMonChoiceEnd:
 	jp TextScriptEnd
 
 CinnabarLabMonEnergeticText:
-	text_far _OaksLabMonEnergeticText
+	text_far _CinnabarLabTradeRoomMonEnergeticText
 	text_end
 
 CinnabarLabReceivedMonText:
