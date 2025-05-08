@@ -28,3 +28,34 @@ ENDC
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
+
+PokemonMansion1FWildMons0:
+	def_grass_wildmons 10 ; encounter rate
+IF DEF(_RED)
+	db 5, KOFFING
+	db 6, KOFFING
+	db 7, PONYTA
+	db 6, PONYTA
+	db 7, GROWLITHE
+	db 5, PONYTA
+	db 6, GRIMER
+	db 4, PONYTA
+	db 8, KOFFING
+	db 8, GRIMER
+ENDC
+IF DEF(_BLUE)
+	db 5, GRIMER
+	db 6, GRIMER
+	db 7, PONYTA
+	db 6, PONYTA
+	db 7, VULPIX
+	db 5, PONYTA
+	db 6, KOFFING
+	db 4, PONYTA
+	db 8, GRIMER
+	db 8, KOFFING
+ENDC
+	end_grass_wildmons
+
+	def_water_wildmons 0 ; encounter rate
+	end_water_wildmons
