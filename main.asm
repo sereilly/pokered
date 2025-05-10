@@ -362,3 +362,31 @@ INCLUDE "data/trainers/parties0.asm"
 SECTION "Trainer Party 1", ROMX
 INCLUDE "engine/battle/read_trainer_party1.asm"
 INCLUDE "data/trainers/parties1.asm"
+
+SECTION "Trainer Party 2", ROMX
+INCLUDE "engine/battle/read_trainer_party2.asm"
+INCLUDE "data/trainers/parties2.asm"
+
+SECTION "Trainer Party 3", ROMX
+INCLUDE "engine/battle/read_trainer_party3.asm"
+INCLUDE "data/trainers/parties3.asm"
+
+SECTION "Trainer Party 4", ROMX
+INCLUDE "engine/battle/read_trainer_party4.asm"
+INCLUDE "data/trainers/parties4.asm"
+
+SECTION "Trainer Party 5", ROMX
+INCLUDE "engine/battle/read_trainer_party5.asm"
+INCLUDE "data/trainers/parties5.asm"
+
+SECTION "Trainer Party 6", ROMX
+INCLUDE "engine/battle/read_trainer_party6.asm"
+INCLUDE "data/trainers/parties6.asm"
+
+SECTION "Trainer Party 7", ROMX
+INCLUDE "engine/battle/read_trainer_party7.asm"
+INCLUDE "data/trainers/parties7.asm"
+
+SECTION "Trainer Party 8", ROMX
+INCLUDE "engine/battle/read_trainer_party8.asm"
+INCLUDE "data/trainers/parties8.asm"
