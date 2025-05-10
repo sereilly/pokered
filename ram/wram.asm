@@ -1196,8 +1196,6 @@ wEnemyMonBaseExp:: db
 wBattleMonNick:: ds NAME_LENGTH
 wBattleMon:: battle_struct wBattleMon
 
-wTrainerDataPointer:: dw ; trainer data pointer
-
 wTrainerClass:: db
 
 	ds 1
