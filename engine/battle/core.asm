@@ -6802,7 +6802,7 @@ InitBattleCommon:
 	jp c, InitWildBattle
 	ld [wTrainerClass], a
 	call GetTrainerInformation
-	callfar ReadTrainer
+	callfar ReadTrainer0
 	call DoBattleTransitionAndInitBattleVariables
 	call _LoadTrainerPic
 	xor a

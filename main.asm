@@ -355,7 +355,10 @@ INCLUDE "engine/movie/evolution.asm"
 INCLUDE "engine/overworld/elevator.asm"
 INCLUDE "engine/items/tm_prices.asm"
 
-SECTION "Trainer Party", ROMX
+SECTION "Trainer Party 0", ROMX
+INCLUDE "engine/battle/read_trainer_party0.asm"
+INCLUDE "data/trainers/parties0.asm"
 
-INCLUDE "engine/battle/read_trainer_party.asm"
-INCLUDE "data/trainers/parties.asm"
+SECTION "Trainer Party 1", ROMX
+INCLUDE "engine/battle/read_trainer_party1.asm"
+INCLUDE "data/trainers/parties1.asm"

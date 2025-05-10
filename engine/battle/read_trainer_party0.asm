@@ -1,4 +1,4 @@
-ReadTrainer:
+ReadTrainer0:
 
 ; don't change any moves in a link battle
 	ld a, [wLinkState]
@@ -15,23 +15,10 @@ ReadTrainer:
 	ld [hl], a
 
 ; get the pointer to trainer data for this class
-
-	call CountBadges       ; Count the number of badges obtained
-    ld a, b                ; Store the badge count in a
-	sla a 					; multiply by 2 by shifting left to get the offset
-	ld e, a
-	ld d, 0
-    ld hl, TrainerDataPointersTable ; Load the base pointer table
-    add hl, de             ; Offset HL by the badge count * 2
-	ld a, [hli]            ; Load low byte of the pointer
-	ld h, [hl]             ; Load high byte into H
-	ld l, a                ; Put low byte into L
-	; Now HL contains the address stored at TrainerDataPointersTable+badge*2
-
 	ld a, [wCurOpponent]
 	sub OPP_ID_OFFSET + 1 ; convert value from pokemon to trainer
 	add a
-	;ld hl, TrainerDataPointers
+	ld hl, TrainerDataPointers0
 	ld c, a
 	ld b, 0
 	add hl, bc ; hl points to trainer class
@@ -177,15 +164,3 @@ ReadTrainer:
 	dec b
 	jr nz, .LastLoop ; repeat wCurEnemyLevel times
 	ret
-
-; Table of pointers to TrainerDataPointers tables
-TrainerDataPointersTable:
-    dw TrainerDataPointers0
-    dw TrainerDataPointers
-    dw TrainerDataPointers
-    dw TrainerDataPointers
-    dw TrainerDataPointers
-    dw TrainerDataPointers
-    dw TrainerDataPointers
-    dw TrainerDataPointers
-    dw TrainerDataPointers
