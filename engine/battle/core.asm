@@ -6802,7 +6802,34 @@ InitBattleCommon:
 	jp c, InitWildBattle
 	ld [wTrainerClass], a
 	call GetTrainerInformation
-	callfar ReadTrainer0
+
+	call CountBadges       ; Count the number of badges obtained
+    ld a, b                ; Store the badge count in a
+    sla a                   ; multiply by 2 by shifting left to get the offset
+	sla a
+    ld e, a
+    ld d, 0
+    ld hl, TrainerDataPointersTable ; Load the base pointer table
+    add hl, de             ; Offset HL by the badge count * 2
+	ld a, l                     ; Get low byte of hl
+	ld [wTrainerDataPointer], a ; Store low byte
+	ld a, h                     ; Get high byte of hl
+	ld [wTrainerDataPointer+1], a ; Store high byte
+	inc hl 		  ; Increment HL twice to get the bank number
+	inc hl
+    ld b, [hl]            ; Load bank number of the trainer data
+
+	ld a, [wTrainerDataPointer] ; load the trainer data pointer into hl
+	ld l, a
+	ld a, [wTrainerDataPointer + 1]
+	ld h, a
+
+	; read the address of hl into hl
+	ld a, [hli]            ; Load low byte of the pointer
+    ld h, [hl]             ; Load high byte into H
+    ld l, a                ; Put low byte into L
+	call Bankswitch
+    
 	call DoBattleTransitionAndInitBattleVariables
 	call _LoadTrainerPic
 	xor a
@@ -7047,3 +7074,14 @@ LoadMonBackPic:
 	ldh a, [hLoadedROMBank]
 	ld b, a
 	jp CopyVideoData
+
+TrainerDataPointersTable:
+    dw ReadTrainer0, BANK(ReadTrainer0)
+    dw ReadTrainer1, BANK(ReadTrainer1)
+    dw ReadTrainer1, BANK(ReadTrainer1)
+	dw ReadTrainer1, BANK(ReadTrainer1)
+	dw ReadTrainer1, BANK(ReadTrainer1)
+	dw ReadTrainer1, BANK(ReadTrainer1)
+	dw ReadTrainer1, BANK(ReadTrainer1)
+	dw ReadTrainer1, BANK(ReadTrainer1)
+	dw ReadTrainer1, BANK(ReadTrainer1)

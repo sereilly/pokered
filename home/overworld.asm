@@ -70,6 +70,7 @@ OverworldLoopLessDelay::
 	ldh a, [hJoyHeld]
 	jr .checkIfStartIsPressed
 .notSimulating
+	call BadgeIncrement
 	ldh a, [hJoyPressed]
 .checkIfStartIsPressed
 	bit BIT_START, a

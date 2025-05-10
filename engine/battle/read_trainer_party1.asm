@@ -18,7 +18,7 @@ ReadTrainer1:
 	ld a, [wCurOpponent]
 	sub OPP_ID_OFFSET + 1 ; convert value from pokemon to trainer
 	add a
-	ld hl, TrainerDataPointers0
+	ld hl, TrainerDataPointers1
 	ld c, a
 	ld b, 0
 	add hl, bc ; hl points to trainer class
