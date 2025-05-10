@@ -16,8 +16,8 @@ ReadTrainer:
 
 ; get the pointer to trainer data for this class
 
-	call CountBadges2       ; Count the number of badges obtained
-    ld a, b                ; Store the badge count in register E
+	call CountBadges       ; Count the number of badges obtained
+    ld a, b                ; Store the badge count in a
 	sla a 					; multiply by 2 by shifting left to get the offset
 	ld e, a
 	ld d, 0
@@ -177,20 +177,6 @@ ReadTrainer:
 	dec b
 	jr nz, .LastLoop ; repeat wCurEnemyLevel times
 	ret
-
-
-; Subroutine to count the number of set bits in A
-CountBadges2:
-    ld a, [wObtainedBadges] ; Load the badge bitmask
-    ld   b, 0          ; Clear B (bit counter)
-.count_loop:
-    sla  a             ; Shift A left, MSB goes into carry
-    jr   nc, .no_carry
-    inc  b             ; If carry was set, increment B
-.no_carry:
-    bit  0, a          ; Check if A is zero (early out)
-    jr   nz, .count_loop
-    ret
 
 ; Table of pointers to TrainerDataPointers tables
 TrainerDataPointersTable:
