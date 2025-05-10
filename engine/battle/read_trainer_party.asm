@@ -17,14 +17,16 @@ ReadTrainer:
 ; get the pointer to trainer data for this class
 
 	call CountBadges2       ; Count the number of badges obtained
-    ld e, b                ; Store the badge count in register E
+    ld a, b                ; Store the badge count in register E
+	sla a 					; multiply by 2 by shifting left to get the offset
+	ld e, a
+	ld d, 0
     ld hl, TrainerDataPointersTable ; Load the base pointer table
-    ld d, 0
-    add hl, de             ; Offset HL by the badge count
-	ld a, [hl]             ; Load the low byte of the pointer
-    inc hl                 ; Increment HL to point to the next byte
-    ld h, [hl]             ; Load the high byte of the pointer
-    ld l, a                ; Set HL to the full pointer
+    add hl, de             ; Offset HL by the badge count * 2
+	ld a, [hli]            ; Load low byte of the pointer
+	ld h, [hl]             ; Load high byte into H
+	ld l, a                ; Put low byte into L
+	; Now HL contains the address stored at TrainerDataPointersTable+badge*2
 
 	ld a, [wCurOpponent]
 	sub OPP_ID_OFFSET + 1 ; convert value from pokemon to trainer
