@@ -1,253 +1,253 @@
-WildDataPointers:
+WildDataPointers1:
 	table_width 2
-	dw NothingWildMons         ; PALLET_TOWN
-	dw NothingWildMons         ; VIRIDIAN_CITY
-	dw NothingWildMons         ; PEWTER_CITY
-	dw NothingWildMons         ; CERULEAN_CITY
-	dw NothingWildMons         ; LAVENDER_TOWN
-	dw NothingWildMons         ; VERMILION_CITY
-	dw NothingWildMons         ; CELADON_CITY
-	dw NothingWildMons         ; FUCHSIA_CITY
-	dw NothingWildMons         ; CINNABAR_ISLAND
-	dw NothingWildMons         ; INDIGO_PLATEAU
-	dw NothingWildMons         ; SAFFRON_CITY
-	dw NothingWildMons         ; unused
-	dw Route1WildMons          ; ROUTE_1
-	dw Route2WildMons          ; ROUTE_2
-	dw Route3WildMons          ; ROUTE_3
-	dw Route4WildMons          ; ROUTE_4
-	dw Route5WildMons          ; ROUTE_5
-	dw Route6WildMons          ; ROUTE_6
-	dw Route7WildMons          ; ROUTE_7
-	dw Route8WildMons          ; ROUTE_8
-	dw Route9WildMons          ; ROUTE_9
-	dw Route10WildMons         ; ROUTE_10
-	dw Route11WildMons         ; ROUTE_11
-	dw Route12WildMons         ; ROUTE_12
-	dw Route13WildMons         ; ROUTE_13
-	dw Route14WildMons         ; ROUTE_14
-	dw Route15WildMons         ; ROUTE_15
-	dw Route16WildMons         ; ROUTE_16
-	dw Route17WildMons         ; ROUTE_17
-	dw Route18WildMons         ; ROUTE_18
-	dw SeaRoutesWildMons       ; ROUTE_19
-	dw SeaRoutesWildMons       ; ROUTE_20
-	dw Route21WildMons         ; ROUTE_21
-	dw Route22WildMons         ; ROUTE_22
-	dw Route23WildMons         ; ROUTE_23
-	dw Route24WildMons         ; ROUTE_24
-	dw Route25WildMons         ; ROUTE_25
-	dw NothingWildMons         ; REDS_HOUSE_1F
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw ViridianForestWildMons ; ViridianForest
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw MtMoon1FWildMons
-	dw MtMoonB1FWildMons
-	dw MtMoonB2FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw RockTunnel1FWildMons
-	dw PowerPlantWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw VictoryRoad1FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw PokemonTower1FWildMons
-	dw PokemonTower2FWildMons
-	dw PokemonTower3FWildMons
-	dw PokemonTower4FWildMons
-	dw PokemonTower5FWildMons
-	dw PokemonTower6FWildMons
-	dw PokemonTower7FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw SeafoamIslandsB1FWildMons
-	dw SeafoamIslandsB2FWildMons
-	dw SeafoamIslandsB3FWildMons
-	dw SeafoamIslandsB4FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw PokemonMansion1FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw SeafoamIslands1FWildMons
-	dw NothingWildMons
-	dw VictoryRoad2FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw DiglettsCaveWildMons
-	dw VictoryRoad3FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw PokemonMansion2FWildMons
-	dw PokemonMansion3FWildMons
-	dw PokemonMansionB1FWildMons
-	dw SafariZoneEastWildMons
-	dw SafariZoneNorthWildMons
-	dw SafariZoneWestWildMons
-	dw SafariZoneCenterWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw CeruleanCave2FWildMons
-	dw CeruleanCaveB1FWildMons
-	dw CeruleanCave1FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw RockTunnelB1FWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
+	dw NothingWildMons1         ; PALLET_TOWN
+	dw NothingWildMons1         ; VIRIDIAN_CITY
+	dw NothingWildMons1         ; PEWTER_CITY
+	dw NothingWildMons1         ; CERULEAN_CITY
+	dw NothingWildMons1         ; LAVENDER_TOWN
+	dw NothingWildMons1         ; VERMILION_CITY
+	dw NothingWildMons1         ; CELADON_CITY
+	dw NothingWildMons1         ; FUCHSIA_CITY
+	dw NothingWildMons1         ; CINNABAR_ISLAND
+	dw NothingWildMons1         ; INDIGO_PLATEAU
+	dw NothingWildMons1         ; SAFFRON_CITY
+	dw NothingWildMons1         ; unused
+	dw Route1WildMons1          ; ROUTE_1
+	dw Route2WildMons1          ; ROUTE_2
+	dw Route3WildMons1          ; ROUTE_3
+	dw Route4WildMons1          ; ROUTE_4
+	dw Route5WildMons1          ; ROUTE_5
+	dw Route6WildMons1          ; ROUTE_6
+	dw Route7WildMons1          ; ROUTE_7
+	dw Route8WildMons1          ; ROUTE_8
+	dw Route9WildMons1          ; ROUTE_9
+	dw Route10WildMons1         ; ROUTE_10
+	dw Route11WildMons1         ; ROUTE_11
+	dw Route12WildMons1         ; ROUTE_12
+	dw Route13WildMons1         ; ROUTE_13
+	dw Route14WildMons1         ; ROUTE_14
+	dw Route15WildMons1         ; ROUTE_15
+	dw Route16WildMons1         ; ROUTE_16
+	dw Route17WildMons1         ; ROUTE_17
+	dw Route18WildMons1         ; ROUTE_18
+	dw SeaRoutesWildMons1       ; ROUTE_19
+	dw SeaRoutesWildMons1       ; ROUTE_20
+	dw Route21WildMons1         ; ROUTE_21
+	dw Route22WildMons1         ; ROUTE_22
+	dw Route23WildMons1         ; ROUTE_23
+	dw Route24WildMons1         ; ROUTE_24
+	dw Route25WildMons1         ; ROUTE_25
+	dw NothingWildMons1         ; REDS_HOUSE_1F
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw ViridianForestWildMons1 ; ViridianForest
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw MtMoon1FWildMons1
+	dw MtMoonB1FWildMons1
+	dw MtMoonB2FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw RockTunnel1FWildMons1
+	dw PowerPlantWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw VictoryRoad1FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw PokemonTower1FWildMons1
+	dw PokemonTower2FWildMons1
+	dw PokemonTower3FWildMons1
+	dw PokemonTower4FWildMons1
+	dw PokemonTower5FWildMons1
+	dw PokemonTower6FWildMons1
+	dw PokemonTower7FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw SeafoamIslandsB1FWildMons1
+	dw SeafoamIslandsB2FWildMons1
+	dw SeafoamIslandsB3FWildMons1
+	dw SeafoamIslandsB4FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw PokemonMansion1FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw SeafoamIslands1FWildMons1
+	dw NothingWildMons1
+	dw VictoryRoad2FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw DiglettsCaveWildMons1
+	dw VictoryRoad3FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw PokemonMansion2FWildMons1
+	dw PokemonMansion3FWildMons1
+	dw PokemonMansionB1FWildMons1
+	dw SafariZoneEastWildMons1
+	dw SafariZoneNorthWildMons1
+	dw SafariZoneWestWildMons1
+	dw SafariZoneCenterWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw CeruleanCave2FWildMons1
+	dw CeruleanCaveB1FWildMons1
+	dw CeruleanCave1FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw RockTunnelB1FWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
+	dw NothingWildMons1
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 
@@ -262,7 +262,7 @@ WildDataPointers:
         ; followed by 20 bytes:
         ; level, species (ten times)
 
-CeruleanCave1FWildMons:
+CeruleanCave1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 46, GOLBAT
 	db 46, HYPNO
@@ -284,7 +284,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-CeruleanCave2FWildMons:
+CeruleanCave2FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 51, DODRIO
 	db 51, VENOMOTH
@@ -301,7 +301,7 @@ CeruleanCave2FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-CeruleanCaveB1FWildMons:
+CeruleanCaveB1FWildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db 55, RHYDON
 	db 55, MAROWAK
@@ -323,7 +323,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-DiglettsCaveWildMons:
+DiglettsCaveWildMons1:
 	def_grass_wildmons 20 ; encounter rate
 	db 18, DIGLETT
 	db 19, DIGLETT
@@ -340,7 +340,7 @@ DiglettsCaveWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-MtMoon1FWildMons:
+MtMoon1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db  8, ZUBAT
 	db  7, ZUBAT
@@ -357,7 +357,7 @@ MtMoon1FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-MtMoonB1FWildMons:
+MtMoonB1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db  8, ZUBAT
 	db  7, ZUBAT
@@ -374,7 +374,7 @@ MtMoonB1FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-MtMoonB2FWildMons:
+MtMoonB2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db  9, ZUBAT
 	db  9, GEODUDE
@@ -391,14 +391,14 @@ MtMoonB2FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-NothingWildMons:
+NothingWildMons1:
 	def_grass_wildmons 0 ; encounter rate
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonMansion1FWildMons:
+PokemonMansion1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 32, KOFFING
@@ -429,7 +429,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonMansion2FWildMons:
+PokemonMansion2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 32, GROWLITHE
@@ -460,7 +460,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonMansion3FWildMons:
+PokemonMansion3FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 31, KOFFING
@@ -491,7 +491,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonMansionB1FWildMons:
+PokemonMansionB1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 33, KOFFING
@@ -522,21 +522,21 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonTower1FWildMons:
+PokemonTower1FWildMons1:
 	def_grass_wildmons 0 ; encounter rate
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonTower2FWildMons:
+PokemonTower2FWildMons1:
 	def_grass_wildmons 0 ; encounter rate
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonTower3FWildMons:
+PokemonTower3FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 20, GASTLY
 	db 21, GASTLY
@@ -553,7 +553,7 @@ PokemonTower3FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonTower4FWildMons:
+PokemonTower4FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 20, GASTLY
 	db 21, GASTLY
@@ -570,7 +570,7 @@ PokemonTower4FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonTower5FWildMons:
+PokemonTower5FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 20, GASTLY
 	db 21, GASTLY
@@ -587,7 +587,7 @@ PokemonTower5FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonTower6FWildMons:
+PokemonTower6FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 21, GASTLY
 	db 22, GASTLY
@@ -604,7 +604,7 @@ PokemonTower6FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PokemonTower7FWildMons:
+PokemonTower7FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 21, GASTLY
 	db 22, GASTLY
@@ -621,7 +621,7 @@ PokemonTower7FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-PowerPlantWildMons:
+PowerPlantWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 21, VOLTORB
 	db 21, MAGNEMITE
@@ -644,7 +644,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-RockTunnel1FWildMons:
+RockTunnel1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 16, ZUBAT
 	db 17, ZUBAT
@@ -661,7 +661,7 @@ RockTunnel1FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-RockTunnelB1FWildMons:
+RockTunnelB1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 16, ZUBAT
 	db 17, ZUBAT
@@ -678,7 +678,7 @@ RockTunnelB1FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route1WildMons:
+Route1WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db  3, PIDGEY
 	db  3, RATTATA
@@ -695,7 +695,7 @@ Route1WildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route2WildMons:
+Route2WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db  3, RATTATA
 	db  3, PIDGEY
@@ -721,7 +721,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route3WildMons:
+Route3WildMons1:
 	def_grass_wildmons 20 ; encounter rate
 	db  6, PIDGEY
 	db  5, SPEAROW
@@ -738,7 +738,7 @@ Route3WildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route4WildMons:
+Route4WildMons1:
 	def_grass_wildmons 20 ; encounter rate
 	db 10, RATTATA
 	db 10, SPEAROW
@@ -766,7 +766,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route5WildMons:
+Route5WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
 	db 13, ODDISH
@@ -797,7 +797,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route6WildMons:
+Route6WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
 	db 13, ODDISH
@@ -828,7 +828,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route7WildMons:
+Route7WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 19, PIDGEY
 IF DEF(_RED)
@@ -858,7 +858,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route8WildMons:
+Route8WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 18, PIDGEY
 IF DEF(_RED)
@@ -888,7 +888,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route9WildMons:
+Route9WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 16, RATTATA
 	db 16, SPEAROW
@@ -916,7 +916,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route10WildMons:
+Route10WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 16, VOLTORB
 	db 16, SPEAROW
@@ -944,7 +944,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route11WildMons:
+Route11WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
 	db 14, EKANS
@@ -972,7 +972,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route12WildMons:
+Route12WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
 	db 24, ODDISH
@@ -1003,7 +1003,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route13WildMons:
+Route13WildMons1:
 	def_grass_wildmons 20 ; encounter rate
 IF DEF(_RED)
 	db 24, ODDISH
@@ -1034,7 +1034,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route14WildMons:
+Route14WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
 	db 24, ODDISH
@@ -1063,7 +1063,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route15WildMons:
+Route15WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
 	db 24, ODDISH
@@ -1092,7 +1092,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route16WildMons:
+Route16WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db 20, SPEAROW
 	db 22, SPEAROW
@@ -1109,7 +1109,7 @@ Route16WildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route17WildMons:
+Route17WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db 20, SPEAROW
 	db 22, SPEAROW
@@ -1126,7 +1126,7 @@ Route17WildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route18WildMons:
+Route18WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db 20, SPEAROW
 	db 22, SPEAROW
@@ -1143,7 +1143,7 @@ Route18WildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route21WildMons:
+Route21WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db 21, RATTATA
 	db 23, PIDGEY
@@ -1170,7 +1170,7 @@ Route21WildMons:
 	db 40, TENTACOOL
 	end_water_wildmons
 
-Route22WildMons:
+Route22WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 	db  3, RATTATA
 IF DEF(_RED)
@@ -1200,7 +1200,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route23WildMons:
+Route23WildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 26, EKANS
@@ -1227,7 +1227,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route24WildMons:
+Route24WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 IF DEF(_RED)
 	db  7, WEEDLE
@@ -1255,7 +1255,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-Route25WildMons:
+Route25WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
 	db  8, WEEDLE
@@ -1286,7 +1286,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SafariZoneCenterWildMons:
+SafariZoneCenterWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
 	db 22, NIDORAN_M
@@ -1316,7 +1316,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SafariZoneEastWildMons:
+SafariZoneEastWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
 	db 24, NIDORAN_M
@@ -1347,7 +1347,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SafariZoneNorthWildMons:
+SafariZoneNorthWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
 	db 22, NIDORAN_M
@@ -1375,7 +1375,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SafariZoneWestWildMons:
+SafariZoneWestWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
 	db 25, NIDORAN_M
@@ -1403,7 +1403,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SeafoamIslands1FWildMons:
+SeafoamIslands1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 30, SEEL
 IF DEF(_RED)
@@ -1433,7 +1433,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SeafoamIslandsB1FWildMons:
+SeafoamIslandsB1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 30, STARYU
@@ -1464,7 +1464,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SeafoamIslandsB2FWildMons:
+SeafoamIslandsB2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 30, SEEL
 IF DEF(_RED)
@@ -1494,7 +1494,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SeafoamIslandsB3FWildMons:
+SeafoamIslandsB3FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 31, SLOWPOKE
@@ -1524,7 +1524,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SeafoamIslandsB4FWildMons:
+SeafoamIslandsB4FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
 	db 31, HORSEA
@@ -1554,7 +1554,7 @@ ENDC
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-SeaRoutesWildMons:
+SeaRoutesWildMons1:
 	def_grass_wildmons 0 ; encounter rate
 	end_grass_wildmons
 
@@ -1571,7 +1571,7 @@ SeaRoutesWildMons:
 	db 40, TENTACOOL
 	end_water_wildmons
 
-VictoryRoad1FWildMons:
+VictoryRoad1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 24, MACHOP
 	db 26, GEODUDE
@@ -1588,7 +1588,7 @@ VictoryRoad1FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-VictoryRoad2FWildMons:
+VictoryRoad2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 22, MACHOP
 	db 24, GEODUDE
@@ -1605,7 +1605,7 @@ VictoryRoad2FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-VictoryRoad3FWildMons:
+VictoryRoad3FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
 	db 24, MACHOP
 	db 26, GEODUDE
@@ -1622,7 +1622,7 @@ VictoryRoad3FWildMons:
 	def_water_wildmons 0 ; encounter rate
 	end_water_wildmons
 
-ViridianForestWildMons:
+ViridianForestWildMons1:
 	def_grass_wildmons 8 ; encounter rate
 IF DEF(_RED)
 	db  4, WEEDLE
