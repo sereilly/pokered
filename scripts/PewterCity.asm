@@ -18,7 +18,7 @@ PewterCityDefaultScript:
 	xor a
 	ld [wMuseum1FCurScript], a
 	ResetEvent EVENT_BOUGHT_MUSEUM_TICKET
-	call PewterCityCheckPlayerLeavingEastScript
+	;call PewterCityCheckPlayerLeavingEastScript
 	ret
 
 PewterCityCheckPlayerLeavingEastScript:
