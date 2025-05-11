@@ -29,3 +29,19 @@ DefaultNamesRival:
 	next "JACK"
 	db   "@"
 ENDC
+
+TownNames1:
+	db   "PALETTE"
+	next "PEWTER"
+	next "CERULEAN"
+	next "VERMILION"
+	next "MORE..."
+	db   "@"
+
+TownNames2:
+	db   "CELADON"
+	next "SAFFRON"
+	next "FUCHSIA"
+	next "CINNABAR"
+	next "VIRIDIAN"
+	db   "@"

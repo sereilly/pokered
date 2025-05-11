@@ -1752,6 +1752,18 @@ _OakSpeechText3::
 	cont "awaits! Let's go!"
 	done
 
+_OakSpeechText4::
+	text "But wait!"
+	line "Where are you"
+	cont "from again?"
+	done
+
+_OakSpeechText5::
+	text "Oh right."
+	line "How could I"
+	cont "forget?"
+	done
+
 _DoYouWantToNicknameText::
 	text "Do you want to"
 	line "give a nickname"

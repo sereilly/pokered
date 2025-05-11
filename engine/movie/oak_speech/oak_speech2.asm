@@ -60,6 +60,37 @@ ChooseRivalName:
 	ld hl, HisNameIsText
 	jp PrintText
 
+ChooseHomeTown:
+	call OakSpeechSlidePicRight
+	ld de, TownNames1
+	call DisplayTownNameTextBox
+	ld a, [wCurrentMenuItem]
+	cp 4
+	jr nz, .chosetown
+	ld de, TownNames2
+	call DisplayTownNameTextBox
+	ld a, [wCurrentMenuItem]
+	add 4 ; 4 towns in the first list
+.chosetown
+	ld c, a
+	ld b, $0
+	ld hl, StartTownTable
+	add hl, bc
+	ld a, [hl]
+	ld [wLastMap], a
+	ret
+
+StartTownTable:
+    db PALLET_TOWN
+    db PEWTER_CITY
+	db CERULEAN_CITY
+	db VERMILION_CITY
+	db CELADON_CITY
+	db SAFFRON_CITY
+	db FUCHSIA_CITY
+	db CINNABAR_ISLAND
+	db VIRIDIAN_CITY
+
 HisNameIsText:
 	text_far _HisNameIsText
 	text_end
@@ -186,6 +217,35 @@ DisplayIntroNameTextBox:
 
 .namestring
 	db "NAME@"
+
+DisplayTownNameTextBox:
+	push de
+	hlcoord 0, 0
+	ld b, $a
+	ld c, $a
+	call TextBoxBorder
+	hlcoord 3, 0
+	ld de, .townstring
+	call PlaceString
+	pop de
+	hlcoord 2, 2
+	call PlaceString
+	call UpdateSprites
+	xor a
+	ld [wCurrentMenuItem], a
+	ld [wLastMenuItem], a
+	inc a
+	ld [wTopMenuItemX], a
+	ld [wMenuWatchedKeys], a ; A_BUTTON
+	inc a
+	ld [wTopMenuItemY], a
+	inc a
+	inc a ; 5 max items
+	ld [wMaxMenuItem], a
+	jp HandleMenuInput
+
+.townstring
+	db "TOWN@"
 
 INCLUDE "data/player_names.asm"
 

@@ -25,3 +25,11 @@ DefaultNamesRivalList:
 	db "ASH@"
 	db "JACK@"
 ENDC
+
+TownNameList:
+	db "PALETTE@"
+	db "CERULEAN@"
+	db "VERMILION@"
+	db "CELADON@"
+	db "MORE...@"
+

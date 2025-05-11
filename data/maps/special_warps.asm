@@ -44,8 +44,10 @@ MACRO special_warp_spec
 	db \4
 ENDM
 
-NewGameWarp:
+NewGameWarpOld:
 	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+NewGameWarp:
+	special_warp_spec CINNABAR_LAB_TRADE_ROOM, 3, 6, LAB
 TradeCenterPlayerWarp:
 	special_warp_spec TRADE_CENTER,  3, 4, CLUB
 TradeCenterFriendWarp:

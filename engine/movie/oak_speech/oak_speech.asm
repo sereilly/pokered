@@ -111,6 +111,14 @@ OakSpeech:
 	jr nz, .next
 	ld hl, OakSpeechText3
 	call PrintText
+	; ask the player where to start
+	ld hl, OakSpeechText4
+	call PrintText
+	call ChooseHomeTown
+	ld hl, OakSpeechText5
+	call PrintText
+	call ClearScreen
+	; end of mod
 .next
 	ldh a, [hLoadedROMBank]
 	push af
@@ -177,6 +185,12 @@ IntroduceRivalText:
 	text_end
 OakSpeechText3:
 	text_far _OakSpeechText3
+	text_end
+OakSpeechText4:
+	text_far _OakSpeechText4
+	text_end
+OakSpeechText5:
+	text_far _OakSpeechText5
 	text_end
 
 FadeInIntroPic:
