@@ -415,3 +415,6 @@ INCLUDE "data/trainers/parties7.asm"
 SECTION "Trainer Party 8", ROMX
 INCLUDE "engine/battle/read_trainer_party8.asm"
 INCLUDE "data/trainers/parties8.asm"
+
+SECTION "Mod", ROMX
+INCLUDE "home/mod_starter.asm"
