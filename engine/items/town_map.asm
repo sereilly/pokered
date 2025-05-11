@@ -229,8 +229,8 @@ LoadTownMap_Fly::
 	ld a, [hl]
 	cp $ff
 	jr z, .wrapToStartOfList
-	;cp NOT_VISITED
-	;jr z, .pressedUp ; skip past unvisited towns
+	cp NOT_VISITED
+	jr z, .pressedUp ; skip past unvisited towns
 	jp .townMapFlyLoop
 .wrapToStartOfList
 	ld hl, wFlyLocationsList
@@ -241,8 +241,8 @@ LoadTownMap_Fly::
 	ld a, [hl]
 	cp $ff
 	jr z, .wrapToEndOfList
-	;cp NOT_VISITED
-	;jr z, .pressedDown ; skip past unvisited towns
+	cp NOT_VISITED
+	jr z, .pressedDown ; skip past unvisited towns
 	jp .townMapFlyLoop
 .wrapToEndOfList
 	ld hl, wFlyLocationsList + NUM_CITY_MAPS
@@ -264,7 +264,7 @@ BuildFlyLocationsList:
 	srl d
 	rr e
 	ld a, NOT_VISITED
-	;jr nc, .notVisited
+	jr nc, .notVisited
 	ld a, b ; store the map number of the town if it has been visited
 .notVisited
 	ld [hl], a
