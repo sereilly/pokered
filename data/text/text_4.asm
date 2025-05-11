@@ -22,6 +22,11 @@ _RepelWoreOffText::
 	line "wore off."
 	done
 
+_MissingStarterText::
+	text "Wait! Don't"
+	line "leave yet!"
+	done
+
 _PokemartBuyingGreetingText::
 	text "Take your time."
 	done

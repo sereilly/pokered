@@ -27,6 +27,7 @@ DisplayTextID::
 	dict TEXT_MON_FAINTED,      DisplayPokemonFaintedText
 	dict TEXT_BLACKED_OUT,      DisplayPlayerBlackedOutText
 	dict TEXT_REPEL_WORE_OFF,   DisplayRepelWoreOffText
+	dict TEXT_MISSING_STARTER,  DisplayMissingStarterText
 
 	ld a, [wNumSprites]
 	ld e, a
@@ -213,4 +214,13 @@ DisplayRepelWoreOffText::
 
 RepelWoreOffText::
 	text_far _RepelWoreOffText
+	text_end
+
+DisplayMissingStarterText::
+	ld hl, MissingStarterText
+	call PrintText
+	jp AfterDisplayingTextID
+
+MissingStarterText::
+	text_far _MissingStarterText
 	text_end

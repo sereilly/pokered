@@ -182,11 +182,6 @@ CinnabarLabMonChoiceMenu:
 	predef HideObject
 	call GBFadeInFromBlack
 
-    ; disabling this because we aren't entering a cutscene after
-	;ld a, SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
-	;ld [wJoyIgnore], a
-	;ld a, SCRIPT_CINNABARLABTRADEROOM_CHOSE_STARTER_SCRIPT
-	;ld [wOaksLabCurScript], a
 CinnabarLabMonChoiceEnd:
 	jp TextScriptEnd
 

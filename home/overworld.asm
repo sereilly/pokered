@@ -416,7 +416,7 @@ CheckWarpsNoCollisionLoop::
 	farcall IsPlayerStandingOnDoorTileOrWarpTile
 	pop bc
 	pop hl
-	jr c, WarpFound1 ; jump if standing on door or warp
+	jp c, WarpFound1 ; jump if standing on door or warp
 	push hl
 	push bc
 	call ExtraWarpCheck
@@ -426,7 +426,7 @@ CheckWarpsNoCollisionLoop::
 ; if the extra check passed
 	ld a, [wStatusFlags7]
 	bit BIT_FORCED_WARP, a
-	jr nz, WarpFound1
+	jp nz, WarpFound1
 	push de
 	push bc
 	call Joypad
@@ -435,6 +435,14 @@ CheckWarpsNoCollisionLoop::
 	ldh a, [hJoyHeld]
 	and D_DOWN | D_UP | D_LEFT | D_RIGHT
 	jr z, CheckWarpsNoCollisionRetry2 ; if directional buttons aren't being pressed, do not pass through the warp
+	
+	ld a, [wLastMap] ; check if we are in Red's house to skip the starter check
+	cp PALLET_TOWN
+	jr z, .dowarp
+	ld a, [wStatusFlags4]
+	bit BIT_GOT_STARTER, a ; check if we got starter. if not, prevent player from leaving the room
+	jr z, WalkAwayFromDoor
+.dowarp
 	jr WarpFound1
 
 ; check if the player has stepped onto a warp after having collided
@@ -457,7 +465,16 @@ CheckWarpsCollision::
 	ld [wDestinationWarpID], a
 	ld a, [hl]
 	ldh [hWarpDestinationMap], a
+
+	ld a, [wLastMap] ; check if we are in Red's house to skip the starter check
+	cp PALLET_TOWN
+	jr z, .dowarp
+	ld a, [wStatusFlags4]
+	bit BIT_GOT_STARTER, a ; check if we got starter. if not, prevent player from leaving the room
+	jr z, WalkAwayFromDoor
+.dowarp
 	jr WarpFound2
+
 .retry1
 	inc hl
 .retry2
@@ -473,6 +490,27 @@ CheckWarpsNoCollisionRetry2::
 	inc hl
 	inc hl
 	jp ContinueCheckWarpsNoCollisionLoop
+
+WalkAwayFromDoor:
+	ld a, [wPlayerMovingDirection]
+	cp PLAYER_DIR_DOWN
+	jr nz, .skiptext
+	ld a, TEXT_MISSING_STARTER
+	ldh [hTextID], a
+	call DisplayTextID
+.skiptext
+	ld a, $1
+	ld [wSimulatedJoypadStatesIndex], a
+	ld a, D_UP
+	ld [wSimulatedJoypadStatesEnd], a
+	call StartSimulatingJoypadStates
+	ld a, PLAYER_DIR_UP
+	ld [wPlayerMovingDirection], a
+	jp OverworldLoop
+
+PlayerWalkAwayMovementRLE:
+    db D_UP, 2
+    db -1 ; end
 
 WarpFound1::
 	ld a, [hli]
