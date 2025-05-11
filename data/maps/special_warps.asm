@@ -44,10 +44,25 @@ MACRO special_warp_spec
 	db \4
 ENDM
 
-NewGameWarpOld:
+PaletteNewGameWarp:
 	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
-NewGameWarp:
+PewterNewGameWarp:
+	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+CeruleanNewGameWarp:
+	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+VermilionNewGameWarp:
+	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+CeladonNewGameWarp:
+	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+SaffronNewGameWarp:
+	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+FuchsiaNewGameWarp:
+	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+CinnabarNewGameWarp:
 	special_warp_spec CINNABAR_LAB_TRADE_ROOM, 3, 6, LAB
+ViridianNewGameWarp:
+	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+
 TradeCenterPlayerWarp:
 	special_warp_spec TRADE_CENTER,  3, 4, CLUB
 TradeCenterFriendWarp:

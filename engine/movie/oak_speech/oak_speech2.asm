@@ -75,21 +75,38 @@ ChooseHomeTown:
 	ld c, a
 	ld b, $0
 	ld hl, StartTownTable
+	add hl, bc ; offset StartTownTable by 3x the town index
 	add hl, bc
-	ld a, [hl]
+	add hl, bc
+	ld a, [hli]
 	ld [wLastMap], a
+	ld [wDestinationMap], a
+	ld a, [hli]
+	ld [wNewGameWarpPtr], a
+	ld a, [hl]
+	ld [wNewGameWarpPtr+1], a
+	call PrepareForSpecialWarp
 	ret
 
 StartTownTable:
-    db PALLET_TOWN
-    db PEWTER_CITY
-	db CERULEAN_CITY
-	db VERMILION_CITY
-	db CELADON_CITY
-	db SAFFRON_CITY
-	db FUCHSIA_CITY
-	db CINNABAR_ISLAND
-	db VIRIDIAN_CITY
+    db PALLET_TOWN 
+	dw PaletteNewGameWarp
+    db PEWTER_CITY 
+	dw PewterNewGameWarp
+	db CERULEAN_CITY 
+	dw CeruleanNewGameWarp
+	db VERMILION_CITY 
+	dw VermilionNewGameWarp
+	db CELADON_CITY 
+	dw CeladonNewGameWarp
+	db SAFFRON_CITY 
+	dw SaffronNewGameWarp
+	db FUCHSIA_CITY 
+	dw FuchsiaNewGameWarp
+	db CINNABAR_ISLAND 
+	dw CinnabarNewGameWarp
+	db VIRIDIAN_CITY 
+	dw ViridianNewGameWarp
 
 HisNameIsText:
 	text_far _HisNameIsText

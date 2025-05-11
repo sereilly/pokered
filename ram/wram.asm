@@ -1786,6 +1786,7 @@ wXBlockCoord:: db
 
 wLastMap:: db
 wUnusedLastMapWidth:: db
+wNewGameWarpPtr:: dw
 
 wCurMapHeader::
 wCurMapTileset:: db

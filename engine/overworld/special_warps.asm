@@ -54,7 +54,11 @@ LoadSpecialWarpData:
 	jr nz, .notNewGameWarp
 	bit BIT_FLY_OR_DUNGEON_WARP, a
 	jr nz, .notNewGameWarp
-	ld hl, NewGameWarp
+	ld a, [wNewGameWarpPtr + 1]
+	ld h, a
+	ld a, [wNewGameWarpPtr]
+	ld l, a
+	
 .copyWarpData
 	ld de, wCurMap
 	ld c, $7
