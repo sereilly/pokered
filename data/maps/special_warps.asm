@@ -47,21 +47,21 @@ ENDM
 PaletteNewGameWarp:
 	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
 PewterNewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	special_warp_spec PEWTER_NIDORAN_HOUSE, 2, 3, HOUSE
 CeruleanNewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	special_warp_spec CERULEAN_TRADE_HOUSE, 3, 6, HOUSE
 VermilionNewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	special_warp_spec VERMILION_TRADE_HOUSE, 3, 6, HOUSE
 CeladonNewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	special_warp_spec CELADON_CHIEF_HOUSE, 3, 6, MANSION
 SaffronNewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	special_warp_spec SAFFRON_PIDGEY_HOUSE, 3, 6, HOUSE
 FuchsiaNewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	special_warp_spec FUCHSIA_BILLS_GRANDPAS_HOUSE, 3, 6, HOUSE
 CinnabarNewGameWarp:
 	special_warp_spec CINNABAR_LAB_TRADE_ROOM, 3, 6, LAB
 ViridianNewGameWarp:
-	special_warp_spec REDS_HOUSE_2F, 3, 6, REDS_HOUSE_2
+	special_warp_spec VIRIDIAN_SCHOOL_HOUSE, 3, 6, HOUSE
 
 TradeCenterPlayerWarp:
 	special_warp_spec TRADE_CENTER,  3, 4, CLUB

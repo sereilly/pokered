@@ -14,7 +14,7 @@ PrepareForSpecialWarp::
 .setNewGameMatWarp
 	; This is called by OakSpeech during StartNewGame and
 	; loads the first warp event for the specified map index.
-	ld a, CINNABAR_ISLAND
+	ld a, [wLastMap]
 .next
 	ld b, a
 	ld a, [wStatusFlags3]
