@@ -55,7 +55,7 @@ VermilionNewGameWarp:
 CeladonNewGameWarp:
 	special_warp_spec CELADON_CHIEF_HOUSE, 3, 6, MANSION
 SaffronNewGameWarp:
-	special_warp_spec SAFFRON_PIDGEY_HOUSE, 3, 6, HOUSE
+	special_warp_spec COPYCATS_HOUSE_1F, 3, 6, REDS_HOUSE_1
 FuchsiaNewGameWarp:
 	special_warp_spec FUCHSIA_BILLS_GRANDPAS_HOUSE, 3, 6, HOUSE
 CinnabarNewGameWarp:

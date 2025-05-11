@@ -41,7 +41,7 @@ SaffronCity_Object:
 	bg_event  1, 19, TEXT_SAFFRONCITY_SILPH_CO_LATEST_PRODUCT_SIGN
 
 	def_object_events
-	object_event  7,  6, SPRITE_ROCKET, STAY, NONE, TEXT_SAFFRONCITY_ROCKET1
+	object_event  8,  8, SPRITE_ROCKET, WALK, NONE, TEXT_SAFFRONCITY_ROCKET1 ; making him walk so he doesn't block the copycat door
 	object_event 20,  8, SPRITE_ROCKET, WALK, LEFT_RIGHT, TEXT_SAFFRONCITY_ROCKET2
 	object_event 34,  4, SPRITE_ROCKET, STAY, NONE, TEXT_SAFFRONCITY_ROCKET3
 	object_event 13, 12, SPRITE_ROCKET, STAY, NONE, TEXT_SAFFRONCITY_ROCKET4
