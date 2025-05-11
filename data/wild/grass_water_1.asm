@@ -264,21 +264,21 @@ WildDataPointers1:
 
 CeruleanCave1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 46, GOLBAT
-	db 46, HYPNO
-	db 46, MAGNETON
-	db 49, DODRIO
-	db 49, VENOMOTH
+	db 15, GOLBAT
+	db 15, HYPNO
+	db 15, MAGNETON
+	db 16, DODRIO
+	db 16, VENOMOTH
 IF DEF(_RED)
-	db 52, ARBOK
+	db 16, ARBOK
 ENDC
 IF DEF(_BLUE)
-	db 52, SANDSLASH
+	db 16, SANDSLASH
 ENDC
-	db 49, KADABRA
-	db 52, PARASECT
-	db 53, RAICHU
-	db 53, DITTO
+	db 16, KADABRA
+	db 17, PARASECT
+	db 17, RAICHU
+	db 17, DITTO
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -286,16 +286,16 @@ ENDC
 
 CeruleanCave2FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 51, DODRIO
-	db 51, VENOMOTH
-	db 51, KADABRA
-	db 52, RHYDON
-	db 52, MAROWAK
-	db 52, ELECTRODE
-	db 56, CHANSEY
-	db 54, WIGGLYTUFF
-	db 55, DITTO
-	db 60, DITTO
+	db 16, DODRIO
+	db 16, VENOMOTH
+	db 16, KADABRA
+	db 17, RHYDON
+	db 17, MAROWAK
+	db 17, ELECTRODE
+	db 17, CHANSEY
+	db 17, WIGGLYTUFF
+	db 17, DITTO
+	db 17, DITTO
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -303,21 +303,21 @@ CeruleanCave2FWildMons1:
 
 CeruleanCaveB1FWildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db 55, RHYDON
-	db 55, MAROWAK
-	db 55, ELECTRODE
-	db 64, CHANSEY
-	db 64, PARASECT
-	db 64, RAICHU
+	db 17, RHYDON
+	db 17, MAROWAK
+	db 17, ELECTRODE
+	db 17, CHANSEY
+	db 17, PARASECT
+	db 17, RAICHU
 IF DEF(_RED)
-	db 57, ARBOK
+	db 17, ARBOK
 ENDC
 IF DEF(_BLUE)
-	db 57, SANDSLASH
+	db 17, SANDSLASH
 ENDC
-	db 65, DITTO
-	db 63, DITTO
-	db 67, DITTO
+	db 17, DITTO
+	db 17, DITTO
+	db 17, DITTO
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -325,16 +325,16 @@ ENDC
 
 DiglettsCaveWildMons1:
 	def_grass_wildmons 20 ; encounter rate
-	db 18, DIGLETT
-	db 19, DIGLETT
-	db 17, DIGLETT
-	db 20, DIGLETT
-	db 16, DIGLETT
-	db 15, DIGLETT
-	db 21, DIGLETT
-	db 22, DIGLETT
-	db 29, DUGTRIO
-	db 31, DUGTRIO
+	db 12, DIGLETT
+	db 12, DIGLETT
+	db 11, DIGLETT
+	db 13, DIGLETT
+	db 11, DIGLETT
+	db 10, DIGLETT
+	db 13, DIGLETT
+	db 14, DIGLETT
+	db 16, DUGTRIO
+	db 17, DUGTRIO
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -343,10 +343,10 @@ DiglettsCaveWildMons1:
 MtMoon1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db  8, ZUBAT
-	db  7, ZUBAT
+	db  8, ZUBAT
 	db  9, ZUBAT
 	db  8, GEODUDE
-	db  6, ZUBAT
+	db  8, ZUBAT
 	db 10, ZUBAT
 	db 10, GEODUDE
 	db  8, PARAS
@@ -359,16 +359,16 @@ MtMoon1FWildMons1:
 
 MtMoonB1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db  8, ZUBAT
-	db  7, ZUBAT
-	db  7, GEODUDE
-	db  8, GEODUDE
 	db  9, ZUBAT
-	db 10, PARAS
-	db 10, ZUBAT
-	db 11, ZUBAT
-	db  9, CLEFAIRY
+	db  9, ZUBAT
 	db  9, GEODUDE
+	db  9, GEODUDE
+	db 10, ZUBAT
+	db 10, PARAS
+	db 11, ZUBAT
+	db 12, ZUBAT
+	db 10, CLEFAIRY
+	db 10, GEODUDE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -376,15 +376,15 @@ MtMoonB1FWildMons1:
 
 MtMoonB2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db  9, ZUBAT
-	db  9, GEODUDE
 	db 10, ZUBAT
 	db 10, GEODUDE
 	db 11, ZUBAT
-	db 10, PARAS
-	db 12, PARAS
-	db 10, CLEFAIRY
+	db 11, GEODUDE
 	db 12, ZUBAT
+	db 11, PARAS
+	db 12, PARAS
+	db 11, CLEFAIRY
+	db 13, ZUBAT
 	db 12, CLEFAIRY
 	end_grass_wildmons
 
@@ -401,28 +401,28 @@ NothingWildMons1:
 PokemonMansion1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 32, KOFFING
-	db 30, KOFFING
-	db 34, PONYTA
-	db 30, PONYTA
-	db 34, GROWLITHE
-	db 32, PONYTA
-	db 30, GRIMER
-	db 28, PONYTA
-	db 37, WEEZING
-	db 39, MUK
+	db 13, KOFFING
+	db 12, KOFFING
+	db 14, PONYTA
+	db 12, PONYTA
+	db 14, GROWLITHE
+	db 13, PONYTA
+	db 12, GRIMER
+	db 11, PONYTA
+	db 15, WEEZING
+	db 16, MUK
 ENDC
 IF DEF(_BLUE)
-	db 32, GRIMER
-	db 30, GRIMER
-	db 34, PONYTA
-	db 30, PONYTA
-	db 34, VULPIX
-	db 32, PONYTA
-	db 30, KOFFING
-	db 28, PONYTA
-	db 37, MUK
-	db 39, WEEZING
+	db 13, GRIMER
+	db 12, GRIMER
+	db 14, PONYTA
+	db 12, PONYTA
+	db 14, VULPIX
+	db 13, PONYTA
+	db 12, KOFFING
+	db 11, PONYTA
+	db 15, MUK
+	db 16, WEEZING
 ENDC
 	end_grass_wildmons
 
@@ -432,28 +432,28 @@ ENDC
 PokemonMansion2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 32, GROWLITHE
-	db 34, KOFFING
-	db 34, KOFFING
-	db 30, PONYTA
-	db 30, KOFFING
-	db 32, PONYTA
-	db 30, GRIMER
-	db 28, PONYTA
-	db 39, WEEZING
-	db 37, MUK
+	db 14, GROWLITHE
+	db 14, KOFFING
+	db 14, KOFFING
+	db 13, PONYTA
+	db 13, KOFFING
+	db 14, PONYTA
+	db 13, GRIMER
+	db 12, PONYTA
+	db 16, WEEZING
+	db 16, MUK
 ENDC
 IF DEF(_BLUE)
-	db 32, VULPIX
-	db 34, GRIMER
-	db 34, GRIMER
-	db 30, PONYTA
-	db 30, GRIMER
-	db 32, PONYTA
-	db 30, KOFFING
-	db 28, PONYTA
-	db 39, MUK
-	db 37, WEEZING
+	db 14, VULPIX
+	db 14, GRIMER
+	db 14, GRIMER
+	db 13, PONYTA
+	db 13, GRIMER
+	db 14, PONYTA
+	db 13, KOFFING
+	db 12, PONYTA
+	db 16, MUK
+	db 16, WEEZING
 ENDC
 	end_grass_wildmons
 
@@ -463,28 +463,28 @@ ENDC
 PokemonMansion3FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 31, KOFFING
-	db 33, GROWLITHE
-	db 35, KOFFING
-	db 32, PONYTA
-	db 34, PONYTA
-	db 40, WEEZING
-	db 34, GRIMER
-	db 38, WEEZING
-	db 36, PONYTA
-	db 42, MUK
+	db 15, KOFFING
+	db 15, GROWLITHE
+	db 15, KOFFING
+	db 14, PONYTA
+	db 15, PONYTA
+	db 16, WEEZING
+	db 15, GRIMER
+	db 16, WEEZING
+	db 15, PONYTA
+	db 17, MUK
 ENDC
 IF DEF(_BLUE)
-	db 31, GRIMER
-	db 33, VULPIX
-	db 35, GRIMER
-	db 32, PONYTA
-	db 34, MAGMAR
-	db 40, MUK
-	db 34, KOFFING
-	db 38, MUK
-	db 36, PONYTA
-	db 42, WEEZING
+	db 15, GRIMER
+	db 15, VULPIX
+	db 15, GRIMER
+	db 14, PONYTA
+	db 15, MAGMAR
+	db 16, MUK
+	db 15, KOFFING
+	db 16, MUK
+	db 15, PONYTA
+	db 17, WEEZING
 ENDC
 	end_grass_wildmons
 
@@ -494,28 +494,28 @@ ENDC
 PokemonMansionB1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 33, KOFFING
-	db 31, KOFFING
-	db 35, GROWLITHE
-	db 32, PONYTA
-	db 31, KOFFING
-	db 40, WEEZING
-	db 34, PONYTA
-	db 35, GRIMER
-	db 42, WEEZING
-	db 42, MUK
+	db 16, KOFFING
+	db 15, KOFFING
+	db 16, GROWLITHE
+	db 15, PONYTA
+	db 15, KOFFING
+	db 17, WEEZING
+	db 16, PONYTA
+	db 16, GRIMER
+	db 17, WEEZING
+	db 17, MUK
 ENDC
 IF DEF(_BLUE)
-	db 33, GRIMER
-	db 31, GRIMER
-	db 35, VULPIX
-	db 32, PONYTA
-	db 31, GRIMER
-	db 40, MUK
-	db 34, PONYTA
-	db 35, KOFFING
-	db 38, MAGMAR
-	db 42, WEEZING
+	db 16, GRIMER
+	db 15, GRIMER
+	db 16, VULPIX
+	db 15, PONYTA
+	db 15, GRIMER
+	db 17, MUK
+	db 16, PONYTA
+	db 16, KOFFING
+	db 17, MAGMAR
+	db 17, WEEZING
 ENDC
 	end_grass_wildmons
 
@@ -538,16 +538,16 @@ PokemonTower2FWildMons1:
 
 PokemonTower3FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 20, GASTLY
-	db 21, GASTLY
-	db 22, GASTLY
-	db 23, GASTLY
-	db 19, GASTLY
-	db 18, GASTLY
-	db 24, GASTLY
-	db 20, CUBONE
-	db 22, CUBONE
-	db 25, HAUNTER
+	db 13, GASTLY
+	db 13, GASTLY
+	db 14, GASTLY
+	db 14, GASTLY
+	db 12, GASTLY
+	db 12, GASTLY
+	db 15, GASTLY
+	db 13, CUBONE
+	db 14, CUBONE
+	db 16, HAUNTER
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -555,16 +555,16 @@ PokemonTower3FWildMons1:
 
 PokemonTower4FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 20, GASTLY
-	db 21, GASTLY
-	db 22, GASTLY
-	db 23, GASTLY
-	db 19, GASTLY
-	db 18, GASTLY
-	db 25, HAUNTER
-	db 20, CUBONE
-	db 22, CUBONE
-	db 24, GASTLY
+	db 13, GASTLY
+	db 14, GASTLY
+	db 14, GASTLY
+	db 15, GASTLY
+	db 13, GASTLY
+	db 12, GASTLY
+	db 16, HAUNTER
+	db 13, CUBONE
+	db 14, CUBONE
+	db 15, GASTLY
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -572,16 +572,16 @@ PokemonTower4FWildMons1:
 
 PokemonTower5FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 20, GASTLY
-	db 21, GASTLY
-	db 22, GASTLY
-	db 23, GASTLY
-	db 19, GASTLY
-	db 18, GASTLY
-	db 25, HAUNTER
-	db 20, CUBONE
-	db 22, CUBONE
-	db 24, GASTLY
+	db 14, GASTLY
+	db 14, GASTLY
+	db 15, GASTLY
+	db 15, GASTLY
+	db 13, GASTLY
+	db 13, GASTLY
+	db 16, HAUNTER
+	db 14, CUBONE
+	db 15, CUBONE
+	db 16, GASTLY
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -589,16 +589,16 @@ PokemonTower5FWildMons1:
 
 PokemonTower6FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 21, GASTLY
-	db 22, GASTLY
-	db 23, GASTLY
-	db 24, GASTLY
-	db 20, GASTLY
-	db 19, GASTLY
-	db 26, HAUNTER
-	db 22, CUBONE
-	db 24, CUBONE
-	db 28, HAUNTER
+	db 15, GASTLY
+	db 15, GASTLY
+	db 16, GASTLY
+	db 16, GASTLY
+	db 14, GASTLY
+	db 14, GASTLY
+	db 17, HAUNTER
+	db 15, CUBONE
+	db 16, CUBONE
+	db 17, HAUNTER
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -606,16 +606,16 @@ PokemonTower6FWildMons1:
 
 PokemonTower7FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 21, GASTLY
-	db 22, GASTLY
-	db 23, GASTLY
-	db 24, GASTLY
-	db 20, GASTLY
-	db 28, HAUNTER
-	db 22, CUBONE
-	db 24, CUBONE
-	db 28, HAUNTER
-	db 30, HAUNTER
+	db 15, GASTLY
+	db 16, GASTLY
+	db 16, GASTLY
+	db 16, GASTLY
+	db 15, GASTLY
+	db 17, HAUNTER
+	db 15, CUBONE
+	db 16, CUBONE
+	db 17, HAUNTER
+	db 17, HAUNTER
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -623,21 +623,21 @@ PokemonTower7FWildMons1:
 
 PowerPlantWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 21, VOLTORB
-	db 21, MAGNEMITE
-	db 20, PIKACHU
-	db 24, PIKACHU
-	db 23, MAGNEMITE
-	db 23, VOLTORB
-	db 32, MAGNETON
-	db 35, MAGNETON
+	db 13, VOLTORB
+	db 13, MAGNEMITE
+	db 12, PIKACHU
+	db 14, PIKACHU
+	db 14, MAGNEMITE
+	db 14, VOLTORB
+	db 15, MAGNETON
+	db 16, MAGNETON
 IF DEF(_RED)
-	db 33, ELECTABUZZ
-	db 36, ELECTABUZZ
+	db 15, ELECTABUZZ
+	db 17, ELECTABUZZ
 ENDC
 IF DEF(_BLUE)
-	db 33, RAICHU
-	db 36, RAICHU
+	db 15, RAICHU
+	db 17, RAICHU
 ENDC
 	end_grass_wildmons
 
@@ -646,16 +646,16 @@ ENDC
 
 RockTunnel1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 16, ZUBAT
-	db 17, ZUBAT
-	db 17, GEODUDE
-	db 15, MACHOP
-	db 16, GEODUDE
-	db 18, ZUBAT
-	db 15, ZUBAT
-	db 17, MACHOP
-	db 13, ONIX
-	db 15, ONIX
+	db 10, ZUBAT
+	db 11, ZUBAT
+	db 11, GEODUDE
+	db 10, MACHOP
+	db 10, GEODUDE
+	db 12, ZUBAT
+	db  9, ZUBAT
+	db 11, MACHOP
+	db  9, ONIX
+	db 10, ONIX
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -663,16 +663,16 @@ RockTunnel1FWildMons1:
 
 RockTunnelB1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 16, ZUBAT
-	db 17, ZUBAT
-	db 17, GEODUDE
-	db 15, MACHOP
-	db 16, GEODUDE
-	db 18, ZUBAT
-	db 17, MACHOP
-	db 17, ONIX
+	db 11, ZUBAT
+	db 12, ZUBAT
+	db 12, GEODUDE
+	db 11, MACHOP
+	db 11, GEODUDE
+	db 13, ZUBAT
+	db 12, MACHOP
 	db 13, ONIX
-	db 18, GEODUDE
+	db 10, ONIX
+	db 12, GEODUDE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -680,16 +680,16 @@ RockTunnelB1FWildMons1:
 
 Route1WildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db  3, PIDGEY
-	db  3, RATTATA
-	db  3, RATTATA
-	db  2, RATTATA
-	db  2, PIDGEY
-	db  3, PIDGEY
-	db  3, PIDGEY
-	db  4, RATTATA
-	db  4, PIDGEY
-	db  5, PIDGEY
+	db  8, PIDGEY
+	db  8, RATTATA
+	db  8, RATTATA
+	db  8, RATTATA
+	db  8, PIDGEY
+	db  8, PIDGEY
+	db  8, PIDGEY
+	db  9, RATTATA
+	db  9, PIDGEY
+	db  9, PIDGEY
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -697,24 +697,24 @@ Route1WildMons1:
 
 Route2WildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db  3, RATTATA
-	db  3, PIDGEY
-	db  4, PIDGEY
-	db  4, RATTATA
-	db  5, PIDGEY
+	db  8, RATTATA
+	db  8, PIDGEY
+	db  9, PIDGEY
+	db  9, RATTATA
+	db  9, PIDGEY
 IF DEF(_RED)
-	db  3, WEEDLE
-	db  2, RATTATA
-	db  5, RATTATA
-	db  4, WEEDLE
-	db  5, WEEDLE
+	db  8, WEEDLE
+	db  8, RATTATA
+	db  9, RATTATA
+	db  9, WEEDLE
+	db  9, WEEDLE
 ENDC
 IF DEF(_BLUE)
-	db  3, CATERPIE
-	db  2, RATTATA
-	db  5, RATTATA
-	db  4, CATERPIE
-	db  5, CATERPIE
+	db  8, CATERPIE
+	db  8, RATTATA
+	db  9, RATTATA
+	db  9, CATERPIE
+	db  9, CATERPIE
 ENDC
 	end_grass_wildmons
 
@@ -723,16 +723,16 @@ ENDC
 
 Route3WildMons1:
 	def_grass_wildmons 20 ; encounter rate
-	db  6, PIDGEY
-	db  5, SPEAROW
-	db  7, PIDGEY
-	db  6, SPEAROW
-	db  7, SPEAROW
 	db  8, PIDGEY
 	db  8, SPEAROW
-	db  3, JIGGLYPUFF
-	db  5, JIGGLYPUFF
-	db  7, JIGGLYPUFF
+	db  9, PIDGEY
+	db  8, SPEAROW
+	db  9, SPEAROW
+	db  9, PIDGEY
+	db  9, SPEAROW
+	db  8, JIGGLYPUFF
+	db  9, JIGGLYPUFF
+	db  9, JIGGLYPUFF
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -740,26 +740,26 @@ Route3WildMons1:
 
 Route4WildMons1:
 	def_grass_wildmons 20 ; encounter rate
-	db 10, RATTATA
-	db 10, SPEAROW
+	db  9, RATTATA
+	db  9, SPEAROW
 	db  8, RATTATA
 IF DEF(_RED)
-	db  6, EKANS
-	db  8, SPEAROW
-	db 10, EKANS
-	db 12, RATTATA
-	db 12, SPEAROW
 	db  8, EKANS
-	db 12, EKANS
+	db  8, SPEAROW
+	db  9, EKANS
+	db 10, RATTATA
+	db 10, SPEAROW
+	db  8, EKANS
+	db 10, EKANS
 ENDC
 IF DEF(_BLUE)
-	db  6, SANDSHREW
-	db  8, SPEAROW
-	db 10, SANDSHREW
-	db 12, RATTATA
-	db 12, SPEAROW
 	db  8, SANDSHREW
-	db 12, SANDSHREW
+	db  8, SPEAROW
+	db  9, SANDSHREW
+	db 10, RATTATA
+	db 10, SPEAROW
+	db  8, SANDSHREW
+	db 10, SANDSHREW
 ENDC
 	end_grass_wildmons
 
@@ -769,28 +769,28 @@ ENDC
 Route5WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 13, ODDISH
-	db 13, PIDGEY
-	db 15, PIDGEY
+	db  9, ODDISH
+	db  9, PIDGEY
+	db 10, PIDGEY
+	db  8, MANKEY
+	db  9, MANKEY
+	db 10, ODDISH
+	db 11, ODDISH
+	db 11, PIDGEY
 	db 10, MANKEY
-	db 12, MANKEY
-	db 15, ODDISH
-	db 16, ODDISH
-	db 16, PIDGEY
-	db 14, MANKEY
-	db 16, MANKEY
+	db 11, MANKEY
 ENDC
 IF DEF(_BLUE)
-	db 13, BELLSPROUT
-	db 13, PIDGEY
-	db 15, PIDGEY
+	db  9, BELLSPROUT
+	db  9, PIDGEY
+	db 10, PIDGEY
+	db  8, MEOWTH
+	db  9, MEOWTH
+	db 10, BELLSPROUT
+	db 11, BELLSPROUT
+	db 11, PIDGEY
 	db 10, MEOWTH
-	db 12, MEOWTH
-	db 15, BELLSPROUT
-	db 16, BELLSPROUT
-	db 16, PIDGEY
-	db 14, MEOWTH
-	db 16, MEOWTH
+	db 11, MEOWTH
 ENDC
 	end_grass_wildmons
 
@@ -800,28 +800,28 @@ ENDC
 Route6WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 13, ODDISH
-	db 13, PIDGEY
-	db 15, PIDGEY
+	db  9, ODDISH
+	db  9, PIDGEY
+	db 10, PIDGEY
+	db  8, MANKEY
+	db  9, MANKEY
+	db 10, ODDISH
+	db 11, ODDISH
+	db 11, PIDGEY
 	db 10, MANKEY
-	db 12, MANKEY
-	db 15, ODDISH
-	db 16, ODDISH
-	db 16, PIDGEY
-	db 14, MANKEY
-	db 16, MANKEY
+	db 11, MANKEY
 ENDC
 IF DEF(_BLUE)
-	db 13, BELLSPROUT
-	db 13, PIDGEY
-	db 15, PIDGEY
+	db  9, BELLSPROUT
+	db  9, PIDGEY
+	db 10, PIDGEY
+	db  8, MEOWTH
+	db  9, MEOWTH
+	db 10, BELLSPROUT
+	db 11, BELLSPROUT
+	db 11, PIDGEY
 	db 10, MEOWTH
-	db 12, MEOWTH
-	db 15, BELLSPROUT
-	db 16, BELLSPROUT
-	db 16, PIDGEY
-	db 14, MEOWTH
-	db 16, MEOWTH
+	db 11, MEOWTH
 ENDC
 	end_grass_wildmons
 
@@ -830,28 +830,28 @@ ENDC
 
 Route7WildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 19, PIDGEY
+	db 12, PIDGEY
 IF DEF(_RED)
-	db 19, ODDISH
-	db 17, MANKEY
-	db 22, ODDISH
-	db 22, PIDGEY
-	db 18, MANKEY
-	db 18, GROWLITHE
-	db 20, GROWLITHE
-	db 19, MANKEY
-	db 20, MANKEY
+	db 12, ODDISH
+	db 11, MANKEY
+	db 13, ODDISH
+	db 13, PIDGEY
+	db 12, MANKEY
+	db 12, GROWLITHE
+	db 13, GROWLITHE
+	db 12, MANKEY
+	db 13, MANKEY
 ENDC
 IF DEF(_BLUE)
-	db 19, BELLSPROUT
-	db 17, MEOWTH
-	db 22, BELLSPROUT
-	db 22, PIDGEY
-	db 18, MEOWTH
-	db 18, VULPIX
-	db 20, VULPIX
-	db 19, MEOWTH
-	db 20, MEOWTH
+	db 12, BELLSPROUT
+	db 11, MEOWTH
+	db 13, BELLSPROUT
+	db 13, PIDGEY
+	db 12, MEOWTH
+	db 12, VULPIX
+	db 13, VULPIX
+	db 12, MEOWTH
+	db 13, MEOWTH
 ENDC
 	end_grass_wildmons
 
@@ -860,28 +860,28 @@ ENDC
 
 Route8WildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 18, PIDGEY
+	db 12, PIDGEY
 IF DEF(_RED)
-	db 18, MANKEY
-	db 17, EKANS
-	db 16, GROWLITHE
-	db 20, PIDGEY
-	db 20, MANKEY
-	db 19, EKANS
-	db 17, GROWLITHE
-	db 15, GROWLITHE
-	db 18, GROWLITHE
+	db 12, MANKEY
+	db 11, EKANS
+	db 11, GROWLITHE
+	db 13, PIDGEY
+	db 13, MANKEY
+	db 12, EKANS
+	db 11, GROWLITHE
+	db 10, GROWLITHE
+	db 12, GROWLITHE
 ENDC
 IF DEF(_BLUE)
-	db 18, MEOWTH
-	db 17, SANDSHREW
-	db 16, VULPIX
-	db 20, PIDGEY
-	db 20, MEOWTH
-	db 19, SANDSHREW
-	db 17, VULPIX
-	db 15, VULPIX
-	db 18, VULPIX
+	db 12, MEOWTH
+	db 11, SANDSHREW
+	db 11, VULPIX
+	db 13, PIDGEY
+	db 13, MEOWTH
+	db 12, SANDSHREW
+	db 11, VULPIX
+	db 10, VULPIX
+	db 12, VULPIX
 ENDC
 	end_grass_wildmons
 
@@ -890,26 +890,26 @@ ENDC
 
 Route9WildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 16, RATTATA
-	db 16, SPEAROW
-	db 14, RATTATA
+	db 10, RATTATA
+	db 10, SPEAROW
+	db  9, RATTATA
 IF DEF(_RED)
+	db  9, EKANS
+	db  9, SPEAROW
+	db 10, EKANS
+	db 11, RATTATA
+	db 11, SPEAROW
+	db  9, EKANS
 	db 11, EKANS
-	db 13, SPEAROW
-	db 15, EKANS
-	db 17, RATTATA
-	db 17, SPEAROW
-	db 13, EKANS
-	db 17, EKANS
 ENDC
 IF DEF(_BLUE)
+	db  9, SANDSHREW
+	db  9, SPEAROW
+	db 10, SANDSHREW
+	db 11, RATTATA
+	db 11, SPEAROW
+	db  9, SANDSHREW
 	db 11, SANDSHREW
-	db 13, SPEAROW
-	db 15, SANDSHREW
-	db 17, RATTATA
-	db 17, SPEAROW
-	db 13, SANDSHREW
-	db 17, SANDSHREW
 ENDC
 	end_grass_wildmons
 
@@ -918,26 +918,26 @@ ENDC
 
 Route10WildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 16, VOLTORB
-	db 16, SPEAROW
-	db 14, VOLTORB
+	db 10, VOLTORB
+	db 10, SPEAROW
+	db  9, VOLTORB
 IF DEF(_RED)
+	db  9, EKANS
+	db  9, SPEAROW
+	db 10, EKANS
+	db 11, VOLTORB
+	db 11, SPEAROW
+	db  9, EKANS
 	db 11, EKANS
-	db 13, SPEAROW
-	db 15, EKANS
-	db 17, VOLTORB
-	db 17, SPEAROW
-	db 13, EKANS
-	db 17, EKANS
 ENDC
 IF DEF(_BLUE)
+	db  9, SANDSHREW
+	db  9, SPEAROW
+	db 10, SANDSHREW
+	db 11, VOLTORB
+	db 11, SPEAROW
+	db  9, SANDSHREW
 	db 11, SANDSHREW
-	db 13, SPEAROW
-	db 15, SANDSHREW
-	db 17, VOLTORB
-	db 17, SPEAROW
-	db 13, SANDSHREW
-	db 17, SANDSHREW
 ENDC
 	end_grass_wildmons
 
@@ -947,26 +947,26 @@ ENDC
 Route11WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 14, EKANS
-	db 15, SPEAROW
-	db 12, EKANS
+	db 10, EKANS
+	db 10, SPEAROW
+	db  9, EKANS
+	db  8, DROWZEE
+	db  9, SPEAROW
 	db  9, DROWZEE
-	db 13, SPEAROW
-	db 13, DROWZEE
-	db 15, EKANS
+	db 10, EKANS
 ENDC
 IF DEF(_BLUE)
-	db 14, SANDSHREW
-	db 15, SPEAROW
-	db 12, SANDSHREW
+	db 10, SANDSHREW
+	db 10, SPEAROW
+	db  9, SANDSHREW
+	db  8, DROWZEE
+	db  9, SPEAROW
 	db  9, DROWZEE
-	db 13, SPEAROW
-	db 13, DROWZEE
-	db 15, SANDSHREW
+	db 10, SANDSHREW
 ENDC
-	db 17, SPEAROW
-	db 11, DROWZEE
-	db 15, DROWZEE
+	db 11, SPEAROW
+	db  9, DROWZEE
+	db 10, DROWZEE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -975,28 +975,28 @@ ENDC
 Route12WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 24, ODDISH
-	db 25, PIDGEY
-	db 23, PIDGEY
-	db 24, VENONAT
-	db 22, ODDISH
-	db 26, VENONAT
-	db 26, ODDISH
-	db 27, PIDGEY
-	db 28, GLOOM
-	db 30, GLOOM
+	db 11, ODDISH
+	db 12, PIDGEY
+	db 11, PIDGEY
+	db 12, VENONAT
+	db 10, ODDISH
+	db 13, VENONAT
+	db 13, ODDISH
+	db 13, PIDGEY
+	db 15, GLOOM
+	db 16, GLOOM
 ENDC
 IF DEF(_BLUE)
-	db 24, BELLSPROUT
-	db 25, PIDGEY
-	db 23, PIDGEY
-	db 24, VENONAT
-	db 22, BELLSPROUT
-	db 26, VENONAT
-	db 26, BELLSPROUT
-	db 27, PIDGEY
-	db 28, WEEPINBELL
-	db 30, WEEPINBELL
+	db 11, BELLSPROUT
+	db 12, PIDGEY
+	db 11, PIDGEY
+	db 12, VENONAT
+	db 10, BELLSPROUT
+	db 13, VENONAT
+	db 13, BELLSPROUT
+	db 13, PIDGEY
+	db 15, WEEPINBELL
+	db 16, WEEPINBELL
 ENDC
 	end_grass_wildmons
 
@@ -1006,28 +1006,28 @@ ENDC
 Route13WildMons1:
 	def_grass_wildmons 20 ; encounter rate
 IF DEF(_RED)
-	db 24, ODDISH
-	db 25, PIDGEY
-	db 27, PIDGEY
-	db 24, VENONAT
-	db 22, ODDISH
-	db 26, VENONAT
-	db 26, ODDISH
-	db 25, DITTO
-	db 28, GLOOM
-	db 30, GLOOM
+	db 11, ODDISH
+	db 12, PIDGEY
+	db 13, PIDGEY
+	db 12, VENONAT
+	db 10, ODDISH
+	db 13, VENONAT
+	db 13, ODDISH
+	db 12, DITTO
+	db 15, GLOOM
+	db 16, GLOOM
 ENDC
 IF DEF(_BLUE)
-	db 24, BELLSPROUT
-	db 25, PIDGEY
-	db 27, PIDGEY
-	db 24, VENONAT
-	db 22, BELLSPROUT
-	db 26, VENONAT
-	db 26, BELLSPROUT
-	db 25, DITTO
-	db 28, WEEPINBELL
-	db 30, WEEPINBELL
+	db 11, BELLSPROUT
+	db 12, PIDGEY
+	db 13, PIDGEY
+	db 12, VENONAT
+	db 10, BELLSPROUT
+	db 13, VENONAT
+	db 13, BELLSPROUT
+	db 12, DITTO
+	db 15, WEEPINBELL
+	db 16, WEEPINBELL
 ENDC
 	end_grass_wildmons
 
@@ -1037,27 +1037,27 @@ ENDC
 Route14WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 24, ODDISH
-	db 26, PIDGEY
-	db 23, DITTO
-	db 24, VENONAT
-	db 22, ODDISH
-	db 26, VENONAT
-	db 26, ODDISH
-	db 30, GLOOM
+	db 11, ODDISH
+	db 13, PIDGEY
+	db 11, DITTO
+	db 12, VENONAT
+	db 10, ODDISH
+	db 13, VENONAT
+	db 13, ODDISH
+	db 16, GLOOM
 ENDC
 IF DEF(_BLUE)
-	db 24, BELLSPROUT
-	db 26, PIDGEY
-	db 23, DITTO
-	db 24, VENONAT
-	db 22, BELLSPROUT
-	db 26, VENONAT
-	db 26, BELLSPROUT
-	db 30, WEEPINBELL
+	db 11, BELLSPROUT
+	db 13, PIDGEY
+	db 11, DITTO
+	db 12, VENONAT
+	db 10, BELLSPROUT
+	db 13, VENONAT
+	db 13, BELLSPROUT
+	db 16, WEEPINBELL
 ENDC
-	db 28, PIDGEOTTO
-	db 30, PIDGEOTTO
+	db 14, PIDGEOTTO
+	db 16, PIDGEOTTO
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1066,27 +1066,27 @@ ENDC
 Route15WildMons1:
 	def_grass_wildmons 15 ; encounter rate
 IF DEF(_RED)
-	db 24, ODDISH
-	db 26, DITTO
-	db 23, PIDGEY
-	db 26, VENONAT
-	db 22, ODDISH
-	db 28, VENONAT
-	db 26, ODDISH
-	db 30, GLOOM
+	db 11, ODDISH
+	db 13, DITTO
+	db 11, PIDGEY
+	db 13, VENONAT
+	db 10, ODDISH
+	db 14, VENONAT
+	db 13, ODDISH
+	db 16, GLOOM
 ENDC
 IF DEF(_BLUE)
-	db 24, BELLSPROUT
-	db 26, DITTO
-	db 23, PIDGEY
-	db 26, VENONAT
-	db 22, BELLSPROUT
-	db 28, VENONAT
-	db 26, BELLSPROUT
-	db 30, WEEPINBELL
+	db 11, BELLSPROUT
+	db 13, DITTO
+	db 11, PIDGEY
+	db 13, VENONAT
+	db 10, BELLSPROUT
+	db 14, VENONAT
+	db 13, BELLSPROUT
+	db 16, WEEPINBELL
 ENDC
-	db 28, PIDGEOTTO
-	db 30, PIDGEOTTO
+	db 14, PIDGEOTTO
+	db 16, PIDGEOTTO
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1094,16 +1094,16 @@ ENDC
 
 Route16WildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db 20, SPEAROW
-	db 22, SPEAROW
-	db 18, RATTATA
-	db 20, DODUO
-	db 20, RATTATA
-	db 18, DODUO
-	db 22, DODUO
-	db 22, RATTATA
-	db 23, RATICATE
-	db 25, RATICATE
+	db 10, SPEAROW
+	db 11, SPEAROW
+	db  9, RATTATA
+	db 10, DODUO
+	db 10, RATTATA
+	db  9, DODUO
+	db 11, DODUO
+	db 11, RATTATA
+	db 12, RATICATE
+	db 13, RATICATE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1111,16 +1111,16 @@ Route16WildMons1:
 
 Route17WildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db 20, SPEAROW
-	db 22, SPEAROW
-	db 25, RATICATE
-	db 24, DODUO
-	db 27, RATICATE
-	db 26, DODUO
-	db 28, DODUO
-	db 29, RATICATE
-	db 25, FEAROW
-	db 27, FEAROW
+	db 11, SPEAROW
+	db 12, SPEAROW
+	db 13, RATICATE
+	db 13, DODUO
+	db 15, RATICATE
+	db 14, DODUO
+	db 15, DODUO
+	db 16, RATICATE
+	db 14, FEAROW
+	db 15, FEAROW
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1128,16 +1128,16 @@ Route17WildMons1:
 
 Route18WildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db 20, SPEAROW
-	db 22, SPEAROW
-	db 25, RATICATE
-	db 24, DODUO
-	db 25, FEAROW
-	db 26, DODUO
-	db 28, DODUO
-	db 29, RATICATE
-	db 27, FEAROW
-	db 29, FEAROW
+	db 11, SPEAROW
+	db 12, SPEAROW
+	db 13, RATICATE
+	db 13, DODUO
+	db 14, FEAROW
+	db 14, DODUO
+	db 15, DODUO
+	db 16, RATICATE
+	db 15, FEAROW
+	db 16, FEAROW
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1145,55 +1145,55 @@ Route18WildMons1:
 
 Route21WildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db 21, RATTATA
-	db 23, PIDGEY
-	db 30, RATICATE
-	db 23, RATTATA
-	db 21, PIDGEY
-	db 30, PIDGEOTTO
-	db 32, PIDGEOTTO
-	db 28, TANGELA
-	db 30, TANGELA
-	db 32, TANGELA
+	db 11, RATTATA
+	db 12, PIDGEY
+	db 15, RATICATE
+	db 12, RATTATA
+	db 11, PIDGEY
+	db 15, PIDGEOTTO
+	db 16, PIDGEOTTO
+	db 15, TANGELA
+	db 16, TANGELA
+	db 17, TANGELA
 	end_grass_wildmons
 
 	def_water_wildmons 5 ; encounter rate
-	db  5, TENTACOOL
+	db  8, TENTACOOL
+	db  9, TENTACOOL
 	db 10, TENTACOOL
-	db 15, TENTACOOL
-	db  5, TENTACOOL
+	db  8, TENTACOOL
+	db  9, TENTACOOL
 	db 10, TENTACOOL
+	db 11, TENTACOOL
+	db 13, TENTACOOL
 	db 15, TENTACOOL
-	db 20, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACOOL
-	db 40, TENTACOOL
+	db 16, TENTACOOL
 	end_water_wildmons
 
 Route22WildMons1:
 	def_grass_wildmons 25 ; encounter rate
-	db  3, RATTATA
+	db  8, RATTATA
 IF DEF(_RED)
-	db  3, NIDORAN_M
-	db  4, RATTATA
-	db  4, NIDORAN_M
-	db  2, RATTATA
-	db  2, NIDORAN_M
-	db  3, SPEAROW
-	db  5, SPEAROW
-	db  3, NIDORAN_F
-	db  4, NIDORAN_F
+	db  8, NIDORAN_M
+	db  9, RATTATA
+	db  9, NIDORAN_M
+	db  8, RATTATA
+	db  8, NIDORAN_M
+	db  8, SPEAROW
+	db  9, SPEAROW
+	db  8, NIDORAN_F
+	db  9, NIDORAN_F
 ENDC
 IF DEF(_BLUE)
-	db  3, NIDORAN_F
-	db  4, RATTATA
-	db  4, NIDORAN_F
-	db  2, RATTATA
-	db  2, NIDORAN_F
-	db  3, SPEAROW
-	db  5, SPEAROW
-	db  3, NIDORAN_M
-	db  4, NIDORAN_M
+	db  8, NIDORAN_F
+	db  9, RATTATA
+	db  9, NIDORAN_F
+	db  8, RATTATA
+	db  8, NIDORAN_F
+	db  8, SPEAROW
+	db  9, SPEAROW
+	db  8, NIDORAN_M
+	db  9, NIDORAN_M
 ENDC
 	end_grass_wildmons
 
@@ -1203,25 +1203,25 @@ ENDC
 Route23WildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 26, EKANS
+	db 13, EKANS
 ENDC
 IF DEF(_BLUE)
-	db 26, SANDSHREW
+	db 13, SANDSHREW
 ENDC
-	db 33, DITTO
-	db 26, SPEAROW
-	db 38, FEAROW
-	db 38, DITTO
-	db 38, FEAROW
+	db 15, DITTO
+	db 13, SPEAROW
+	db 16, FEAROW
+	db 16, DITTO
+	db 16, FEAROW
 IF DEF(_RED)
-	db 41, ARBOK
+	db 17, ARBOK
 ENDC
 IF DEF(_BLUE)
-	db 41, SANDSLASH
+	db 17, SANDSLASH
 ENDC
-	db 43, DITTO
-	db 41, FEAROW
-	db 43, FEAROW
+	db 17, DITTO
+	db 17, FEAROW
+	db 17, FEAROW
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1230,26 +1230,26 @@ ENDC
 Route24WildMons1:
 	def_grass_wildmons 25 ; encounter rate
 IF DEF(_RED)
-	db  7, WEEDLE
-	db  8, KAKUNA
-	db 12, PIDGEY
-	db 12, ODDISH
-	db 13, ODDISH
-	db 10, ABRA
-	db 14, ODDISH
+	db  8, WEEDLE
+	db  9, KAKUNA
+	db 10, PIDGEY
+	db  9, ODDISH
+	db 10, ODDISH
+	db  8, ABRA
+	db 11, ODDISH
 ENDC
 IF DEF(_BLUE)
-	db  7, CATERPIE
-	db  8, METAPOD
-	db 12, PIDGEY
-	db 12, BELLSPROUT
-	db 13, BELLSPROUT
-	db 10, ABRA
-	db 14, BELLSPROUT
-ENDC
-	db 13, PIDGEY
+	db  8, CATERPIE
+	db  9, METAPOD
+	db 10, PIDGEY
+	db  9, BELLSPROUT
+	db 10, BELLSPROUT
 	db  8, ABRA
-	db 12, ABRA
+	db 11, BELLSPROUT
+ENDC
+	db 10, PIDGEY
+	db  8, ABRA
+	db 10, ABRA
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1260,25 +1260,25 @@ Route25WildMons1:
 IF DEF(_RED)
 	db  8, WEEDLE
 	db  9, KAKUNA
-	db 13, PIDGEY
-	db 12, ODDISH
-	db 13, ODDISH
-	db 12, ABRA
-	db 14, ODDISH
-	db 10, ABRA
-	db  7, METAPOD
+	db 10, PIDGEY
+	db  9, ODDISH
+	db 10, ODDISH
+	db  9, ABRA
+	db 11, ODDISH
+	db  8, ABRA
+	db  9, METAPOD
 	db  8, CATERPIE
 ENDC
 IF DEF(_BLUE)
 	db  8, CATERPIE
 	db  9, METAPOD
-	db 13, PIDGEY
-	db 12, BELLSPROUT
-	db 13, BELLSPROUT
-	db 12, ABRA
-	db 14, BELLSPROUT
-	db 10, ABRA
-	db  7, KAKUNA
+	db 10, PIDGEY
+	db  9, BELLSPROUT
+	db 10, BELLSPROUT
+	db  9, ABRA
+	db 11, BELLSPROUT
+	db  8, ABRA
+	db  9, KAKUNA
 	db  8, WEEDLE
 ENDC
 	end_grass_wildmons
@@ -1289,28 +1289,28 @@ ENDC
 SafariZoneCenterWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
-	db 22, NIDORAN_M
-	db 25, RHYHORN
-	db 22, VENONAT
-	db 24, EXEGGCUTE
-	db 31, NIDORINO
-	db 25, EXEGGCUTE
-	db 31, NIDORINA
-	db 30, PARASECT
-	db 23, SCYTHER
+	db 13, NIDORAN_M
+	db 14, RHYHORN
+	db 13, VENONAT
+	db 14, EXEGGCUTE
+	db 15, NIDORINO
+	db 14, EXEGGCUTE
+	db 15, NIDORINA
+	db 15, PARASECT
+	db 13, SCYTHER
 ENDC
 IF DEF(_BLUE)
-	db 22, NIDORAN_F
-	db 25, RHYHORN
-	db 22, VENONAT
-	db 24, EXEGGCUTE
-	db 31, NIDORINA
-	db 25, EXEGGCUTE
-	db 31, NIDORINO
-	db 30, PARASECT
-	db 23, PINSIR
+	db 13, NIDORAN_F
+	db 14, RHYHORN
+	db 13, VENONAT
+	db 14, EXEGGCUTE
+	db 15, NIDORINA
+	db 14, EXEGGCUTE
+	db 15, NIDORINO
+	db 15, PARASECT
+	db 13, PINSIR
 ENDC
-	db 23, CHANSEY
+	db 13, CHANSEY
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1319,28 +1319,28 @@ ENDC
 SafariZoneEastWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
-	db 24, NIDORAN_M
-	db 26, DODUO
-	db 22, PARAS
-	db 25, EXEGGCUTE
-	db 33, NIDORINO
-	db 23, EXEGGCUTE
-	db 24, NIDORAN_F
-	db 25, PARASECT
-	db 25, KANGASKHAN
-	db 28, SCYTHER
+	db 14, NIDORAN_M
+	db 14, DODUO
+	db 13, PARAS
+	db 14, EXEGGCUTE
+	db 16, NIDORINO
+	db 13, EXEGGCUTE
+	db 14, NIDORAN_F
+	db 14, PARASECT
+	db 14, KANGASKHAN
+	db 15, SCYTHER
 ENDC
 IF DEF(_BLUE)
-	db 24, NIDORAN_F
-	db 26, DODUO
-	db 22, PARAS
-	db 25, EXEGGCUTE
-	db 33, NIDORINA
-	db 23, EXEGGCUTE
-	db 24, NIDORAN_M
-	db 25, PARASECT
-	db 25, KANGASKHAN
-	db 28, PINSIR
+	db 14, NIDORAN_F
+	db 14, DODUO
+	db 13, PARAS
+	db 14, EXEGGCUTE
+	db 16, NIDORINA
+	db 13, EXEGGCUTE
+	db 14, NIDORAN_M
+	db 14, PARASECT
+	db 14, KANGASKHAN
+	db 15, PINSIR
 ENDC
 	end_grass_wildmons
 
@@ -1350,26 +1350,26 @@ ENDC
 SafariZoneNorthWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
-	db 22, NIDORAN_M
-	db 26, RHYHORN
-	db 23, PARAS
-	db 25, EXEGGCUTE
-	db 30, NIDORINO
-	db 27, EXEGGCUTE
-	db 30, NIDORINA
+	db 13, NIDORAN_M
+	db 14, RHYHORN
+	db 13, PARAS
+	db 14, EXEGGCUTE
+	db 15, NIDORINO
+	db 14, EXEGGCUTE
+	db 15, NIDORINA
 ENDC
 IF DEF(_BLUE)
-	db 22, NIDORAN_F
-	db 26, RHYHORN
-	db 23, PARAS
-	db 25, EXEGGCUTE
-	db 30, NIDORINA
-	db 27, EXEGGCUTE
-	db 30, NIDORINO
+	db 13, NIDORAN_F
+	db 14, RHYHORN
+	db 13, PARAS
+	db 14, EXEGGCUTE
+	db 15, NIDORINA
+	db 14, EXEGGCUTE
+	db 15, NIDORINO
 ENDC
-	db 32, VENOMOTH
-	db 26, CHANSEY
-	db 28, TAUROS
+	db 16, VENOMOTH
+	db 14, CHANSEY
+	db 15, TAUROS
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1378,26 +1378,26 @@ ENDC
 SafariZoneWestWildMons1:
 	def_grass_wildmons 30 ; encounter rate
 IF DEF(_RED)
-	db 25, NIDORAN_M
-	db 26, DODUO
-	db 23, VENONAT
-	db 24, EXEGGCUTE
-	db 33, NIDORINO
-	db 26, EXEGGCUTE
-	db 25, NIDORAN_F
+	db 14, NIDORAN_M
+	db 14, DODUO
+	db 13, VENONAT
+	db 14, EXEGGCUTE
+	db 16, NIDORINO
+	db 14, EXEGGCUTE
+	db 14, NIDORAN_F
 ENDC
 IF DEF(_BLUE)
-	db 25, NIDORAN_F
-	db 26, DODUO
-	db 23, VENONAT
-	db 24, EXEGGCUTE
-	db 33, NIDORINA
-	db 26, EXEGGCUTE
-	db 25, NIDORAN_M
+	db 14, NIDORAN_F
+	db 14, DODUO
+	db 13, VENONAT
+	db 14, EXEGGCUTE
+	db 16, NIDORINA
+	db 14, EXEGGCUTE
+	db 14, NIDORAN_M
 ENDC
-	db 31, VENOMOTH
-	db 26, TAUROS
-	db 28, KANGASKHAN
+	db 16, VENOMOTH
+	db 14, TAUROS
+	db 15, KANGASKHAN
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1405,28 +1405,28 @@ ENDC
 
 SeafoamIslands1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 30, SEEL
+	db 13, SEEL
 IF DEF(_RED)
-	db 30, SLOWPOKE
-	db 30, SHELLDER
-	db 30, HORSEA
-	db 28, HORSEA
-	db 21, ZUBAT
-	db 29, GOLBAT
-	db 28, PSYDUCK
-	db 28, SHELLDER
-	db 38, GOLDUCK
+	db 13, SLOWPOKE
+	db 13, SHELLDER
+	db 13, HORSEA
+	db 12, HORSEA
+	db 11, ZUBAT
+	db 13, GOLBAT
+	db 12, PSYDUCK
+	db 12, SHELLDER
+	db 17, GOLDUCK
 ENDC
 IF DEF(_BLUE)
-	db 30, PSYDUCK
-	db 30, STARYU
-	db 30, KRABBY
-	db 28, KRABBY
-	db 21, ZUBAT
-	db 29, GOLBAT
-	db 28, SLOWPOKE
-	db 28, STARYU
-	db 38, SLOWBRO
+	db 13, PSYDUCK
+	db 13, STARYU
+	db 13, KRABBY
+	db 12, KRABBY
+	db 11, ZUBAT
+	db 13, GOLBAT
+	db 12, SLOWPOKE
+	db 12, STARYU
+	db 17, SLOWBRO
 ENDC
 	end_grass_wildmons
 
@@ -1436,28 +1436,28 @@ ENDC
 SeafoamIslandsB1FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 30, STARYU
-	db 30, HORSEA
-	db 32, SHELLDER
-	db 32, HORSEA
-	db 28, SLOWPOKE
-	db 30, SEEL
-	db 30, SLOWPOKE
-	db 28, SEEL
-	db 38, DEWGONG
-	db 37, SEADRA
+	db 14, STARYU
+	db 14, HORSEA
+	db 15, SHELLDER
+	db 15, HORSEA
+	db 13, SLOWPOKE
+	db 14, SEEL
+	db 14, SLOWPOKE
+	db 13, SEEL
+	db 17, DEWGONG
+	db 17, SEADRA
 ENDC
 IF DEF(_BLUE)
-	db 30, SHELLDER
-	db 30, KRABBY
-	db 32, STARYU
-	db 32, KRABBY
-	db 28, PSYDUCK
-	db 30, SEEL
-	db 30, PSYDUCK
-	db 28, SEEL
-	db 38, DEWGONG
-	db 37, KINGLER
+	db 14, SHELLDER
+	db 14, KRABBY
+	db 15, STARYU
+	db 15, KRABBY
+	db 13, PSYDUCK
+	db 14, SEEL
+	db 14, PSYDUCK
+	db 13, SEEL
+	db 17, DEWGONG
+	db 17, KINGLER
 ENDC
 	end_grass_wildmons
 
@@ -1466,28 +1466,28 @@ ENDC
 
 SeafoamIslandsB2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 30, SEEL
+	db 15, SEEL
 IF DEF(_RED)
-	db 30, SLOWPOKE
-	db 32, SEEL
-	db 32, SLOWPOKE
-	db 28, HORSEA
-	db 30, STARYU
-	db 30, HORSEA
-	db 28, SHELLDER
-	db 30, GOLBAT
-	db 37, SLOWBRO
+	db 15, SLOWPOKE
+	db 16, SEEL
+	db 16, SLOWPOKE
+	db 14, HORSEA
+	db 15, STARYU
+	db 15, HORSEA
+	db 14, SHELLDER
+	db 15, GOLBAT
+	db 17, SLOWBRO
 ENDC
 IF DEF(_BLUE)
-	db 30, PSYDUCK
-	db 32, SEEL
-	db 32, PSYDUCK
-	db 28, KRABBY
-	db 30, SHELLDER
-	db 30, KRABBY
-	db 28, STARYU
-	db 30, GOLBAT
-	db 37, GOLDUCK
+	db 15, PSYDUCK
+	db 16, SEEL
+	db 16, PSYDUCK
+	db 14, KRABBY
+	db 15, SHELLDER
+	db 15, KRABBY
+	db 14, STARYU
+	db 15, GOLBAT
+	db 17, GOLDUCK
 ENDC
 	end_grass_wildmons
 
@@ -1497,28 +1497,28 @@ ENDC
 SeafoamIslandsB3FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 31, SLOWPOKE
-	db 31, SEEL
-	db 33, SLOWPOKE
-	db 33, SEEL
-	db 29, HORSEA
-	db 31, SHELLDER
-	db 31, HORSEA
-	db 29, SHELLDER
-	db 39, SEADRA
+	db 16, SLOWPOKE
+	db 16, SEEL
+	db 17, SLOWPOKE
+	db 17, SEEL
+	db 15, HORSEA
+	db 16, SHELLDER
+	db 16, HORSEA
+	db 15, SHELLDER
+	db 17, SEADRA
 ENDC
 IF DEF(_BLUE)
-	db 31, PSYDUCK
-	db 31, SEEL
-	db 33, PSYDUCK
-	db 33, SEEL
-	db 29, KRABBY
-	db 31, STARYU
-	db 31, KRABBY
-	db 29, STARYU
-	db 39, KINGLER
+	db 16, PSYDUCK
+	db 16, SEEL
+	db 17, PSYDUCK
+	db 17, SEEL
+	db 15, KRABBY
+	db 16, STARYU
+	db 16, KRABBY
+	db 15, STARYU
+	db 17, KINGLER
 ENDC
-	db 37, DEWGONG
+	db 17, DEWGONG
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1527,28 +1527,28 @@ ENDC
 SeafoamIslandsB4FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 IF DEF(_RED)
-	db 31, HORSEA
-	db 31, SHELLDER
-	db 33, HORSEA
-	db 33, SHELLDER
-	db 29, SLOWPOKE
-	db 31, SEEL
-	db 31, SLOWPOKE
-	db 29, SEEL
-	db 39, SLOWBRO
+	db 16, HORSEA
+	db 16, SHELLDER
+	db 17, HORSEA
+	db 17, SHELLDER
+	db 15, SLOWPOKE
+	db 16, SEEL
+	db 16, SLOWPOKE
+	db 15, SEEL
+	db 17, SLOWBRO
 ENDC
 IF DEF(_BLUE)
-	db 31, KRABBY
-	db 31, STARYU
-	db 33, KRABBY
-	db 33, STARYU
-	db 29, PSYDUCK
-	db 31, SEEL
-	db 31, PSYDUCK
-	db 29, SEEL
-	db 39, GOLDUCK
+	db 16, KRABBY
+	db 16, STARYU
+	db 17, KRABBY
+	db 17, STARYU
+	db 15, PSYDUCK
+	db 16, SEEL
+	db 16, PSYDUCK
+	db 15, SEEL
+	db 17, GOLDUCK
 ENDC
-	db 32, GOLBAT
+	db 16, GOLBAT
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1559,30 +1559,30 @@ SeaRoutesWildMons1:
 	end_grass_wildmons
 
 	def_water_wildmons 5 ; encounter rate
-	db  5, TENTACOOL
+	db  8, TENTACOOL
+	db  9, TENTACOOL
 	db 10, TENTACOOL
-	db 15, TENTACOOL
-	db  5, TENTACOOL
+	db  8, TENTACOOL
+	db  9, TENTACOOL
 	db 10, TENTACOOL
+	db 11, TENTACOOL
+	db 13, TENTACOOL
 	db 15, TENTACOOL
-	db 20, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACOOL
-	db 40, TENTACOOL
+	db 16, TENTACOOL
 	end_water_wildmons
 
 VictoryRoad1FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 24, MACHOP
-	db 26, GEODUDE
-	db 22, ZUBAT
-	db 36, ONIX
-	db 39, ONIX
-	db 42, ONIX
-	db 41, GRAVELER
-	db 41, GOLBAT
-	db 42, MACHOKE
-	db 43, MAROWAK
+	db 12, MACHOP
+	db 13, GEODUDE
+	db 11, ZUBAT
+	db 16, ONIX
+	db 16, ONIX
+	db 17, ONIX
+	db 17, GRAVELER
+	db 17, GOLBAT
+	db 17, MACHOKE
+	db 17, MAROWAK
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1590,16 +1590,16 @@ VictoryRoad1FWildMons1:
 
 VictoryRoad2FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 22, MACHOP
-	db 24, GEODUDE
-	db 26, ZUBAT
-	db 36, ONIX
-	db 39, ONIX
-	db 42, ONIX
-	db 41, MACHOKE
-	db 40, GOLBAT
-	db 40, MAROWAK
-	db 43, GRAVELER
+	db 13, MACHOP
+	db 13, GEODUDE
+	db 13, ZUBAT
+	db 16, ONIX
+	db 16, ONIX
+	db 17, ONIX
+	db 17, MACHOKE
+	db 16, GOLBAT
+	db 16, MAROWAK
+	db 17, GRAVELER
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1607,16 +1607,16 @@ VictoryRoad2FWildMons1:
 
 VictoryRoad3FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 24, MACHOP
-	db 26, GEODUDE
-	db 22, ZUBAT
-	db 42, ONIX
-	db 40, VENOMOTH
-	db 45, ONIX
-	db 43, GRAVELER
-	db 41, GOLBAT
-	db 42, MACHOKE
-	db 45, MACHOKE
+	db 14, MACHOP
+	db 14, GEODUDE
+	db 13, ZUBAT
+	db 17, ONIX
+	db 16, VENOMOTH
+	db 17, ONIX
+	db 17, GRAVELER
+	db 17, GOLBAT
+	db 17, MACHOKE
+	db 17, MACHOKE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1625,27 +1625,27 @@ VictoryRoad3FWildMons1:
 ViridianForestWildMons1:
 	def_grass_wildmons 8 ; encounter rate
 IF DEF(_RED)
-	db  4, WEEDLE
-	db  5, KAKUNA
-	db  3, WEEDLE
-	db  5, WEEDLE
-	db  4, KAKUNA
-	db  6, KAKUNA
-	db  4, METAPOD
-	db  3, CATERPIE
+	db  8, WEEDLE
+	db  9, KAKUNA
+	db  8, WEEDLE
+	db  9, WEEDLE
+	db  8, KAKUNA
+	db  9, KAKUNA
+	db  8, METAPOD
+	db  8, CATERPIE
 ENDC
 IF DEF(_BLUE)
-	db  4, CATERPIE
-	db  5, METAPOD
-	db  3, CATERPIE
-	db  5, CATERPIE
-	db  4, METAPOD
-	db  6, METAPOD
-	db  4, KAKUNA
-	db  3, WEEDLE
+	db  8, CATERPIE
+	db  9, METAPOD
+	db  8, CATERPIE
+	db  9, CATERPIE
+	db  8, METAPOD
+	db  9, METAPOD
+	db  8, KAKUNA
+	db  8, WEEDLE
 ENDC
-	db  3, PIKACHU
-	db  5, PIKACHU
+	db  8, PIKACHU
+	db  9, PIKACHU
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

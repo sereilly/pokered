@@ -1,5 +1,5 @@
-LoadWildData::
-	ld hl, WildDataPointers
+LoadWildData3::
+	ld hl, WildDataPointers3
 	ld a, [wCurMap]
 
 	; get wild data for current map
@@ -30,4 +30,4 @@ LoadWildData::
 	ld bc, $14
 	jp CopyData
 
-INCLUDE "data/wild/grass_water.asm"
+INCLUDE "data/wild/grass_water_3.asm"

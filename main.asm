@@ -74,11 +74,31 @@ INCLUDE "engine/events/hidden_objects/town_map.asm"
 INCLUDE "engine/events/hidden_objects/pokemon_stuff.asm"
 
 SECTION "Wild Mons 0", ROMX
-INCLUDE "engine/overworld/wild_mons.asm"
+INCLUDE "engine/overworld/wild_mons_0.asm"
 
 SECTION "Wild Mons 1", ROMX
 INCLUDE "engine/overworld/wild_mons_1.asm"
 
+SECTION "Wild Mons 2", ROMX
+INCLUDE "engine/overworld/wild_mons_2.asm"
+
+SECTION "Wild Mons 3", ROMX
+INCLUDE "engine/overworld/wild_mons_3.asm"
+
+SECTION "Wild Mons 4", ROMX
+INCLUDE "engine/overworld/wild_mons_4.asm"
+
+SECTION "Wild Mons 5", ROMX
+INCLUDE "engine/overworld/wild_mons_5.asm"
+
+SECTION "Wild Mons 6", ROMX
+INCLUDE "engine/overworld/wild_mons_6.asm"
+
+SECTION "Wild Mons 7", ROMX
+INCLUDE "engine/overworld/wild_mons_7.asm"
+
+SECTION "Wild Mons 8", ROMX
+INCLUDE "engine/overworld/wild_mons_8.asm"
 
 SECTION "Font Graphics", ROMX
 

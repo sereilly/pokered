@@ -2252,7 +2252,24 @@ LoadMapHeader::
 	jp nz, .loadSpriteLoop
 .finishUp
 	predef LoadTilesetHeader
-	callfar LoadWildData
+	
+	call CountBadges       ; Count the number of badges obtained
+    ld a, b                ; Store the badge count in a
+    sla a                   ; multiply by 4 by shifting left to get the offset
+	sla a
+    ld e, a
+    ld d, 0
+    ld hl, WildDataPointersTable ; Load the base pointer table
+    add hl, de             ; Offset HL by the badge count * 4
+	ld a, [hli]              ; read the bank number of the trainer data
+	ld b, a				; Store the bank number in b
+	inc hl ; skip the next byte to get to the trainer pointer
+	ld a, [hli]            ; Load the low byte of the trainer pointer
+    ld h, [hl]             ; Load high byte into H
+    ld l, a                ; Put low byte into L
+	call Bankswitch
+	
+	;callfar LoadWildData
 	pop hl ; restore hl from before going to the warp/sign/sprite data (this value was saved for seemingly no purpose)
 	ld a, [wCurMapHeight] ; map height in 4x4 tile blocks
 	add a ; double it
@@ -2448,3 +2465,14 @@ LoadDestinationWarpPosition::
 	ldh [hLoadedROMBank], a
 	ld [MBC1RomBank], a
 	ret
+
+WildDataPointersTable:
+    dw BANK(LoadWildData0), LoadWildData0
+    dw BANK(LoadWildData1), LoadWildData1
+    dw BANK(LoadWildData2), LoadWildData2
+	dw BANK(LoadWildData3), LoadWildData3
+	dw BANK(LoadWildData4), LoadWildData4
+	dw BANK(LoadWildData5), LoadWildData5
+	dw BANK(LoadWildData6), LoadWildData6
+	dw BANK(LoadWildData7), LoadWildData7
+	dw BANK(LoadWildData8), LoadWildData8
