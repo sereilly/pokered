@@ -22,20 +22,6 @@ Route22SetDefaultScript:
 Route22NoopScript:
 	ret
 
-Route22GetRivalTrainerNoByStarterScript:
-	ld a, [wRivalStarter]
-	ld b, a
-.next_trainer_no
-	ld a, [hli]
-	cp b
-	jr z, .got_trainer_no
-	inc hl
-	jr .next_trainer_no
-.got_trainer_no
-	ld a, [hl]
-	ld [wTrainerNo], a
-	ret
-
 Route22MoveRivalRightScript:
 	ld de, Route22RivalMovementData
 	ld a, [wSavedCoordIndex]
@@ -135,7 +121,7 @@ Route22Rival1StartBattleScript:
 	ld a, OPP_RIVAL1
 	ld [wCurOpponent], a
 	ld hl, .StarterTable
-	call Route22GetRivalTrainerNoByStarterScript
+	farcall GetRivalTrainerNoByStarterScript
 	ld a, SCRIPT_ROUTE22_RIVAL1_AFTER_BATTLE
 	ld [wRoute22CurScript], a
 	ret
@@ -291,7 +277,7 @@ Route22Rival2StartBattleScript:
 	ld a, OPP_RIVAL2
 	ld [wCurOpponent], a
 	ld hl, .StarterTable
-	call Route22GetRivalTrainerNoByStarterScript
+	farcall GetRivalTrainerNoByStarterScript
 	ld a, SCRIPT_ROUTE22_RIVAL2_AFTER_BATTLE
 	ld [wRoute22CurScript], a
 	ret

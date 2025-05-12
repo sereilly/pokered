@@ -38,4 +38,45 @@ StarterPicked::
 	ld a, HS_STARTER_BALL_PEWTER_3
 	ld [wMissableObjectIndex], a
 	predef HideObject
+
+    call SetRivalStarter
     ret
+
+GetRivalTrainerNoByStarterScript::
+	ld a, [wRivalStarter]
+	ld b, a
+.next_trainer_no
+	ld a, [hli]
+	cp b
+	jr z, .got_trainer_no
+	inc hl
+	jr .next_trainer_no
+.got_trainer_no
+	ld a, [hl]
+	ld [wTrainerNo], a
+	ret
+
+
+SetRivalStarter::
+    ld a, [wPlayerStarter] ; load our chosen pokemon
+    ld b, a
+    ld hl, .RivalStarterTable ; look up rival starter
+.next_starter
+	ld a, [hli]
+	cp b
+	jr z, .got_starter
+	inc hl
+	jr .next_starter
+.got_starter
+	ld a, [hl]
+	ld [wRivalStarter], a ; store rival starter
+	ret
+
+.RivalStarterTable:
+; starter the rival picked, rival trainer number
+	db STARTER1, STARTER2_RIVAL
+	db STARTER2, STARTER3_RIVAL
+	db STARTER3, STARTER1_RIVAL
+    db STARTER1_PEWTER, STARTER2_RIVAL
+    db STARTER2_PEWTER, STARTER3_RIVAL
+    db STARTER3_PEWTER, STARTER1_RIVAL
