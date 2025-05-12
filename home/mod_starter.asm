@@ -51,19 +51,29 @@ StarterPicked::
     call SetRivalStarter
     ret
 
+
 GetRivalTrainerNoByStarterScript::
+    ld a, [wTrainerNo]
+    ld c, a
 	ld a, [wRivalStarter]
 	ld b, a
+    ld hl, .StarterTable ; look up rival trainer number
 .next_trainer_no
 	ld a, [hli]
 	cp b
 	jr z, .got_trainer_no
-	inc hl
+    inc c
 	jr .next_trainer_no
 .got_trainer_no
-	ld a, [hl]
+    ld a, c
 	ld [wTrainerNo], a
 	ret
+
+.StarterTable:
+    db STARTER2_RIVAL
+    db STARTER3_RIVAL
+    db STARTER1_RIVAL
+    ; TODO: add the other starters
 
 
 SetRivalStarter::

@@ -120,20 +120,18 @@ Route22Rival1StartBattleScript:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL1
 	ld [wCurOpponent], a
-	ld hl, .StarterTable
+	ld a, $4
+	ld [wTrainerNo], a ; battle offset
 	farcall GetRivalTrainerNoByStarterScript
 	ld a, SCRIPT_ROUTE22_RIVAL1_AFTER_BATTLE
 	ld [wRoute22CurScript], a
 	ret
 
-.StarterTable:
-; starter the rival picked, rival trainer number
-	db STARTER2, 4
-	db STARTER3, 5
-	db STARTER1, 6
-	db STARTER1_VIRIDIAN, 4
-	db STARTER1_VIRIDIAN, 5
-	db STARTER1_VIRIDIAN, 6
+; .StarterTable:
+; ; starter the rival picked, rival trainer number
+; 	db STARTER1_RIVAL, 4
+; 	db STARTER2_RIVAL, 5
+; 	db STARTER3_RIVAL, 6
 
 
 Route22Rival1AfterBattleScript:
@@ -279,17 +277,17 @@ Route22Rival2StartBattleScript:
 	ld de, Route22Rival2VictoryText
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL2
-	ld [wCurOpponent], a
-	ld hl, .StarterTable
+	ld a, $a
+	ld [wTrainerNo], a
 	farcall GetRivalTrainerNoByStarterScript
 	ld a, SCRIPT_ROUTE22_RIVAL2_AFTER_BATTLE
 	ld [wRoute22CurScript], a
 	ret
 
-.StarterTable:
-	db STARTER2, 10
-	db STARTER3, 11
-	db STARTER1, 12
+; .StarterTable:
+; 	db STARTER2, 10
+; 	db STARTER3, 11
+; 	db STARTER1, 12
 
 Route22Rival2AfterBattleScript:
 	ld a, [wIsInBattle]
