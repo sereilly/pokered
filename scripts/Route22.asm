@@ -131,6 +131,10 @@ Route22Rival1StartBattleScript:
 	db STARTER2, 4
 	db STARTER3, 5
 	db STARTER1, 6
+	db STARTER1_VIRIDIAN, 4
+	db STARTER1_VIRIDIAN, 5
+	db STARTER1_VIRIDIAN, 6
+
 
 Route22Rival1AfterBattleScript:
 	ld a, [wIsInBattle]

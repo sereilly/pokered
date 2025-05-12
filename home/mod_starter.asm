@@ -38,6 +38,15 @@ StarterPicked::
 	ld a, HS_STARTER_BALL_PEWTER_3
 	ld [wMissableObjectIndex], a
 	predef HideObject
+    ld a, HS_STARTER_BALL_VIRIDIAN_1
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_VIRIDIAN_2
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_STARTER_BALL_VIRIDIAN_3
+	ld [wMissableObjectIndex], a
+	predef HideObject
 
     call SetRivalStarter
     ret
@@ -80,3 +89,6 @@ SetRivalStarter::
     db STARTER1_PEWTER, STARTER2_RIVAL
     db STARTER2_PEWTER, STARTER3_RIVAL
     db STARTER3_PEWTER, STARTER1_RIVAL
+    db STARTER1_VIRIDIAN, STARTER2_RIVAL
+    db STARTER2_VIRIDIAN, STARTER3_RIVAL
+    db STARTER3_VIRIDIAN, STARTER1_RIVAL

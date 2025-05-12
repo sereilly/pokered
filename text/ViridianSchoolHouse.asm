@@ -11,3 +11,26 @@ _ViridianSchoolHouseCooltrainerFText::
 	line "the blackboard"
 	cont "carefully!"
 	done
+
+	
+_ViridianSchoolHouseYouWantCaterpieText::
+	text "So! You want the"
+	line "bug #MON,"
+	cont "CATERPIE?"
+	done
+
+_ViridianSchoolHouseYouWantNidoranMText::
+	text "So! You want the"
+	line "poison #MON,"
+	cont "NIDORAN?"
+	done
+
+_ViridianSchoolHouseYouWantMankeyText::
+	text "So! You want the"
+	line "normal #MON,"
+	cont "MANKEY?"
+	done
+
+_ViridianSchoolHouseMonEnergeticText::
+	text "Nice pick!"
+	prompt
