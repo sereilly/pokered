@@ -186,7 +186,7 @@ SilphCo7FRivalStartBattleScript:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL2
 	ld [wCurOpponent], a
-	ld a, $7
+	ld a, $11
     ld [wTrainerNo], a
     farcall GetRivalTrainerNoByStarterScript
 	ld a, SCRIPT_SILPHCO7F_RIVAL_AFTER_BATTLE

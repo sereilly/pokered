@@ -120,7 +120,7 @@ Route22Rival1StartBattleScript:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL1
 	ld [wCurOpponent], a
-	ld a, $4
+	ld a, $9
 	ld [wTrainerNo], a ; battle offset
 	farcall GetRivalTrainerNoByStarterScript
 	ld a, SCRIPT_ROUTE22_RIVAL1_AFTER_BATTLE
@@ -278,7 +278,7 @@ Route22Rival2StartBattleScript:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL2
 	ld [wCurOpponent], a
-	ld a, $a
+	ld a, $19
 	ld [wTrainerNo], a
 	farcall GetRivalTrainerNoByStarterScript
 	ld a, SCRIPT_ROUTE22_RIVAL2_AFTER_BATTLE

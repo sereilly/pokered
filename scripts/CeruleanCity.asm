@@ -143,7 +143,7 @@ CeruleanCityRivalBattleScript:
 	ld [wCurOpponent], a
 
 	; select which team to use during the encounter
-	ld a, $7
+	ld a, $11
 	ld [wTrainerNo], a
 	farcall GetRivalTrainerNoByStarterScript
 

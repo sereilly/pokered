@@ -70,10 +70,14 @@ GetRivalTrainerNoByStarterScript::
 	ret
 
 .StarterTable:
+    db STARTER1_RIVAL
     db STARTER2_RIVAL
     db STARTER3_RIVAL
-    db STARTER1_RIVAL
-    ; TODO: add the other starters
+	db STARTER4_RIVAL
+	db STARTER5_RIVAL
+	db STARTER6_RIVAL
+	db STARTER7_RIVAL
+	db STARTER8_RIVAL
 
 
 SetRivalStarter::

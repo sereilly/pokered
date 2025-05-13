@@ -150,7 +150,7 @@ PokemonTower2FRivalText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL2
 	ld [wCurOpponent], a
-	ld a, $4
+	ld a, $9
     ld [wTrainerNo], a
     farcall GetRivalTrainerNoByStarterScript
 
