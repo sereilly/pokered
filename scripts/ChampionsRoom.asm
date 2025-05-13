@@ -67,22 +67,9 @@ ChampionsRoomRivalReadyToBattleScript:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL3
 	ld [wCurOpponent], a
-
-	; select which team to use during the encounter
-	ld a, [wRivalStarter]
-	cp STARTER2
-	jr nz, .NotStarter2
 	ld a, $1
-	jr .saveTrainerId
-.NotStarter2
-	cp STARTER3
-	jr nz, .NotStarter3
-	ld a, $2
-	jr .saveTrainerId
-.NotStarter3
-	ld a, $3
-.saveTrainerId
-	ld [wTrainerNo], a
+    ld [wTrainerNo], a
+    farcall GetRivalTrainerNoByStarterScript
 
 	xor a
 	ldh [hJoyHeld], a

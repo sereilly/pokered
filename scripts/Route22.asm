@@ -277,6 +277,7 @@ Route22Rival2StartBattleScript:
 	ld de, Route22Rival2VictoryText
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL2
+	ld [wCurOpponent], a
 	ld a, $a
 	ld [wTrainerNo], a
 	farcall GetRivalTrainerNoByStarterScript

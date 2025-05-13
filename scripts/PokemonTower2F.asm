@@ -150,22 +150,9 @@ PokemonTower2FRivalText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_RIVAL2
 	ld [wCurOpponent], a
-
-	; select which team to use during the encounter
-	ld a, [wRivalStarter]
-	cp STARTER2
-	jr nz, .NotSquirtle
 	ld a, $4
-	jr .done
-.NotSquirtle
-	cp STARTER3
-	jr nz, .Charmander
-	ld a, $5
-	jr .done
-.Charmander
-	ld a, $6
-.done
-	ld [wTrainerNo], a
+    ld [wTrainerNo], a
+    farcall GetRivalTrainerNoByStarterScript
 
 	ld a, SCRIPT_POKEMONTOWER2F_DEFEATED_RIVAL
 	ld [wPokemonTower2FCurScript], a
