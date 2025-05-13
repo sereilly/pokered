@@ -81,6 +81,7 @@ ChooseHomeTown:
 	ld a, [hli]
 	ld [wLastMap], a
 	ld [wDestinationMap], a
+	ld [wLastBlackoutMap], a
 	ld a, [hli]
 	ld [wNewGameWarpPtr], a
 	ld a, [hl]
