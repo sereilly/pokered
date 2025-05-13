@@ -93,12 +93,38 @@ SetRivalStarter::
 
 .RivalStarterTable:
 ; starter the rival picked, rival trainer number
-	db STARTER1, STARTER2_RIVAL
-	db STARTER2, STARTER3_RIVAL
-	db STARTER3, STARTER1_RIVAL
-    db STARTER1_PEWTER, STARTER2_RIVAL
-    db STARTER2_PEWTER, STARTER3_RIVAL
-    db STARTER3_PEWTER, STARTER1_RIVAL
-    db STARTER1_VIRIDIAN, STARTER2_RIVAL
-    db STARTER2_VIRIDIAN, STARTER3_RIVAL
-    db STARTER3_VIRIDIAN, STARTER1_RIVAL
+	db STARTER1, STARTER2_RIVAL      ; Charmander -> Squirtle (water beats fire)
+	db STARTER2, STARTER3_RIVAL      ; Squirtle -> Bulbasaur (grass beats water)
+	db STARTER3, STARTER1_RIVAL      ; Bulbasaur -> Charmander (fire beats grass)
+	
+	db STARTER1_PEWTER, STARTER2_RIVAL    ; Geodude -> Squirtle (water beats rock)
+	db STARTER2_PEWTER, STARTER3_RIVAL    ; Nidoran F -> Bulbasaur (poison is strong against grass)
+	db STARTER3_PEWTER, STARTER1_RIVAL    ; Oddish -> Charmander (fire beats grass)
+	
+	db STARTER1_VIRIDIAN, STARTER6_RIVAL  ; Caterpie -> Geodude (bug is weak to rock)
+	db STARTER2_VIRIDIAN, STARTER5_RIVAL  ; Nidoran M -> Abra (psychic is strong against poison)
+	db STARTER3_VIRIDIAN, STARTER1_RIVAL  ; Mankey -> Charmander (fighting is weak to fire)
+	
+	db STARTER1_CERULEAN, STARTER4_RIVAL  ; Poliwag -> Pikachu (electric beats water)
+	db STARTER2_CERULEAN, STARTER1_RIVAL  ; Abra -> Charmander (psychic is neutral, but fire is good matchup)
+	db STARTER3_CERULEAN, STARTER2_RIVAL  ; Meowth -> Squirtle (normal is neutral, but water is good matchup)
+	
+	db STARTER1_VERMILION, STARTER7_RIVAL ; Pikachu -> Machop (fighting is neutral to electric)
+	db STARTER2_VERMILION, STARTER3_RIVAL ; Machop -> Bulbasaur (fighting is neutral to grass)
+	db STARTER3_VERMILION, STARTER8_RIVAL ; Diglett -> Nidoran F (ground is strong against poison)
+	
+	db STARTER1_CELADON, STARTER1_RIVAL   ; Bellsprout -> Charmander (fire beats grass/poison)
+	db STARTER2_CELADON, STARTER6_RIVAL   ; Vulpix -> Geodude (rock beats fire)
+	db STARTER3_CELADON, STARTER7_RIVAL   ; Porygon -> Machop (fighting beats normal)
+	
+	db STARTER1_FUCHSIA, STARTER5_RIVAL   ; Koffing -> Abra (psychic beats poison)
+	db STARTER2_FUCHSIA, STARTER4_RIVAL   ; Doduo -> Pikachu (electric beats flying)
+	db STARTER3_FUCHSIA, STARTER3_RIVAL   ; Slowpoke -> Bulbasaur (grass beats water/psychic)
+	
+	db STARTER1_SAFFRON, STARTER8_RIVAL   ; Abra -> Nidoran F (poison resists psychic)
+	db STARTER2_SAFFRON, STARTER5_RIVAL   ; Gastly -> Abra (psychic beats ghost/poison)
+	db STARTER3_SAFFRON, STARTER2_RIVAL   ; Ditto -> Squirtle (water is strong against transformed normal)
+	
+	db STARTER1_CINNABAR, STARTER8_RIVAL  ; Dratini -> Bulbasaur (grass is neutral to dragon)
+	db STARTER2_CINNABAR, STARTER6_RIVAL  ; Ponyta -> Geodude (rock beats fire)
+	db STARTER3_CINNABAR, STARTER4_RIVAL  ; Pikachu -> Bulbasaur (electric beats water)
