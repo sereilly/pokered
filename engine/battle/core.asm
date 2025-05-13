@@ -3979,20 +3979,29 @@ CheckForDisobedience:
 ; it was traded
 .monIsTraded
 ; what level might disobey?
-	ld hl, wObtainedBadges
-	bit BIT_EARTHBADGE, [hl]
-	ld a, 101
-	jr nz, .next
-	bit BIT_MARSHBADGE, [hl]
-	ld a, 70
-	jr nz, .next
-	bit BIT_RAINBOWBADGE, [hl]
-	ld a, 50
-	jr nz, .next
-	bit BIT_CASCADEBADGE, [hl]
-	ld a, 30
-	jr nz, .next
-	ld a, 10
+	call CountBadges
+	ld a, b  ; b contains badge count from CountBadges
+	cp 2
+	jr nc, .checkFourBadges
+	ld a, 10 ; less than 2 badges: obey up to level 10
+	jr .next
+.checkFourBadges
+	cp 4
+	jr nc, .checkSixBadges
+	ld a, 30 ; less than 4 badges: obey up to level 30
+	jr .next
+.checkSixBadges
+	cp 6
+	jr nc, .checkEightBadges
+	ld a, 50 ; less than 6 badges: obey up to level 50
+	jr .next
+.checkEightBadges
+	cp 8
+	jr nc, .allBadges
+	ld a, 70 ; less than 8 badges: obey up to level 70
+	jr .next
+.allBadges
+	ld a, 101 ; 8 badges: obey up to level 101 (all levels)
 .next
 	ld b, a
 	ld c, a
