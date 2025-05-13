@@ -1750,15 +1750,13 @@ _OakSpeechText3::
 	line "and adventures"
 	cont "with #MON"
 	cont "awaits! Let's go!"
-	done
 
-_OakSpeechText4::
-	text "But wait!"
+	para "But wait!"
 	line "Where are you"
 	cont "from again?"
 	done
 
-_OakSpeechText5::
+_OakSpeechText4::
 	text "Oh right."
 	line "How could I"
 	cont "forget?"

@@ -45,14 +45,11 @@ _ViridianGymGiovanniPostBattleAdviceText::
 
 _ViridianGymGiovanniEarthBadgeInfoText::
 	text "The EARTHBADGE"
-	line "makes #MON of"
-	cont "any level obey!"
-
-	para "It is evidence of"
-	line "your mastery as a"
+	line "is evidence of"
+	cont "your mastery as a"
 	cont "#MON trainer!"
 
-	para "With it, you can"
+	para "With 8, you can"
 	line "enter the #MON"
 	cont "LEAGUE!"
 

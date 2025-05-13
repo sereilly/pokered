@@ -26,16 +26,8 @@ _CeruleanGymMistyTM11ExplanationText::
 	done
 
 _CeruleanGymMistyCascadeBadgeInfoText::
-	text "The CASCADEBADGE"
-	line "makes all #MON"
-	cont "up to L30 obey!"
-
-	para "That includes"
-	line "even outsiders!"
-
-	para "There's more, you"
-	line "can now use CUT"
-	cont "any time!"
+	text "You can now use"
+	line "CUT any time!"
 
 	para "You can CUT down"
 	line "small bushes to"

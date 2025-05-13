@@ -109,13 +109,10 @@ OakSpeech:
 	ld a, [wStatusFlags3]
 	and a ; ???
 	jr nz, .next
-	ld hl, OakSpeechText3
-	call PrintText
-	; ask the player where to start
-	ld hl, OakSpeechText4
+	ld hl, OakSpeechText3 ; ask the player where to start
 	call PrintText
 	call ChooseHomeTown
-	ld hl, OakSpeechText5
+	ld hl, OakSpeechText4
 	call PrintText
 	call ClearScreen
 	; end of mod
@@ -188,9 +185,6 @@ OakSpeechText3:
 	text_end
 OakSpeechText4:
 	text_far _OakSpeechText4
-	text_end
-OakSpeechText5:
-	text_far _OakSpeechText5
 	text_end
 
 FadeInIntroPic:
