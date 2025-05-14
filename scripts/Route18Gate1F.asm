@@ -14,34 +14,34 @@ Route18Gate1F_ScriptPointers:
 	dw_const Route18Gate1FPlayerMovingRightScript, SCRIPT_ROUTE18GATE1F_PLAYER_MOVING_RIGHT
 
 Route18Gate1FDefaultScript:
-	call Route16Gate1FIsBicycleInBagScript
-	ret nz
-	ld hl, .StopsPlayerCoords
-	call ArePlayerCoordsInArray
-	ret nc
-	ld a, TEXT_ROUTE18GATE1F_GUARD_EXCUSE_ME
-	ldh [hTextID], a
-	call DisplayTextID
-	xor a
-	ldh [hJoyHeld], a
-	ld a, [wCoordIndex]
-	cp $1
-	jr z, .next_to_counter
-	ld a, [wCoordIndex]
-	dec a
-	ld [wSimulatedJoypadStatesIndex], a
-	ld b, 0
-	ld c, a
-	ld a, D_UP
-	ld hl, wSimulatedJoypadStatesEnd
-	call FillMemory
-	call StartSimulatingJoypadStates
-	ld a, SCRIPT_ROUTE18GATE1F_PLAYER_MOVING_UP
-	ld [wRoute18Gate1FCurScript], a
-	ret
-.next_to_counter
-	ld a, SCRIPT_ROUTE18GATE1F_GUARD
-	ld [wRoute18Gate1FCurScript], a
+; 	call Route16Gate1FIsBicycleInBagScript
+; 	ret nz
+; 	ld hl, .StopsPlayerCoords
+; 	call ArePlayerCoordsInArray
+; 	ret nc
+; 	ld a, TEXT_ROUTE18GATE1F_GUARD_EXCUSE_ME
+; 	ldh [hTextID], a
+; 	call DisplayTextID
+; 	xor a
+; 	ldh [hJoyHeld], a
+; 	ld a, [wCoordIndex]
+; 	cp $1
+; 	jr z, .next_to_counter
+; 	ld a, [wCoordIndex]
+; 	dec a
+; 	ld [wSimulatedJoypadStatesIndex], a
+; 	ld b, 0
+; 	ld c, a
+; 	ld a, D_UP
+; 	ld hl, wSimulatedJoypadStatesEnd
+; 	call FillMemory
+; 	call StartSimulatingJoypadStates
+; 	ld a, SCRIPT_ROUTE18GATE1F_PLAYER_MOVING_UP
+; 	ld [wRoute18Gate1FCurScript], a
+; 	ret
+; .next_to_counter
+; 	ld a, SCRIPT_ROUTE18GATE1F_GUARD
+; 	ld [wRoute18Gate1FCurScript], a
 	ret
 
 .StopsPlayerCoords:
