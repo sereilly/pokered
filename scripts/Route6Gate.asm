@@ -11,26 +11,26 @@ Route6Gate_ScriptPointers:
 	dw_const Route6GatePlayerMovingScript, SCRIPT_ROUTE6GATE_PLAYER_MOVING
 
 Route6GateDefaultScript:
-	ld a, [wStatusFlags1]
-	bit BIT_GAVE_SAFFRON_GUARDS_DRINK, a
-	ret nz
-	ld hl, .PlayerInCoordsArray
-	call ArePlayerCoordsInArray
-	ret nc
-	ld a, PLAYER_DIR_RIGHT
-	ld [wPlayerMovingDirection], a
-	xor a
-	ldh [hJoyHeld], a
-	farcall RemoveGuardDrink
-	ldh a, [hItemToRemoveID]
-	and a
-	jr nz, .have_drink
-	ld a, TEXT_ROUTE6GATE_GUARD_GEE_IM_THIRSTY
-	ldh [hTextID], a
-	call DisplayTextID
-	call Route6GateMovePlayerDownScript
-	ld a, SCRIPT_ROUTE6GATE_PLAYER_MOVING
-	ld [wRoute6GateCurScript], a
+	; ld a, [wStatusFlags1]
+	; bit BIT_GAVE_SAFFRON_GUARDS_DRINK, a
+	; ret nz
+	; ld hl, .PlayerInCoordsArray
+	; call ArePlayerCoordsInArray
+	; ret nc
+	; ld a, PLAYER_DIR_RIGHT
+	; ld [wPlayerMovingDirection], a
+	; xor a
+	; ldh [hJoyHeld], a
+	; farcall RemoveGuardDrink
+	; ldh a, [hItemToRemoveID]
+	; and a
+	; jr nz, .have_drink
+	; ld a, TEXT_ROUTE6GATE_GUARD_GEE_IM_THIRSTY
+	; ldh [hTextID], a
+	; call DisplayTextID
+	; call Route6GateMovePlayerDownScript
+	; ld a, SCRIPT_ROUTE6GATE_PLAYER_MOVING
+	; ld [wRoute6GateCurScript], a
 	ret
 .have_drink
 	ld hl, wStatusFlags1

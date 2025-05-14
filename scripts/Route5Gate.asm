@@ -17,33 +17,33 @@ Route5GateMovePlayerUpScript:
 	jp StartSimulatingJoypadStates
 
 Route5GateDefaultScript:
-	ld a, [wStatusFlags1]
-	bit BIT_GAVE_SAFFRON_GUARDS_DRINK, a
-	ret nz
-	ld hl, .PlayerInCoordsArray
-	call ArePlayerCoordsInArray
-	ret nc
-	ld a, PLAYER_DIR_LEFT
-	ld [wPlayerMovingDirection], a
-	xor a
-	ldh [hJoyHeld], a
-	farcall RemoveGuardDrink
-	ldh a, [hItemToRemoveID]
-	and a
-	jr nz, .have_drink
-	ld a, TEXT_ROUTE5GATE_GUARD_GEE_IM_THIRSTY
-	ldh [hTextID], a
-	call DisplayTextID
-	call Route5GateMovePlayerUpScript
-	ld a, SCRIPT_ROUTE5GATE_PLAYER_MOVING
-	ld [wRoute5GateCurScript], a
-	ret
-.have_drink
-	ld a, TEXT_ROUTE5GATE_GUARD_GIVE_DRINK
-	ldh [hTextID], a
-	call DisplayTextID
-	ld hl, wStatusFlags1
-	set BIT_GAVE_SAFFRON_GUARDS_DRINK, [hl]
+; 	ld a, [wStatusFlags1]
+; 	bit BIT_GAVE_SAFFRON_GUARDS_DRINK, a
+; 	ret nz
+; 	ld hl, .PlayerInCoordsArray
+; 	call ArePlayerCoordsInArray
+; 	ret nc
+; 	ld a, PLAYER_DIR_LEFT
+; 	ld [wPlayerMovingDirection], a
+; 	xor a
+; 	ldh [hJoyHeld], a
+; 	farcall RemoveGuardDrink
+; 	ldh a, [hItemToRemoveID]
+; 	and a
+; 	jr nz, .have_drink
+; 	ld a, TEXT_ROUTE5GATE_GUARD_GEE_IM_THIRSTY
+; 	ldh [hTextID], a
+; 	call DisplayTextID
+; 	call Route5GateMovePlayerUpScript
+; 	ld a, SCRIPT_ROUTE5GATE_PLAYER_MOVING
+; 	ld [wRoute5GateCurScript], a
+; 	ret
+; .have_drink
+; 	ld a, TEXT_ROUTE5GATE_GUARD_GIVE_DRINK
+; 	ldh [hTextID], a
+; 	call DisplayTextID
+; 	ld hl, wStatusFlags1
+; 	set BIT_GAVE_SAFFRON_GUARDS_DRINK, [hl]
 	ret
 
 .PlayerInCoordsArray:
