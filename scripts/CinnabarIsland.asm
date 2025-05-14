@@ -55,6 +55,8 @@ CinnabarIsland_TextPointers:
 	def_text_pointers
 	dw_const CinnabarIslandGirlText,           TEXT_CINNABARISLAND_GIRL
 	dw_const CinnabarIslandGamblerText,        TEXT_CINNABARISLAND_GAMBLER
+	dw_const CinnabarIslandPalletSeelText,     TEXT_CINNABARISLAND_PALLETSEEL
+	dw_const CinnabarIslandFuchsiaSeelText,    TEXT_CINNABARISLAND_FUCHSIASEEL
 	dw_const CinnabarIslandSignText,           TEXT_CINNABARISLAND_SIGN
 	dw_const MartSignText,                     TEXT_CINNABARISLAND_MART_SIGN
 	dw_const PokeCenterSignText,               TEXT_CINNABARISLAND_POKECENTER_SIGN
@@ -84,4 +86,72 @@ CinnabarIslandPokemonLabSignText:
 
 CinnabarIslandGymSignText:
 	text_far _CinnabarIslandGymSignText
+	text_end
+
+CinnabarIslandFuchsiaSeelText:
+	text_asm
+	ld hl, .Text
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .refused
+	ld hl, .CinnabarIslandSeelYesText
+	call PrintText
+	ld a, FUCHSIA_CITY
+	ld [wDestinationMap], a
+	ld hl, wStatusFlags6
+	set BIT_FLY_WARP, [hl]
+	inc hl
+	set BIT_USED_FLY, [hl]
+	jp TextScriptEnd
+.refused
+	ld hl, .CinnabarIslandSeelNoText
+	call PrintText
+	jp TextScriptEnd
+
+.Text:
+	text_far _CinnabarIslandFuchsiaSeelText
+	text_end
+
+.CinnabarIslandSeelYesText:
+	text_far _CinnabarIslandSeelYesText
+	text_end
+
+.CinnabarIslandSeelNoText:
+	text_far _CinnabarIslandSeelNoText
+	text_end
+
+CinnabarIslandPalletSeelText:
+	text_asm
+	ld hl, .Text
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .refused
+	ld hl, .CinnabarIslandSeelYesText
+	call PrintText
+	ld a, PALLET_TOWN
+	ld [wDestinationMap], a
+	ld hl, wStatusFlags6
+	set BIT_FLY_WARP, [hl]
+	inc hl
+	set BIT_USED_FLY, [hl]
+	jp TextScriptEnd
+.refused
+	ld hl, .CinnabarIslandSeelNoText
+	call PrintText
+	jp TextScriptEnd
+
+.Text:
+	text_far _CinnabarIslandPalletSeelText
+	text_end
+
+.CinnabarIslandSeelYesText:
+	text_far _CinnabarIslandSeelYesText
+	text_end
+
+.CinnabarIslandSeelNoText:
+	text_far _CinnabarIslandSeelNoText
 	text_end

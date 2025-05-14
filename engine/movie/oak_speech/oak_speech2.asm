@@ -92,6 +92,8 @@ ChooseHomeTown:
 StartTownTable:
     db PALLET_TOWN 
 	dw PaletteNewGameWarp
+	db VIRIDIAN_CITY 
+	dw ViridianNewGameWarp
     db PEWTER_CITY 
 	dw PewterNewGameWarp
 	db CERULEAN_CITY 
@@ -106,8 +108,6 @@ StartTownTable:
 	dw FuchsiaNewGameWarp
 	db CINNABAR_ISLAND 
 	dw CinnabarNewGameWarp
-	db VIRIDIAN_CITY 
-	dw ViridianNewGameWarp
 
 HisNameIsText:
 	text_far _HisNameIsText

@@ -31,17 +31,17 @@ DefaultNamesRival:
 ENDC
 
 TownNames1:
-	db   "PALETTE"
+	db   "PALLET"
+	next "VIRIDIAN"
 	next "PEWTER"
 	next "CERULEAN"
-	next "VERMILION"
 	next "MORE..."
 	db   "@"
 
 TownNames2:
-	db   "CELADON"
+	db   "VERMILION"
+	next "CELADON"
 	next "SAFFRON"
 	next "FUCHSIA"
 	next "CINNABAR"
-	next "VIRIDIAN"
 	db   "@"

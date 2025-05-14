@@ -35,3 +35,25 @@ _CinnabarIslandGymSignText::
 	para "The Hot-Headed"
 	line "Quiz Master!"
 	done
+
+_CinnabarIslandFuchsiaSeelText::
+	text "Seel!!!"
+
+	para "Want a ride to"
+	line "Fuchsia City?"
+	done
+
+_CinnabarIslandPalletSeelText::
+	text "Seel!!!"
+
+	para "Want a ride to"
+	line "Pallet Town?"
+	done
+
+_CinnabarIslandSeelYesText::
+	text "Seel!!!"
+	done
+
+_CinnabarIslandSeelNoText::
+	text "Seel..."
+	done

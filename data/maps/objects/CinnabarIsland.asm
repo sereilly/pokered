@@ -1,6 +1,8 @@
 	object_const_def
 	const_export CINNABARISLAND_GIRL
 	const_export CINNABARISLAND_GAMBLER
+	const_export CINNABARISLAND_FUCHSIASEEL
+	const_export CINNABARISLAND_PALLETSEEL
 
 CinnabarIsland_Object:
 	db $43 ; border block
@@ -22,5 +24,7 @@ CinnabarIsland_Object:
 	def_object_events
 	object_event 12,  5, SPRITE_GIRL, WALK, LEFT_RIGHT, TEXT_CINNABARISLAND_GIRL
 	object_event 14,  6, SPRITE_GAMBLER, STAY, NONE, TEXT_CINNABARISLAND_GAMBLER
+	object_event 19,  6, SPRITE_SEEL, STAY, NONE, TEXT_CINNABARISLAND_FUCHSIASEEL
+	object_event 12,  0, SPRITE_SEEL, STAY, NONE, TEXT_CINNABARISLAND_PALLETSEEL
 
 	def_warps_to CINNABAR_ISLAND
