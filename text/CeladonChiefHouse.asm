@@ -20,3 +20,26 @@ _CeladonChiefHouseSailorText::
 	para "There's no secret"
 	line "switch behind it!"
 	done
+
+_CeladonChiefHouseYouWantBellsproutText::
+	text "So! You want the"
+	line "grass #MON,"
+	cont "BELLSPROUT?"
+	done
+
+_CeladonChiefHouseYouWantVulpixText::
+	text "So! You want the"
+	line "fire #MON,"
+	cont "VULPIX?"
+	done
+
+_CeladonChiefHouseYouWantPorygonText::
+	text "So! You want the"
+	line "normal #MON,"
+	cont "PORYGON?"
+	done
+
+_CeladonChiefHouseMonEnergeticText::
+	text "Take good care of"
+	line "it, will you?"
+	prompt
