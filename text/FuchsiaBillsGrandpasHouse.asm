@@ -25,3 +25,26 @@ _FuchsiaBillsGrandpasHouseYoungsterText::
 
 	para "Did he show you?"
 	done
+
+_FuchsiaBillsGrandpasHouseYouWantKoffingText::
+	text "So! You want the"
+	line "poison #MON,"
+	cont "KOFFING?"
+	done
+
+_FuchsiaBillsGrandpasHouseYouWantDoduoText::
+	text "So! You want the"
+	line "flying #MON,"
+	cont "DODUO?"
+	done
+
+_FuchsiaBillsGrandpasHouseYouWantSlowpokeText::
+	text "So! You want the"
+	line "psychic #MON,"
+	cont "SLOWPOKE?"
+	done
+
+_FuchsiaBillsGrandpasHouseMonEnergeticText::
+	text "You must be a"
+	line "good trainer!"
+	prompt
