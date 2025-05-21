@@ -30,7 +30,7 @@ StarterPicked::
 
     ; hide all starter balls using BallTable
     ld hl, .BallTable
-    ld c, 12 ; 12 starter balls in the table (3 balls × 4 locations)
+    ld c, 27 ; 27 starter balls in the table (3 balls × 9 locations)
 .hideAllBalls
     ld a, [hli]
     ld [wMissableObjectIndex], a
@@ -47,18 +47,33 @@ StarterPicked::
 
 
 .BallTable:
-	db HS_STARTER_BALL_PEWTER_1
-	db HS_STARTER_BALL_PEWTER_2
-	db HS_STARTER_BALL_PEWTER_3
-	db HS_STARTER_BALL_CERULEAN_1
-	db HS_STARTER_BALL_CERULEAN_2
-	db HS_STARTER_BALL_CERULEAN_3
-	db HS_STARTER_BALL_VIRIDIAN_1
-	db HS_STARTER_BALL_VIRIDIAN_2
-	db HS_STARTER_BALL_VIRIDIAN_3
-	db HS_STARTER_BALL_CINNABAR_1
-	db HS_STARTER_BALL_CINNABAR_2
-	db HS_STARTER_BALL_CINNABAR_3
+	db HS_STARTER_BALL_CINNABAR_1   
+	db HS_STARTER_BALL_CINNABAR_2  
+	db HS_STARTER_BALL_CINNABAR_3  
+	db HS_STARTER_BALL_PEWTER_1    
+	db HS_STARTER_BALL_PEWTER_2    
+	db HS_STARTER_BALL_PEWTER_3    
+	db HS_STARTER_BALL_VIRIDIAN_1  
+	db HS_STARTER_BALL_VIRIDIAN_2  
+	db HS_STARTER_BALL_VIRIDIAN_3  
+	db HS_STARTER_BALL_CERULEAN_1  
+	db HS_STARTER_BALL_CERULEAN_2  
+	db HS_STARTER_BALL_CERULEAN_3  
+	db HS_STARTER_BALL_VERMILION_1 
+	db HS_STARTER_BALL_VERMILION_2 
+	db HS_STARTER_BALL_VERMILION_3 
+	db HS_STARTER_BALL_CELADON_1  
+	db HS_STARTER_BALL_CELADON_2  
+	db HS_STARTER_BALL_CELADON_3  
+	db HS_STARTER_BALL_FUCHSIA_1  
+	db HS_STARTER_BALL_FUCHSIA_2  
+	db HS_STARTER_BALL_FUCHSIA_3  
+	db HS_STARTER_BALL_LAVENDER_1
+	db HS_STARTER_BALL_LAVENDER_2
+	db HS_STARTER_BALL_LAVENDER_3
+	db HS_STARTER_BALL_SAFFRON_1
+	db HS_STARTER_BALL_SAFFRON_2
+	db HS_STARTER_BALL_SAFFRON_3
 
 GetRivalTrainerNoByStarterScript::
     ld a, [wTrainerNo]
@@ -134,13 +149,13 @@ SetRivalStarter::
 	db STARTER3_FUCHSIA, STARTER3_RIVAL   ; Slowpoke -> Bulbasaur (grass beats water/psychic)
 	
 	db STARTER1_SAFFRON, STARTER8_RIVAL   ; Abra -> Nidoran F (poison resists psychic)
-	db STARTER2_SAFFRON, STARTER5_RIVAL   ; Gastly -> Abra (psychic beats ghost/poison)
+	db STARTER2_SAFFRON, STARTER5_RIVAL   ; Eevee -> Abra (psychic beats most)
 	db STARTER3_SAFFRON, STARTER2_RIVAL   ; Ditto -> Squirtle (water is strong against transformed normal)
 	
 	db STARTER1_CINNABAR, STARTER8_RIVAL  ; Dratini -> NidoranF (dragon is neutral to poison)
 	db STARTER2_CINNABAR, STARTER6_RIVAL  ; Ponyta -> Geodude (rock beats fire)
 	db STARTER3_CINNABAR, STARTER4_RIVAL  ; Krabby -> Pikachu (electric beats water)
 
-	db STARTER1_LAVENDER, STARTER2_RIVAL  ; Seel -> Bulbasaur (grass is strong against water)
-	db STARTER2_LAVENDER, STARTER7_RIVAL  ; Eevee -> Machop (fighting is strong against normal)
+	db STARTER1_LAVENDER, STARTER2_RIVAL  ; Gastly -> Bulbasaur (grass is strong against ghost)
+	db STARTER2_LAVENDER, STARTER7_RIVAL  ; Cubone -> Machop (fighting is strong against ground)
 	db STARTER3_LAVENDER, STARTER6_RIVAL  ; Clefairy -> Geodude (normal is weak to rock)

@@ -19,3 +19,26 @@ _CopycatsHouse1FChanseyText::
 	text "CHANSEY: Chaan!"
 	line "Sii!@"
 	text_end
+
+_CopycatsHouse1FYouWantAbraText::
+	text "So! You want the"
+	line "psychic #MON,"
+	cont "ABRA?"
+	done
+
+_CopycatsHouse1FYouWantEeveeText::
+	text "So! You want the"
+	line "normal #MON,"
+	cont "EEVEE?"
+	done
+
+_CopycatsHouse1FYouWantDittoText::
+	text "So! You want the"
+	line "normal #MON,"
+	cont "DITTO?"
+	done
+
+_CopycatsHouse1FMonEnergeticText::
+	text "Ooh! That's a"
+	line "good choice!"
+	prompt
