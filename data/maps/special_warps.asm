@@ -62,6 +62,8 @@ CinnabarNewGameWarp:
 	special_warp_spec CINNABAR_LAB_TRADE_ROOM, 3, 6, LAB
 ViridianNewGameWarp:
 	special_warp_spec VIRIDIAN_SCHOOL_HOUSE, 3, 6, HOUSE
+LavenderNewGameWarp:
+	special_warp_spec LAVENDER_CUBONE_HOUSE, 3, 6, HOUSE
 
 TradeCenterPlayerWarp:
 	special_warp_spec TRADE_CENTER,  3, 4, CLUB

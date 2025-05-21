@@ -118,7 +118,7 @@ SetRivalStarter::
 	db STARTER3_VIRIDIAN, STARTER1_RIVAL  ; Mankey -> Charmander (fighting is weak to fire)
 	
 	db STARTER1_CERULEAN, STARTER4_RIVAL  ; Poliwag -> Pikachu (electric beats water)
-	db STARTER2_CERULEAN, STARTER1_RIVAL  ; Abra -> Charmander (psychic is neutral, but fire is good matchup)
+	db STARTER2_CERULEAN, STARTER1_RIVAL  ; Scyther -> Charmander (bug is weak to fire)
 	db STARTER3_CERULEAN, STARTER2_RIVAL  ; Meowth -> Squirtle (normal is neutral, but water is good matchup)
 	
 	db STARTER1_VERMILION, STARTER7_RIVAL ; Pikachu -> Machop (fighting is neutral to electric)
@@ -137,6 +137,10 @@ SetRivalStarter::
 	db STARTER2_SAFFRON, STARTER5_RIVAL   ; Gastly -> Abra (psychic beats ghost/poison)
 	db STARTER3_SAFFRON, STARTER2_RIVAL   ; Ditto -> Squirtle (water is strong against transformed normal)
 	
-	db STARTER1_CINNABAR, STARTER8_RIVAL  ; Dratini -> Bulbasaur (grass is neutral to dragon)
+	db STARTER1_CINNABAR, STARTER8_RIVAL  ; Dratini -> NidoranF (dragon is neutral to poison)
 	db STARTER2_CINNABAR, STARTER6_RIVAL  ; Ponyta -> Geodude (rock beats fire)
-	db STARTER3_CINNABAR, STARTER4_RIVAL  ; Pikachu -> Bulbasaur (electric beats water)
+	db STARTER3_CINNABAR, STARTER4_RIVAL  ; Krabby -> Pikachu (electric beats water)
+
+	db STARTER1_LAVENDER, STARTER2_RIVAL  ; Seel -> Bulbasaur (grass is strong against water)
+	db STARTER2_LAVENDER, STARTER7_RIVAL  ; Eevee -> Machop (fighting is strong against normal)
+	db STARTER3_LAVENDER, STARTER6_RIVAL  ; Clefairy -> Geodude (normal is weak to rock)

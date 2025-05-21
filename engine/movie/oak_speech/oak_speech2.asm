@@ -62,6 +62,7 @@ ChooseRivalName:
 
 ChooseHomeTown:
 	call OakSpeechSlidePicRight
+.towns
 	ld de, TownNames1
 	call DisplayTownNameTextBox
 	ld a, [wCurrentMenuItem]
@@ -71,6 +72,14 @@ ChooseHomeTown:
 	call DisplayTownNameTextBox
 	ld a, [wCurrentMenuItem]
 	add 4 ; 4 towns in the first list
+	cp 8
+	jr nz, .chosetown
+	ld de, TownNames3
+	call DisplayTownNameTextBox
+	ld a, [wCurrentMenuItem]
+	add 8 ; 4 towns in the second list
+	cp 10
+	jr z, .towns
 .chosetown
 	ld c, a
 	ld b, $0
@@ -100,6 +109,8 @@ StartTownTable:
 	dw CeruleanNewGameWarp
 	db VERMILION_CITY 
 	dw VermilionNewGameWarp
+	db LAVENDER_TOWN
+	dw LavenderNewGameWarp
 	db CELADON_CITY 
 	dw CeladonNewGameWarp
 	db SAFFRON_CITY 

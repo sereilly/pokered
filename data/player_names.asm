@@ -40,8 +40,14 @@ TownNames1:
 
 TownNames2:
 	db   "VERMILION"
+	next "LAVENDER"
 	next "CELADON"
 	next "SAFFRON"
-	next "FUCHSIA"
+	next "MORE..."
+	db   "@"
+
+TownNames3:
+	db   "FUCHSIA"
 	next "CINNABAR"
+	next "BACK"
 	db   "@"

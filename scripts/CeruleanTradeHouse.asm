@@ -56,7 +56,7 @@ CeruleanTradeHouseSelectedPokeBallScript:
 	cp CERULEANTRADEHOUSE_POLIWAG_POKE_BALL
 	jr z, CeruleanTradeHouseYouWantPoliwagText
 	cp CERULEANTRADEHOUSE_ABRA_POKE_BALL
-	jr z, CeruleanTradeHouseYouWantAbraText
+	jr z, CeruleanTradeHouseYouWantScytherText
 	jr CeruleanTradeHouseYouWantMeowthText
 
 CeruleanTradeHouseYouWantPoliwagText:
@@ -66,11 +66,11 @@ CeruleanTradeHouseYouWantPoliwagText:
 	text_far _CeruleanTradeHouseYouWantPoliwagText
 	text_end
 
-CeruleanTradeHouseYouWantAbraText:
+CeruleanTradeHouseYouWantScytherText:
 	ld hl, .Text
 	jr CeruleanTradeHouseMonChoiceMenu
 .Text:
-	text_far _CeruleanTradeHouseYouWantAbraText
+	text_far _CeruleanTradeHouseYouWantScytherText
 	text_end
 
 CeruleanTradeHouseYouWantMeowthText:

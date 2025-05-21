@@ -14,10 +14,10 @@ _CeruleanTradeHouseYouWantPoliwagText::
 	cont "POLIWAG?"
 	done
 
-_CeruleanTradeHouseYouWantAbraText::
+_CeruleanTradeHouseYouWantScytherText::
 	text "So! You want the"
-	line "psychic #MON,"
-	cont "ABRA?"
+	line "bug #MON,"
+	cont "SCYTHER?"
 	done
 
 _CeruleanTradeHouseYouWantMeowthText::

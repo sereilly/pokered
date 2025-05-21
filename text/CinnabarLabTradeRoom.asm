@@ -10,20 +10,20 @@ _CinnabarLabTradeRoomSuperNerdText::
 
 _CinnabarLabTradeRoomYouWantSeelText::
 	text "So! You want the"
-	line "water #MON,"
-	cont "SEEL?"
+	line "dragon #MON,"
+	cont "DRATINI?"
 	done
 
 _CinnabarLabTradeRoomYouWantCaterpieText::
 	text "So! You want the"
-	line "bug #MON,"
-	cont "CATERPIE?"
+	line "fire #MON,"
+	cont "PONYTA?"
 	done
 
 _CinnabarLabTradeRoomYouWantPorygonText::
 	text "So! You want the"
-	line "normal #MON,"
-	cont "PORYGON?"
+	line "water #MON,"
+	cont "KRABBY?"
 	done
 
 _CinnabarLabTradeRoomMonEnergeticText::
