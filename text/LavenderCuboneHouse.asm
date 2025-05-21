@@ -23,3 +23,26 @@ _LavenderCuboneHouseBrunetteGirlGhostIsGoneText::
 	line "soothed its"
 	cont "restless soul!"
 	done
+
+_LavenderCuboneHouseYouWantGastlyText::
+	text "So! You want the"
+	line "ghost #MON,"
+	cont "GASTLY?"
+	done
+
+_LavenderCuboneHouseYouWantCuboneText::
+	text "So! You want the"
+	line "ground #MON,"
+	cont "CUBONE?"
+	done
+
+_LavenderCuboneHouseYouWantClefairyText::
+	text "So! You want the"
+	line "normal #MON,"
+	cont "CLEFAIRY?"
+	done
+
+_LavenderCuboneHouseMonEnergeticText::
+	text "An interesting"
+	line "choice!"
+	prompt
