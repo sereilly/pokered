@@ -64,6 +64,8 @@ ChooseHomeTown:
 	call OakSpeechSlidePicRight
 .towns
 	ld de, TownNames1
+	ld a, 4
+	ld [wMaxMenuItem], a
 	call DisplayTownNameTextBox
 	ld a, [wCurrentMenuItem]
 	cp 4
@@ -75,6 +77,8 @@ ChooseHomeTown:
 	cp 8
 	jr nz, .chosetown
 	ld de, TownNames3
+	ld a, 2
+	ld [wMaxMenuItem], a
 	call DisplayTownNameTextBox
 	ld a, [wCurrentMenuItem]
 	add 8 ; 4 towns in the second list
@@ -270,7 +274,6 @@ DisplayTownNameTextBox:
 	ld [wTopMenuItemY], a
 	inc a
 	inc a ; 5 max items
-	ld [wMaxMenuItem], a
 	jp HandleMenuInput
 
 .townstring
