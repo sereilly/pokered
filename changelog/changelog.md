@@ -1,10 +1,10 @@
 # Overview
 
-Pokemon Open World is a mod for Pokemon Blue where you can battle gyms and obtain badges in whichever order you choose.
+Pokémon Open World is a mod for Pokémon Blue where you can battle gyms and obtain badges in whichever order you choose.
 
 ## Start Anywhere
 
-Choose any town to begin your journey. All badge towns + Lavender Town and Pallet Town town are available to choose from.
+Choose any town to begin your journey. All badge towns, plus Lavender Town and Pallet Town, are available to choose from.
 
 ![alt text](image.png)
 
@@ -14,19 +14,25 @@ Choose any town to begin your journey. All badge towns + Lavender Town and Palle
 <details> 
   <summary>Expand to view the full list.</summary>
 
-<h3>Pewter</h3>
+<h3>Pallet</h3>
 <ul>
-  <li>Geodude</li>
-  <li>Nidoran (F)</li>
-  <li>Oddish</li>
+  <li>Bulbasaur</li>
+  <li>Squirtle</li>
+  <li>Charmander</li>
 </ul>
-
 
 <h3>Viridian</h3>
 <ul>
   <li>Caterpie</li>
-  <li>Nidoran (M)</li>
+  <li>Nidoran♂</li>
   <li>Mankey</li>
+</ul>
+
+<h3>Pewter</h3>
+<ul>
+  <li>Geodude</li>
+  <li>Nidoran♀</li>
+  <li>Oddish</li>
 </ul>
 
 <h3>Cerulean</h3>
@@ -78,11 +84,10 @@ Choose any town to begin your journey. All badge towns + Lavender Town and Palle
   <li>Krabby</li>
 </ul>
 
-
 </details>
 
 ## Level Scaling
-Trainers, gym leaders and wild pokemon enounters scale with your badge count. This means no matter your path, you will always find a challenge.
+Trainers, gym leaders and wild pokemon encounters scale with your badge count. This means no matter your path, you will always find a challenge.
 
 ## Reduced Obstacles
 Various obstacles have been moved or removed completely in order to facilitate travel without having to worry too much about having the right HMs.
