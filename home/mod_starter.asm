@@ -4,13 +4,22 @@ StarterPicked::
 	ld [wOakWalkedToPlayer], a
     ld a, $12 ;SCRIPT_OAKSLAB_NOOP
 	ld [wOaksLabCurScript], a
+
+	; Set tutorial events
     SetEvent EVENT_FOLLOWED_OAK_INTO_LAB
     SetEvent EVENT_GOT_POKEBALLS_FROM_OAK
     SetEvent EVENT_GOT_POKEDEX
     SetEvent EVENT_OAK_APPEARED_IN_PALLET
     SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS_2
     SetEvent EVENT_DAISY_WALKING
-
+	SetEvent EVENT_OAK_GOT_PARCEL
+	
+	ld a, HS_LYING_OLD_MAN
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_OLD_MAN
+	ld [wMissableObjectIndex], a
+	predef ShowObject
     ld a, HS_OAKS_LAB_OAK_1
 	ld [wMissableObjectIndex], a
 	predef ShowObject
