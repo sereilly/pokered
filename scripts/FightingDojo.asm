@@ -241,7 +241,7 @@ FightingDojoHitmonleePokeBallText:
 	jr nz, .done
 	ld a, [wCurPartySpecies]
 	ld b, a
-	ld c, 30
+	ld c, 7
 	call GivePokemon
 	jr nc, .done
 
@@ -275,7 +275,7 @@ FightingDojoHitmonchanPokeBallText:
 	jr nz, .done
 	ld a, [wCurPartySpecies]
 	ld b, a
-	ld c, 30
+	ld c, 7
 	call GivePokemon
 	jr nc, .done
 	SetEvents EVENT_GOT_HITMONCHAN, EVENT_DEFEATED_FIGHTING_DOJO
