@@ -12,7 +12,7 @@ ViridianCity_ScriptPointers:
 	dw_const ViridianCityPlayerMovingDownScript,         SCRIPT_VIRIDIANCITY_PLAYER_MOVING_DOWN
 
 ViridianCityDefaultScript:
-	call ViridianCityCheckGymOpenScript
+	;call ViridianCityCheckGymOpenScript
 	jp ViridianCityCheckGotPokedexScript
 
 ViridianCityCheckGymOpenScript:
