@@ -16,14 +16,14 @@ IF DEF(_BLUE)
 DefaultNamesPlayerList:
 	db "NEW NAME@"
 	db "BLUE@"
-	db "GARY@"
-	db "JOHN@"
+	db "SEAN@"
+	db "RANDY@"
 
 DefaultNamesRivalList:
 	db "NEW NAME@"
 	db "RED@"
-	db "ASH@"
-	db "JACK@"
+	db "SEUNG@"
+	db "LOREN@"
 ENDC
 
 TownNameList:
