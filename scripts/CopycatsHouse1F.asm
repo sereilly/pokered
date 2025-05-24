@@ -115,7 +115,7 @@ CopycatsHouse1FMonChoiceMenu:
 	ld a, [wCurPartySpecies]
 	cp ABRA
 	jr nz, notabra
-	ld a, TACKLE
+	ld a, PSYWAVE
 	ld [wMoveNum], a
 	ld [wNamedObjectIndex], a
 	call GetMoveName
