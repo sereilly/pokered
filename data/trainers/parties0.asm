@@ -228,9 +228,9 @@ SuperNerdData0:
 	db 8, MAGNEMITE, MAGNEMITE, KOFFING, MAGNEMITE, 0
 	db 9, MAGNEMITE, VOLTORB, 0
 ; Cinnabar Gym
-	db 10, VULPIX, VULPIX, VULPIX, 0
-	db 10, PONYTA, CHARMANDER, VULPIX, GROWLITHE, 0
-	db 10, PONYTA, 0
+	db 9, VULPIX, VULPIX, VULPIX, 0
+	db 8, PONYTA, CHARMANDER, VULPIX, GROWLITHE, 0
+	db 12, PONYTA, 0
 	db 10, GROWLITHE, VULPIX, 0
 
 HikerData0:
@@ -285,8 +285,8 @@ BurglarData0:
 	db 10, GROWLITHE, 0
 	db 9, VULPIX, CHARMANDER, PONYTA, 0
 ; Cinnabar Gym
-	db 10, GROWLITHE, VULPIX, VULPIX, 0
-	db 10, PONYTA, 0
+	db 9, GROWLITHE, VULPIX, VULPIX, 0
+	db 11, PONYTA, 0
 	db 10, VULPIX, GROWLITHE, 0
 ; Mansion 2F
 	db 4, CHARMANDER, CHARMANDER, 0
@@ -325,7 +325,7 @@ FisherData0:
 
 SwimmerData0:
 ; Cerulean Gym
-	db 7, HORSEA, SHELLDER, 0
+	db 9, HORSEA, SHELLDER, 0
 ; Route 19
 	db 9, TENTACOOL, SHELLDER, 0
 	db 9, GOLDEEN, HORSEA, STARYU, 0
@@ -375,7 +375,7 @@ BeautyData0:
 ; Celadon Gym
 	db 8, ODDISH, BELLSPROUT, ODDISH, BELLSPROUT, 0
 	db 9, BELLSPROUT, BELLSPROUT, 0
-	db 10, EXEGGCUTE, 0
+	db 11, EXEGGCUTE, 0
 ; Route 13
 	db 9, RATTATA, PIKACHU, RATTATA, 0
 	db 10, CLEFAIRY, MEOWTH, 0
@@ -397,10 +397,10 @@ BeautyData0:
 
 PsychicData0:
 ; Saffron Gym
-	db 10, ABRA, SLOWPOKE, MR_MIME, ABRA, 0
+	db 9, ABRA, SLOWPOKE, MR_MIME, ABRA, 0
 	db 10, MR_MIME, ABRA, 0
-	db 10, SLOWPOKE, SLOWPOKE, SLOWPOKE, 0
-	db 10, SLOWPOKE, 0
+	db 9, SLOWPOKE, SLOWPOKE, SLOWPOKE, 0
+	db 12, SLOWPOKE, 0
 
 RockerData0:
 ; Vermilion Gym
@@ -414,23 +414,23 @@ JugglerData0:
 ; Victory Road 2F
 	db 10, DROWZEE, DROWZEE, ABRA, ABRA, 0
 ; Fuchsia Gym
-	db 10, DROWZEE, DROWZEE, ABRA, DROWZEE, 0
-	db 10, DROWZEE, DROWZEE, 0
+	db 7, DROWZEE, DROWZEE, ABRA, DROWZEE, 0
+	db 8, DROWZEE, DROWZEE, 0
 ; Victory Road 2F
 	db 10, MR_MIME, 0
 ; Unused
 	db 10, DROWZEE, 0
 ; Fuchsia Gym
-	db 10, DROWZEE, 0
-	db 10, DROWZEE, ABRA, 0
+	db 9, DROWZEE, 0
+	db 8, DROWZEE, ABRA, 0
 
 TamerData0:
 ; Fuchsia Gym
-	db 10, SANDSHREW, EKANS, 0
-	db 9, EKANS, SANDSHREW, EKANS, 0
+	db 9, SANDSHREW, EKANS, 0
+	db 7, EKANS, SANDSHREW, EKANS, 0
 ; Viridian Gym
 	db 10, RHYHORN, 0
-	db 10, EKANS, TAUROS, 0
+	db 8, EKANS, TAUROS, 0
 ; Victory Road 2F
 	db 10, PERSIAN, GOLDUCK, 0
 ; Unused
@@ -470,9 +470,9 @@ BlackbeltData0:
 	db 10, MANKEY, 0
 	db 9, MACHOP, MANKEY, MANKEY, 0
 ; Viridian Gym
-	db 10, MACHOP, MACHOP, 0
-	db 10, MACHOP, 0
-	db 10, MACHOP, MACHOP, MACHOP, 0
+	db 8, MACHOP, MACHOP, 0
+	db 9, MACHOP, 0
+	db 7, MACHOP, MACHOP, MACHOP, 0
 ; Victory Road 2F
 	db 10, MACHOP, MACHOP, MACHOP, 0
 
@@ -613,7 +613,7 @@ RocketData0:
 
 CooltrainerMData0:
 ; Viridian Gym
-	db 10, NIDORAN_M, NIDORAN_M, 0
+	db 8, NIDORAN_M, NIDORAN_M, 0
 ; Victory Road 3F
 	db 10, EXEGGCUTE, SHELLDER, GROWLITHE, 0
 	db 10, KRABBY, TENTACOOL, SQUIRTLE, 0
@@ -626,8 +626,8 @@ CooltrainerMData0:
 	db 10, NIDORAN_M, 0
 	db 10, KRABBY, SHELLDER, 0
 ; Viridian Gym
-	db 10, SANDSHREW, DIGLETT, 0
-	db 10, RHYHORN, 0
+	db 8, SANDSHREW, DIGLETT, 0
+	db 9, RHYHORN, 0
 
 CooltrainerFData0:
 ; Celadon Gym
@@ -651,22 +651,22 @@ BrockData0:
 	db $FF, 12, GEODUDE, 14, ONIX, 0
 
 MistyData0:
-	db $FF, 11, STARYU, 13, STARYU, 0
+	db $FF, 12, STARYU, 14, STARYU, 0
 
 LtSurgeData0:
-	db $FF, 10, VOLTORB, 9, PIKACHU, 12, PIKACHU, 0
+	db $FF, 10, VOLTORB, 10, PIKACHU, 12, PIKACHU, 0
 
 ErikaData0:
-	db $FF, 10, BELLSPROUT, 9, TANGELA, 12, ODDISH, 0
+	db $FF, 10, BELLSPROUT, 10, TANGELA, 12, ODDISH, 0
 
 KogaData0:
-	db $FF, 10, KOFFING, 10, GRIMER, 11, KOFFING, 12, KOFFING, 0
+	db $FF, 9, KOFFING, 10, GRIMER, 10, KOFFING, 12, KOFFING, 0
 
 BlaineData0:
-	db $FF, 10, GROWLITHE, 10, PONYTA, 11, PONYTA, 12, GROWLITHE, 0
+	db $FF, 11, GROWLITHE, 11, PONYTA, 12, PONYTA, 13, GROWLITHE, 0
 
 SabrinaData0:
-	db $FF, 10, ABRA, 10, MR_MIME, 11, VENONAT, 12, ABRA, 0
+	db $FF, 11, ABRA, 11, MR_MIME, 12, VENONAT, 13, ABRA, 0
 
 GentlemanData0:
 ; SS Anne 1F Rooms
@@ -767,9 +767,9 @@ ChannelerData0:
 	db 9, GASTLY, 0
 	db 9, GASTLY, 0
 ; Saffron Gym
-	db 10, GASTLY, GASTLY, 0
+	db 9, GASTLY, GASTLY, 0
 	db 10, GASTLY, 0
-	db 10, GASTLY, GASTLY, GASTLY, 0
+	db 8, GASTLY, GASTLY, GASTLY, 0
 
 AgathaData0:
 	db $FF, 10, GASTLY, 10, ZUBAT, 10, GASTLY, 10, EKANS, 10, GASTLY, 0
