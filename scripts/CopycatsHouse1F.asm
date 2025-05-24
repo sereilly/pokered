@@ -111,6 +111,18 @@ CopycatsHouse1FMonChoiceMenu:
 	ld hl, wStatusFlags4
 	set BIT_GOT_STARTER, [hl]
 
+	; teach abra tackle if it is the starter
+	ld a, [wCurPartySpecies]
+	cp ABRA
+	jr nz, notabra
+	ld a, TACKLE
+	ld [wMoveNum], a
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	call CopyToStringBuffer
+	predef LearnMove
+notabra:
+
 	; fade to black and hide the other balls
 	call GBFadeOutToBlack
 	farcall StarterPicked
