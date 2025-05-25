@@ -384,20 +384,9 @@ OaksLabRivalStartBattleScript:
 	; define which team rival uses, and fight it
 	ld a, OPP_RIVAL1
 	ld [wCurOpponent], a
-	ld a, [wRivalStarter]
-	cp STARTER2
-	jr nz, .not_squirtle
 	ld a, $1
-	jr .done
-.not_squirtle
-	cp STARTER3
-	jr nz, .not_bulbasaur
-	ld a, $2
-	jr .done
-.not_bulbasaur
-	ld a, $3
-.done
-	ld [wTrainerNo], a
+    ld [wTrainerNo], a
+	farcall GetRivalTrainerNoByStarterScript
 	ld a, OAKSLAB_RIVAL
 	ld [wSpriteIndex], a
 	call GetSpritePosition1
