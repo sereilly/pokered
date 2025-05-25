@@ -26,6 +26,12 @@ ViridianMart_ScriptPointers:
 	dw_const ViridianMartNoopScript,       SCRIPT_VIRIDIANMART_NOOP
 
 ViridianMartDefaultScript:
+	CheckEvent EVENT_OAK_GOT_PARCEL
+	jr z, .noparcel
+	ld a, SCRIPT_VIRIDIANMART_NOOP
+	ld [wViridianMartCurScript], a
+	ret
+.noparcel:
 	call UpdateSprites
 	ld a, TEXT_VIRIDIANMART_CLERK_YOU_CAME_FROM_PALLET_TOWN
 	ldh [hTextID], a
