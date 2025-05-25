@@ -35,7 +35,7 @@ PokemonTower6FDefaultScript:
 	call DisplayTextID
 	ld a, RESTLESS_SOUL
 	ld [wCurOpponent], a
-	ld a, 30
+	ld a, 15
 	ld [wCurEnemyLevel], a
 	ld a, SCRIPT_POKEMONTOWER6F_MAROWAK_BATTLE
 	ld [wPokemonTower6FCurScript], a

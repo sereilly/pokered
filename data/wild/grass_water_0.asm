@@ -538,16 +538,16 @@ PokemonTower2FWildMons0:
 
 PokemonTower3FWildMons0:
 	def_grass_wildmons 10 ; encounter rate
-	db 6, GASTLY
-	db 7, GASTLY
-	db 7, GASTLY
-	db 8, GASTLY
+	db 4, GASTLY
+	db 4, GASTLY
 	db 5, GASTLY
 	db 4, GASTLY
-	db 8, GASTLY
+	db 5, GASTLY
+	db 6, GASTLY
+	db 5, GASTLY
 	db 6, CUBONE
 	db 7, CUBONE
-	db 9, GASTLY
+	db 7, GASTLY
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -561,7 +561,7 @@ PokemonTower4FWildMons0:
 	db 8, GASTLY
 	db 5, GASTLY
 	db 4, GASTLY
-	db 9, GASTLY
+	db 8, GASTLY
 	db 6, CUBONE
 	db 7, CUBONE
 	db 8, GASTLY
@@ -575,10 +575,10 @@ PokemonTower5FWildMons0:
 	db 7, GASTLY
 	db 8, GASTLY
 	db 8, GASTLY
-	db 9, GASTLY
+	db 7, GASTLY
 	db 6, GASTLY
 	db 5, GASTLY
-	db 10, GASTLY
+	db 8, GASTLY
 	db 7, CUBONE
 	db 8, CUBONE
 	db 9, GASTLY
