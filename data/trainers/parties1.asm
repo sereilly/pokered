@@ -736,7 +736,15 @@ LoreleiData1:
 
 ChannelerData1:
 ; Unused
+	db 12, GASTLY, 0
 	db 14, GASTLY, 0
+	db 13, GASTLY, GASTLY, 0
+	db 14, GASTLY, 0
+; Pokémon Tower 3F
+	db 13, GASTLY, 0
+	db 14, GASTLY, 0
+; Unused
+	db 14, HAUNTER, 0
 ; Pokémon Tower 3F
 	db 12, GASTLY, 0
 ; Pokémon Tower 4F
@@ -749,13 +757,13 @@ ChannelerData1:
 ; Unused
 	db 14, GASTLY, 0
 ; Pokémon Tower 5F
-	db 13, GASTLY, 0
+	db 13, HAUNTER, 0
 ; Unused
 	db 14, GASTLY, 0
 ; Pokémon Tower 5F
 	db 12, GASTLY, 0
 	db 14, GASTLY, 0
-	db 12, GASTLY, 0
+	db 12, HAUNTER, 0
 ; Pokémon Tower 6F
 	db 12, GASTLY, GASTLY, GASTLY, 0
 	db 14, GASTLY, 0

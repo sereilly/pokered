@@ -738,19 +738,19 @@ ChannelerData2:
 	db 21, GASTLY, GASTLY, 0
 	db 21, GASTLY, 0
 ; Pokémon Tower 3F
-	db 21, GASTLY, 0
-	db 21, GASTLY, 0
+	db 19, GASTLY, 0
+	db 19, GASTLY, 0
 ; Unused
 	db 21, HAUNTER, 0
 ; Pokémon Tower 3F
-	db 21, GASTLY, 0
+	db 20, GASTLY, 0
 ; Pokémon Tower 4F
-	db 21, GASTLY, 0
-	db 21, GASTLY, GASTLY, 0
+	db 20, GASTLY, 0
+	db 19, GASTLY, GASTLY, 0
 ; Unused
 	db 21, GASTLY, 0
 ; Pokémon Tower 4F
-	db 21, GASTLY, 0
+	db 20, GASTLY, 0
 ; Unused
 	db 21, GASTLY, 0
 ; Pokémon Tower 5F
@@ -762,7 +762,7 @@ ChannelerData2:
 	db 21, GASTLY, 0
 	db 21, HAUNTER, 0
 ; Pokémon Tower 6F
-	db 21, GASTLY, GASTLY, GASTLY, 0
+	db 19, GASTLY, GASTLY, GASTLY, 0
 	db 21, GASTLY, 0
 	db 20, GASTLY, 0
 ; Saffron Gym

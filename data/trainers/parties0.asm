@@ -734,38 +734,38 @@ LoreleiData0:
 
 ChannelerData0:
 ; Unused
-	db 9, GASTLY, 0
-	db 9, GASTLY, 0
-	db 9, GASTLY, GASTLY, 0
-	db 9, GASTLY, 0
+	db 7, GASTLY, 0
+	db 7, GASTLY, 0
+	db 7, GASTLY, GASTLY, 0
+	db 7, GASTLY, 0
 ; Pokémon Tower 3F
 	db 7, GASTLY, 0
 	db 7, GASTLY, 0
 ; Unused
-	db 9, GASTLY, 0
+	db 24, HAUNTER, 0
 ; Pokémon Tower 3F
+	db 8, GASTLY, 0
+; Pokémon Tower 4F
+	db 8, GASTLY, 0
+	db 7, GASTLY, GASTLY, 0
+; Unused
 	db 7, GASTLY, 0
 ; Pokémon Tower 4F
 	db 8, GASTLY, 0
-	db 6, GASTLY, GASTLY, 0
 ; Unused
-	db 9, GASTLY, 0
-; Pokémon Tower 4F
-	db 7, GASTLY, 0
-; Unused
-	db 9, GASTLY, 0
+	db 24, GASTLY, 0
 ; Pokémon Tower 5F
-	db 8, GASTLY, 0
+	db 8, HAUNTER, 0
 ; Unused
-	db 9, GASTLY, 0
+	db 24, GASTLY, 0
 ; Pokémon Tower 5F
 	db 8, GASTLY, 0
 	db 8, GASTLY, 0
-	db 8, GASTLY, 0
+	db 8, HAUNTER, 0
 ; Pokémon Tower 6F
 	db 7, GASTLY, GASTLY, GASTLY, 0
 	db 8, GASTLY, 0
-	db 9, GASTLY, 0
+	db 8, GASTLY, 0
 ; Saffron Gym
 	db 11, GASTLY, GASTLY, 0
 	db 12, GASTLY, 0
