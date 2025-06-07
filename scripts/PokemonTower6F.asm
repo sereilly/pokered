@@ -35,12 +35,30 @@ PokemonTower6FDefaultScript:
 	call DisplayTextID
 	ld a, RESTLESS_SOUL
 	ld [wCurOpponent], a
-	ld a, 15
+
+	call CountBadges
+    ld a, b                
+	ld c, a
+	ld b, 0          
+	ld hl, MarowakLevels
+	add hl, bc
+	ld a, [hl]
 	ld [wCurEnemyLevel], a
 	ld a, SCRIPT_POKEMONTOWER6F_MAROWAK_BATTLE
 	ld [wPokemonTower6FCurScript], a
 	ld [wCurMapScript], a
 	ret
+
+MarowakLevels:
+	db 9
+	db 16
+	db 22
+	db 28
+	db 33
+	db 38
+	db 43
+	db 48
+	db 53
 
 PokemonTower6FMarowakCoords:
 	dbmapcoord 10, 16

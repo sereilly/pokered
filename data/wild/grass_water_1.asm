@@ -538,16 +538,16 @@ PokemonTower2FWildMons1:
 
 PokemonTower3FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
-	db 13, GASTLY
-	db 13, GASTLY
-	db 14, GASTLY
-	db 14, GASTLY
 	db 12, GASTLY
 	db 12, GASTLY
-	db 15, GASTLY
+	db 13, GASTLY
+	db 13, GASTLY
+	db 12, GASTLY
+	db 12, GASTLY
+	db 13, GASTLY
 	db 13, CUBONE
-	db 14, CUBONE
-	db 16, HAUNTER
+	db 13, CUBONE
+	db 15, HAUNTER
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -558,10 +558,10 @@ PokemonTower4FWildMons1:
 	db 13, GASTLY
 	db 14, GASTLY
 	db 14, GASTLY
-	db 15, GASTLY
+	db 14, GASTLY
 	db 13, GASTLY
 	db 12, GASTLY
-	db 16, HAUNTER
+	db 15, HAUNTER
 	db 13, CUBONE
 	db 14, CUBONE
 	db 15, GASTLY
@@ -574,14 +574,14 @@ PokemonTower5FWildMons1:
 	def_grass_wildmons 10 ; encounter rate
 	db 14, GASTLY
 	db 14, GASTLY
-	db 15, GASTLY
-	db 15, GASTLY
+	db 14, GASTLY
+	db 14, GASTLY
 	db 13, GASTLY
 	db 13, GASTLY
 	db 16, HAUNTER
 	db 14, CUBONE
 	db 15, CUBONE
-	db 16, GASTLY
+	db 15, GASTLY
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -589,16 +589,16 @@ PokemonTower5FWildMons1:
 
 PokemonTower6FWildMons1:
 	def_grass_wildmons 15 ; encounter rate
-	db 15, GASTLY
-	db 15, GASTLY
-	db 16, GASTLY
-	db 16, GASTLY
 	db 14, GASTLY
 	db 14, GASTLY
-	db 17, HAUNTER
+	db 14, GASTLY
+	db 14, GASTLY
+	db 14, GASTLY
+	db 14, GASTLY
+	db 15, HAUNTER
 	db 15, CUBONE
 	db 16, CUBONE
-	db 17, HAUNTER
+	db 16, HAUNTER
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -611,10 +611,10 @@ PokemonTower7FWildMons1:
 	db 16, GASTLY
 	db 16, GASTLY
 	db 15, GASTLY
-	db 17, HAUNTER
+	db 16, HAUNTER
 	db 15, CUBONE
 	db 16, CUBONE
-	db 17, HAUNTER
+	db 16, HAUNTER
 	db 17, HAUNTER
 	end_grass_wildmons
 
