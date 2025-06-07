@@ -13,6 +13,7 @@ StarterPicked::
     SetEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS_2
     SetEvent EVENT_DAISY_WALKING
 	SetEvent EVENT_OAK_GOT_PARCEL
+	SetEvent EVENT_GOT_TOWN_MAP
 	
 	ld a, HS_LYING_OLD_MAN
 	ld [wMissableObjectIndex], a
@@ -23,6 +24,14 @@ StarterPicked::
     ld a, HS_OAKS_LAB_OAK_1
 	ld [wMissableObjectIndex], a
 	predef ShowObject
+	ld a, HS_TOWN_MAP
+	ld [wMissableObjectIndex], a
+	predef HideObject
+
+	lb bc, TOWN_MAP, 1
+	call GiveItem
+	lb bc, POKE_BALL, 3
+	call GiveItem
 
     ; rival setup
     ld a, HS_OAKS_LAB_RIVAL
