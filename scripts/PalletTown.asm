@@ -154,6 +154,7 @@ PalletTown_TextPointers:
 	dw_const PalletTownOakText,              TEXT_PALLETTOWN_OAK
 	dw_const PalletTownGirlText,             TEXT_PALLETTOWN_GIRL
 	dw_const PalletTownFisherText,           TEXT_PALLETTOWN_FISHER
+	dw_const PalletCinnabarIslandSeelText,   TEXT_PALLETTOWN_SEEL
 	dw_const PalletTownOaksLabSignText,      TEXT_PALLETTOWN_OAKSLAB_SIGN
 	dw_const PalletTownSignText,             TEXT_PALLETTOWN_SIGN
 	dw_const PalletTownPlayersHouseSignText, TEXT_PALLETTOWN_PLAYERSHOUSE_SIGN
@@ -213,4 +214,38 @@ PalletTownPlayersHouseSignText:
 
 PalletTownRivalsHouseSignText:
 	text_far _PalletTownRivalsHouseSignText
+	text_end
+
+PalletCinnabarIslandSeelText:
+	text_asm
+	ld hl, .Text
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .refused
+	ld hl, .PalletSeelYesText
+	call PrintText
+	ld a, CINNABAR_ISLAND
+	ld [wDestinationMap], a
+	ld hl, wStatusFlags6
+	set BIT_FLY_WARP, [hl]
+	inc hl
+	set BIT_USED_FLY, [hl]
+	jp TextScriptEnd
+.refused
+	ld hl, .PalletSeelNoText
+	call PrintText
+	jp TextScriptEnd
+
+.Text:
+	text_far _PalletTownCinnabarSeelText
+	text_end
+
+.PalletSeelYesText:
+	text_far _PalletSeelYesText
+	text_end
+
+.PalletSeelNoText:
+	text_far _PalletSeelNoText
 	text_end

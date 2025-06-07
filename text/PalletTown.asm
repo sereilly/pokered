@@ -54,3 +54,21 @@ _PalletTownPlayersHouseSignText::
 _PalletTownRivalsHouseSignText::
 	text "<RIVAL>'s house "
 	done
+
+_PalletTownCinnabarSeelText::
+	text "Seel!!!"
+
+	para "Want a ride to"
+	line "Cinnabar Island?"
+	done
+
+_PalletSeelYesText::
+	text "Seel: Seel!"
+	line "Seel is ready."
+	cont "Hop on!"
+	done
+
+_PalletSeelNoText::
+	text "Seel: Seel!"
+	line "Seel is sad."
+	done

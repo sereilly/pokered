@@ -335,6 +335,9 @@ OaksLabRivalChoosesStarterScript:
 	SetEvent EVENT_GOT_STARTER
 	xor a
 	ld [wJoyIgnore], a
+	ld a, HS_PALLET_TOWN_SEEL
+	ld [wMissableObjectIndex], a
+	predef ShowObject
 
 	ld a, SCRIPT_OAKSLAB_RIVAL_CHALLENGES_PLAYER
 	ld [wOaksLabCurScript], a
