@@ -29,6 +29,7 @@ StarterPicked::
 	predef HideObject
 	ld a, HS_PALLET_TOWN_SEEL
 	ld [wMissableObjectIndex], a
+	predef ShowObject
 
 	lb bc, TOWN_MAP, 1
 	call GiveItem

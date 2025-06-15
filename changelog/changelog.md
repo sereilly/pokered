@@ -99,6 +99,12 @@ Various obstacles have been moved or removed completely in order to facilitate t
 - Removed the thirsty Saffron Guard check
 - Removed the east Pewter City badge check
 - Added Seels on Cinnabar that can take you to Pallet Town or Fuchsia City
+- Added Seel in Pallet Town to take you to Cinnabar.
+- Added a hole in the rock wall between the Seafoam Islands
 
 ## Other changes
 - Added a Link Cable item to evolve Pokemon that normally require trades. The Link Cable can be purchased in the Celadon Dept Store.
+
+## Known Issues
+- Fished Pokémon do not scale with badge count
+- The Route 22 second rival does not disappear after fighting him and has the wrong dialog.
