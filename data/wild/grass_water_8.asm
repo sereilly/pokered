@@ -1508,17 +1508,17 @@ IF DEF(_RED)
 	db 63, SEADRA
 ENDC
 IF DEF(_BLUE)
-	db 60, GOLDUCK
+	db 58, GOLDUCK
+	db 58, DEWGONG
+	db 59, GOLDUCK
 	db 60, DEWGONG
-	db 61, GOLDUCK
-	db 61, DEWGONG
-	db 59, KINGLER
-	db 60, STARMIE
 	db 60, KINGLER
-	db 59, STARMIE
+	db 60, STARMIE
+	db 61, KINGLER
+	db 61, STARMIE
 	db 63, KINGLER
 ENDC
-	db 64, DEWGONG
+	db 63, DEWGONG
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1534,8 +1534,8 @@ IF DEF(_RED)
 	db 60, SLOWBRO
 	db 61, DEWGONG
 	db 61, SLOWBRO
-	db 60, DEWGONG
-	db 64, SLOWBRO
+	db 62, DEWGONG
+	db 63, SLOWBRO
 ENDC
 IF DEF(_BLUE)
 	db 61, KINGLER
@@ -1545,8 +1545,8 @@ IF DEF(_BLUE)
 	db 60, GOLDUCK
 	db 61, DEWGONG
 	db 61, GOLDUCK
-	db 60, DEWGONG
-	db 64, GOLDUCK
+	db 62, DEWGONG
+	db 63, GOLDUCK
 ENDC
 	db 61, GOLBAT
 	end_grass_wildmons
@@ -1593,13 +1593,13 @@ VictoryRoad2FWildMons8:
 	db 56, MACHOKE
 	db 57, GRAVELER
 	db 58, GOLBAT
+	db 59, ONIX
+	db 60, ONIX
 	db 61, ONIX
-	db 62, ONIX
-	db 63, ONIX
-	db 63, MACHAMP
+	db 61, MACHAMP
 	db 62, GOLBAT
-	db 62, MAROWAK
-	db 64, GOLEM
+	db 63, MAROWAK
+	db 63, GOLEM
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
@@ -1610,13 +1610,13 @@ VictoryRoad3FWildMons8:
 	db 58, MACHOKE
 	db 59, GRAVELER
 	db 57, GOLBAT
-	db 64, ONIX
-	db 63, VENOMOTH
-	db 65, ONIX
-	db 65, GOLEM
+	db 60, ONIX
+	db 62, VENOMOTH
+	db 61, ONIX
+	db 63, GOLEM
 	db 63, GOLBAT
-	db 64, MACHAMP
-	db 65, MACHAMP
+	db 62, MACHAMP
+	db 63, MACHAMP
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
