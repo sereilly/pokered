@@ -666,7 +666,7 @@ BlaineData0:
 	db $FF, 11, GROWLITHE, 11, CHARMANDER, 12, PONYTA, 13, GROWLITHE, 0
 
 SabrinaData0:
-	db $FF, 12, ABRA, 15, MR_MIME, 15, VENONAT, 18, KADABRA, 0
+	db $FF, 12, ABRA, 13, MR_MIME, 14, VENONAT, 15, KADABRA, 0
 
 GentlemanData0:
 ; SS Anne 1F Rooms
