@@ -171,15 +171,7 @@ CinnabarLabMonChoiceMenu:
 
 	; fade to black and hide the other balls
 	call GBFadeOutToBlack
-	ld a, HS_STARTER_BALL_CINNABAR_1
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	ld a, HS_STARTER_BALL_CINNABAR_2
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	ld a, HS_STARTER_BALL_CINNABAR_3
-	ld [wMissableObjectIndex], a
-	predef HideObject
+	farcall StarterPicked
 	call GBFadeInFromBlack
 
 CinnabarLabMonChoiceEnd:
