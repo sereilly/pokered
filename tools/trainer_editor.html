@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trainer Battle Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    select, button, input[type="file"] {
+      margin-bottom: 10px;
+    }
+    .trainer {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .pokemon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .pokemon img {
+      margin-right: 10px;
+    }
+    input[type="number"], select {
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+    #status {
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trainer Battle Editor</h1>
+  <button onclick="openFiles()">Open Parties Files</button>
+  <button onclick="saveChanges()">Save Changes</button>
+  <br />
+  <label for="fileSelector">Choose Parties File:</label>
+  <select id="fileSelector"></select>
+  <div id="status"></div>
+  <div id="trainersContainer"></div>
+
+  <script>
+    const spriteBaseUrl = 'https://img.pokemondb.net/sprites/silver/normal/';
+    const pokedexUrl = 'https://pokemondb.net/pokedex/';
+    const fileSelector = document.getElementById("fileSelector");
+    const trainersContainer = document.getElementById("trainersContainer");
+    const statusDiv = document.getElementById("status");
+
+    let trainersData = {};
+    let fileContents = {};
+    let fileHandles = {}; // Store file handles for Chrome File System API
+
+    // Check if File System API is supported
+    function isFileSystemAPISupported() {
+      return 'showOpenFilePicker' in window && 'showSaveFilePicker' in window;
+    }
+
+    // Open files using Chrome File System API
+    async function openFiles() {
+      if (!isFileSystemAPISupported()) {
+        statusDiv.innerHTML = '<span style="color: red;">Chrome File System API is not supported in this browser. Please use a recent version of Chrome.</span>';
+        return;
+      }
+
+      try {
+        const fileHandleArray = await window.showOpenFilePicker({
+          multiple: true,
+          types: [{
+            description: 'Assembly files',
+            accept: {
+              'text/plain': ['.asm']
+            }
+          }]
+        });
+
+        // Clear previous data
+        fileSelector.innerHTML = "";
+        trainersData = {};
+        fileContents = {};
+        fileHandles = {};
+
+        const partiesFiles = fileHandleArray.filter(handle => 
+          handle.name.startsWith("parties") && handle.name.endsWith(".asm")
+        );
+
+        if (partiesFiles.length === 0) {
+          statusDiv.innerHTML = '<span style="color: orange;">No parties files found. Please select files that start with "parties" and end with ".asm".</span>';
+          return;
+        }
+
+        for (const fileHandle of partiesFiles) {
+          const option = document.createElement("option");
+          option.value = fileHandle.name;
+          option.textContent = fileHandle.name;
+          fileSelector.appendChild(option);
+
+          // Store file handle for later saving
+          fileHandles[fileHandle.name] = fileHandle;
+
+          // Read file content
+          const file = await fileHandle.getFile();
+          const content = await file.text();
+          
+          fileContents[fileHandle.name] = content;
+          trainersData[fileHandle.name] = parseTrainerData(content);
+          
+          if (fileHandle.name === partiesFiles[0].name) {
+            renderTrainers(trainersData[fileHandle.name]);
+          }
+        }
+
+        statusDiv.innerHTML = `<span style="color: green;">Loaded ${partiesFiles.length} parties file(s) successfully.</span>`;
+      } catch (error) {
+        if (error.name === 'AbortError') {
+          statusDiv.innerHTML = '<span style="color: gray;">File selection cancelled.</span>';
+        } else {
+          statusDiv.innerHTML = `<span style="color: red;">Error opening files: ${error.message}</span>`;
+        }
+      }
+    }
+
+    function mapSpeciesName(species) {
+      const mapping = {
+        'NIDORAN_M': 'nidoran-m',
+        'NIDORAN_F': 'nidoran-f',
+        'MR_MIME': 'mr-mime',
+        'FARFETCHD': 'farfetchd',
+        'FARFETCH_D': 'farfetchd',
+        'TYPE_NULL': 'type-null',
+        'JANGMO_O': 'jangmo-o',
+        'HAKAMO_O': 'hakamo-o',
+        'KOMMO_O': 'kommo-o',
+        'HO_OH': 'ho-oh',
+        'PORYGON_Z': 'porygon-z',
+      };
+      let key = species.toUpperCase().replace(/[- ]/g, '_');
+      return mapping[key] || species.toLowerCase();
+    }
+
+    // Remove the old directory picker event listener and add file selector listener
+
+    fileSelector.addEventListener("change", () => {
+      const filename = fileSelector.value;
+      const content = fileContents[filename];
+      if (content) {
+        trainersData[filename] = parseTrainerData(content);
+        renderTrainers(trainersData[filename]);
+      }
+    });
+
+    function parseTrainerData(text) {
+      const lines = text.split(/\r?\n/);
+      const data = {};
+      let currentTrainer = null;
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        const match = trimmed.match(/^(\w+Data\d+):$/);
+        if (match) {
+          currentTrainer = match[1];
+          data[currentTrainer] = [];
+        } else if (trimmed.startsWith("db")) {
+          if (currentTrainer === null) continue;
+          const tokens = trimmed.substring(3).split(',').map(x => x.trim().replace(/^\$/, '').replace(/ /g, '_'));
+          if (tokens[0].toUpperCase() === "FF") {
+            const party = [];
+            for (let i = 1; i < tokens.length - 1; i += 2) {
+              party.push([parseInt(tokens[i]), tokens[i + 1].toLowerCase()]);
+            }
+            data[currentTrainer].push({ type: 'mixed', party });
+          } else {
+            const level = parseInt(tokens[0]);
+            const species = tokens.slice(1, -1).map(x => x.toLowerCase());
+            data[currentTrainer].push({ type: 'uniform', level, species });
+          }
+        }
+      }
+
+      return data;
+    }
+
+    function renderTrainers(data) {
+      trainersContainer.innerHTML = "";
+
+      for (const [trainer, battles] of Object.entries(data)) {
+        const trainerDiv = document.createElement("div");
+        trainerDiv.className = "trainer";
+
+        const header = document.createElement("h3");
+        header.textContent = trainer;
+        trainerDiv.appendChild(header);
+
+        battles.forEach((battle, index) => {
+          const battleDiv = document.createElement("div");
+
+          const toggle = document.createElement("select");
+          toggle.innerHTML = `
+            <option value="uniform">Same Level</option>
+            <option value="mixed">Individual Levels</option>`;
+          toggle.value = battle.type;
+          toggle.addEventListener("change", (e) => {
+            const newType = e.target.value;
+            if (newType === battle.type) return;
+
+            if (newType === 'uniform') {
+              battle.level = battle.party[0][0];
+              battle.species = battle.party.map(p => p[1]);
+              delete battle.party;
+              battle.type = 'uniform';
+            } else {
+              battle.party = battle.species.map(s => [battle.level, s]);
+              delete battle.species;
+              delete battle.level;
+              battle.type = 'mixed';
+            }
+            renderTrainers(data);
+          });
+
+          battleDiv.appendChild(toggle);
+
+          if (battle.type === 'uniform') {
+            const levelInput = document.createElement("input");
+            levelInput.type = "number";
+            levelInput.min = 1;
+            levelInput.value = battle.level;
+            levelInput.addEventListener("input", () => {
+              battle.level = parseInt(levelInput.value);
+            });
+
+            const levelLabel = document.createElement("label");
+            levelLabel.textContent = "Level:";
+            levelLabel.appendChild(levelInput);
+            battleDiv.appendChild(levelLabel);
+
+            battle.species.forEach((spec, i) => {
+              const pokeDiv = document.createElement("div");
+              pokeDiv.className = "pokemon";
+
+              const mapped = mapSpeciesName(spec);
+              const img = document.createElement("img");
+              img.src = `${spriteBaseUrl}${mapped}.png`;
+              img.alt = spec;
+              img.width = 40;
+
+              const link = document.createElement("a");
+              link.href = `${pokedexUrl}${mapped}`;
+              link.target = "_blank";
+              link.appendChild(img);
+
+              const input = document.createElement("input");
+              input.type = "text";
+              input.value = spec;
+              input.addEventListener("input", (e) => {
+                battle.species[i] = e.target.value.toLowerCase();
+              });
+              input.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                  const newMapped = mapSpeciesName(input.value);
+                  img.src = `${spriteBaseUrl}${newMapped}.png`;
+                  img.alt = input.value;
+                  link.href = `${pokedexUrl}${newMapped}`;
+                }
+              });
+
+              pokeDiv.appendChild(link);
+              pokeDiv.appendChild(document.createTextNode(" Species: "));
+              pokeDiv.appendChild(input);
+
+              battleDiv.appendChild(pokeDiv);
+            });
+          } else {
+            battle.party.forEach((pair, i) => {
+              const pokeDiv = document.createElement("div");
+              pokeDiv.className = "pokemon";
+
+              const mapped = mapSpeciesName(pair[1]);
+              const img = document.createElement("img");
+              img.src = `${spriteBaseUrl}${mapped}.png`;
+              img.alt = pair[1];
+              img.width = 40;
+
+              const link = document.createElement("a");
+              link.href = `${pokedexUrl}${mapped}`;
+              link.target = "_blank";
+              link.appendChild(img);
+
+              const levelInput = document.createElement("input");
+              levelInput.type = "number";
+              levelInput.min = 1;
+              levelInput.value = pair[0];
+              levelInput.addEventListener("input", () => {
+                pair[0] = parseInt(levelInput.value);
+              });
+
+              const speciesInput = document.createElement("input");
+              speciesInput.type = "text";
+              speciesInput.value = pair[1];
+              speciesInput.addEventListener("input", (e) => {
+                pair[1] = e.target.value.toLowerCase();
+              });
+              speciesInput.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                  const newMapped = mapSpeciesName(speciesInput.value);
+                  img.src = `${spriteBaseUrl}${newMapped}.png`;
+                  img.alt = speciesInput.value;
+                  link.href = `${pokedexUrl}${newMapped}`;
+                }
+              });
+
+              pokeDiv.appendChild(link);
+              pokeDiv.appendChild(document.createTextNode(" Level: "));
+              pokeDiv.appendChild(levelInput);
+              pokeDiv.appendChild(document.createTextNode(" Species: "));
+              pokeDiv.appendChild(speciesInput);
+
+              battleDiv.appendChild(pokeDiv);
+            });
+          }
+
+          trainerDiv.appendChild(battleDiv);
+        });
+
+        trainersContainer.appendChild(trainerDiv);
+      }
+    }
+
+    function saveChanges() {
+      const filename = fileSelector.value;
+      
+      if (!filename) {
+        statusDiv.innerHTML = '<span style="color: red;">No file selected to save.</span>';
+        return;
+      }
+
+      const data = trainersData[filename];
+      const originalLines = fileContents[filename].split(/\r?\n/);
+      const newLines = [];
+      
+      let currentTrainer = null;
+      let battleIndex = 0;
+
+      for (const line of originalLines) {
+        const trimmed = line.trim();
+        
+        // Check for a new trainer data block label that we are managing
+        const trainerMatch = trimmed.match(/^(\w+Data\d+):$/);
+        if (trainerMatch && data[trainerMatch[1]]) {
+          currentTrainer = trainerMatch[1];
+          battleIndex = 0;
+          newLines.push(line);
+          continue;
+        }
+
+        // Check for any other label, which would end the current trainer block
+        if (trimmed.endsWith(':') && !trainerMatch) {
+            currentTrainer = null;
+        }
+        
+        // Check if this line is a data line within a trainer block we're managing
+        if (currentTrainer && trimmed.startsWith("db")) {
+          // This is a data line we need to replace.
+          // Check if we have corresponding new data for it.
+          if (battleIndex < data[currentTrainer].length) {
+            const battle = data[currentTrainer][battleIndex];
+            
+            // Preserve the original line's indentation
+            const indentMatch = line.match(/^(\s*)/);
+            const indent = indentMatch ? indentMatch[1] : '\t';
+
+            // Reconstruct the db line from our data object
+            let outputLine;
+            if (battle.type === 'uniform') {
+              const speciesList = battle.species.map(s => s.toUpperCase()).join(', ');
+              outputLine = `${indent}db ${battle.level}, ${speciesList}, 0`;
+            } else {
+              let lineContent = `db $FF`;
+              battle.party.forEach(([lvl, spec]) => {
+                lineContent += `, ${lvl}, ${spec.toUpperCase()}`;
+              });
+              lineContent += `, 0`;
+              outputLine = `${indent}${lineContent}`;
+            }
+            newLines.push(outputLine);
+            battleIndex++;
+          } else {
+            // This case shouldn't happen with correct parsing.
+            // As a fallback, just copy the original line to avoid data loss.
+            newLines.push(line);
+          }
+        } else {
+          // This is not a data line to be replaced.
+          // It's a comment, a pointer table line, a blank line, or other directive.
+          // Keep it as is.
+          newLines.push(line);
+        }
+      }
+
+      const output = newLines.join('\n');
+
+      // Try to save using File System API first
+      if (isFileSystemAPISupported() && fileHandles[filename]) {
+        saveWithFileSystemAPI(filename, output);
+      } else {
+        // Fallback to download
+        saveAsDownload(filename, output);
+      }
+    }
+
+    async function saveWithFileSystemAPI(filename, content) {
+      try {
+        const fileHandle = fileHandles[filename];
+        const writable = await fileHandle.createWritable();
+        await writable.write(content);
+        await writable.close();
+        
+        statusDiv.innerHTML = `<span style="color: green;">Successfully saved ${filename} in place.</span>`;
+        
+        // Update the stored content
+        fileContents[filename] = content;
+      } catch (error) {
+        statusDiv.innerHTML = `<span style="color: red;">Error saving file: ${error.message}</span>`;
+        console.error('File save error:', error);
+        
+        // Fallback to download if file system API fails
+        saveAsDownload(filename, content);
+      }
+    }
+
+    function saveAsDownload(filename, content) {
+      const blob = new Blob([content], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      statusDiv.innerHTML = `<span style="color: orange;">File downloaded as ${filename} (File System API not available).</span>`;
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', function() {
+      if (isFileSystemAPISupported()) {
+        statusDiv.innerHTML = '<span style="color: green;">Chrome File System API is supported. You can edit files in place.</span>';
+      } else {
+        statusDiv.innerHTML = '<span style="color: orange;">Chrome File System API is not supported. Files will be downloaded instead.</span>';
+      }
+    });
+  </script>
+</body>
+</html>
