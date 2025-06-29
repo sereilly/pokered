@@ -333,6 +333,7 @@ OaksLabRivalChoosesStarterScript:
 	ldh [hTextID], a
 	call DisplayTextID
 	SetEvent EVENT_GOT_STARTER
+	farcall HideBalls
 	xor a
 	ld [wJoyIgnore], a
 	ld a, HS_PALLET_TOWN_SEEL

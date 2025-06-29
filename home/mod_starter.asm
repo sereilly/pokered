@@ -48,7 +48,10 @@ StarterPicked::
 	predef ShowObject
 	ld a, $5 ;SCRIPT_PALLETTOWN_DAISY
 	ld [wPalletTownCurScript], a
+	call HideBalls
+	ret
 
+HideBalls::
     ; hide all starter balls using BallTable
     ld hl, .BallTable
     ld c, 27 ; 27 starter balls in the table (3 balls × 9 locations)
@@ -65,7 +68,6 @@ StarterPicked::
 
     call SetRivalStarter
     ret
-
 
 .BallTable:
 	db HS_STARTER_BALL_CINNABAR_1   
