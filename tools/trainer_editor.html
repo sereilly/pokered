@@ -17,6 +17,12 @@
       border: 1px solid #ccc;
       padding: 10px;
     }
+    .battle-box {
+      border: 1px solid #e0e0e0;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
     .pokemon {
       display: flex;
       align-items: center;
@@ -187,7 +193,10 @@
       return data;
     }
 
-    function renderTrainers(data) {
+    function renderTrainers(data, options = {}) {
+      const { preserveScroll } = options;
+      const scrollY = preserveScroll ? window.scrollY : 0;
+
       trainersContainer.innerHTML = "";
 
       for (const [trainer, battles] of Object.entries(data)) {
@@ -200,6 +209,7 @@
 
         battles.forEach((battle, index) => {
           const battleDiv = document.createElement("div");
+          battleDiv.className = "battle-box";
 
           const toggle = document.createElement("select");
           toggle.innerHTML = `
@@ -221,7 +231,7 @@
               delete battle.level;
               battle.type = 'mixed';
             }
-            renderTrainers(data);
+            renderTrainers(data, { preserveScroll: true });
           });
 
           battleDiv.appendChild(toggle);
@@ -239,6 +249,13 @@
             levelLabel.textContent = "Level:";
             levelLabel.appendChild(levelInput);
             battleDiv.appendChild(levelLabel);
+
+            if (battle.species.length === 0) {
+              const warning = document.createElement("p");
+              warning.style.color = 'red';
+              warning.textContent = "Warning: This party is empty.";
+              battleDiv.appendChild(warning);
+            }
 
             battle.species.forEach((spec, i) => {
               const pokeDiv = document.createElement("div");
@@ -259,7 +276,13 @@
               input.type = "text";
               input.value = spec;
               input.addEventListener("input", (e) => {
-                battle.species[i] = e.target.value.toLowerCase();
+                const newValue = e.target.value.toLowerCase();
+                if (newValue === "") {
+                  battle.species.splice(i, 1);
+                  renderTrainers(data, { preserveScroll: true });
+                } else {
+                  battle.species[i] = newValue;
+                }
               });
               input.addEventListener("keydown", (e) => {
                 if (e.key === "Enter") {
@@ -276,7 +299,22 @@
 
               battleDiv.appendChild(pokeDiv);
             });
+
+            const addButton = document.createElement("button");
+            addButton.textContent = "+ Add Pokémon";
+            addButton.onclick = () => {
+              battle.species.push("rattata");
+              renderTrainers(data, { preserveScroll: true });
+            };
+            battleDiv.appendChild(addButton);
           } else {
+            if (battle.party.length === 0) {
+              const warning = document.createElement("p");
+              warning.style.color = 'red';
+              warning.textContent = "Warning: This party is empty.";
+              battleDiv.appendChild(warning);
+            }
+
             battle.party.forEach((pair, i) => {
               const pokeDiv = document.createElement("div");
               pokeDiv.className = "pokemon";
@@ -304,7 +342,13 @@
               speciesInput.type = "text";
               speciesInput.value = pair[1];
               speciesInput.addEventListener("input", (e) => {
-                pair[1] = e.target.value.toLowerCase();
+                const newValue = e.target.value.toLowerCase();
+                if (newValue === "") {
+                  battle.party.splice(i, 1);
+                  renderTrainers(data, { preserveScroll: true });
+                } else {
+                  pair[1] = newValue;
+                }
               });
               speciesInput.addEventListener("keydown", (e) => {
                 if (e.key === "Enter") {
@@ -323,12 +367,25 @@
 
               battleDiv.appendChild(pokeDiv);
             });
+
+            const addButton = document.createElement("button");
+            addButton.textContent = "+ Add Pokémon";
+            addButton.onclick = () => {
+              const lastLevel = battle.party.length > 0 ? battle.party[battle.party.length - 1][0] : 1;
+              battle.party.push([lastLevel, "rattata"]);
+              renderTrainers(data, { preserveScroll: true });
+            };
+            battleDiv.appendChild(addButton);
           }
 
           trainerDiv.appendChild(battleDiv);
         });
 
         trainersContainer.appendChild(trainerDiv);
+      }
+
+      if (preserveScroll) {
+        setTimeout(() => window.scrollTo(0, scrollY), 0);
       }
     }
 
@@ -379,12 +436,18 @@
             let outputLine;
             if (battle.type === 'uniform') {
               const speciesList = battle.species.map(s => s.toUpperCase()).join(', ');
-              outputLine = `${indent}db ${battle.level}, ${speciesList}, 0`;
+              if (battle.species.length > 0) {
+                outputLine = `${indent}db ${battle.level}, ${speciesList}, 0`;
+              } else {
+                outputLine = `${indent}db ${battle.level}, 0`;
+              }
             } else {
               let lineContent = `db $FF`;
-              battle.party.forEach(([lvl, spec]) => {
-                lineContent += `, ${lvl}, ${spec.toUpperCase()}`;
-              });
+              if (battle.party.length > 0) {
+                battle.party.forEach(([lvl, spec]) => {
+                  lineContent += `, ${lvl}, ${spec.toUpperCase()}`;
+                });
+              }
               lineContent += `, 0`;
               outputLine = `${indent}${lineContent}`;
             }
