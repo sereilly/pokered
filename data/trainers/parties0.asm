@@ -544,7 +544,7 @@ GiovanniData0:
 ; Rocket Hideout B4F
 	db $FF, 7, ONIX, 7, RHYHORN, 8, KANGASKHAN, 0
 ; Silph Co. 11F
-	db $FF, 7, NIDORAN_M, 8, KANGASKHAN, 7, RHYHORN, 8, NIDORAN_F, 9
+	db $FF, 7, NIDORAN_M, 8, KANGASKHAN, 7, RHYHORN, 8, NIDORAN_F, 0
 ; Viridian Gym
 	db $FF, 9, RHYHORN, 10, DIGLETT, 12, NIDORAN_F, 0
 
@@ -651,22 +651,22 @@ BrockData0:
 	db $FF, 12, GEODUDE, 14, ONIX, 0
 
 MistyData0:
-	db $FF, 12, SEEL, 14, STARYU, 0
+	db $FF, 12, PSYDUCK, 14, STARYU, 0
 
 LtSurgeData0:
-	db $FF, 10, VOLTORB, 10, PIKACHU, 12, PIKACHU, 0
+	db $FF, 12, VOLTORB, 14, PIKACHU, 0
 
 ErikaData0:
-	db $FF, 10, BELLSPROUT, 10, TANGELA, 12, ODDISH, 0
+	db $FF, 12, BELLSPROUT, 14, ODDISH, 0
 
 KogaData0:
-	db $FF, 9, KOFFING, 10, GRIMER, 10, KOFFING, 12, KOFFING, 0
+	db $FF, 12, KOFFING, 14, VENONAT, 0
 
 BlaineData0:
-	db $FF, 11, GROWLITHE, 11, CHARMANDER, 12, PONYTA, 13, GROWLITHE, 0
+	db $FF, 12, GROWLITHE, 14, VULPIX, 0
 
 SabrinaData0:
-	db $FF, 12, ABRA, 13, MR_MIME, 14, VENONAT, 15, KADABRA, 0
+	db $FF, 12, EXEGGCUTE, 14, DROWZEE, 0
 
 GentlemanData0:
 ; SS Anne 1F Rooms
